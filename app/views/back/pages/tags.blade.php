@@ -2,17 +2,24 @@
 
 @section('content')
 @include('front._includes.errors')
-{{Form::open(['route' => 'new_tag_admin_path', 'class' => 'form col-7'])}}
+<div class="col-7">
+{{Form::open(['route' => 'new_tag_admin_path', 'class' => 'form'])}}
 
 {{Form::label('tags', 'Tag:')}}
 {{Form::text('tags','',['placeholder' => 'mexicano'])}}
 
 {{Form::submit('Adicionar Tag', ['class' => 'btn btn-green fr'] )}}
 {{Form::close()}}
-
-<div class="sidebar col-3">
-	@include('back._includes.getTag')
+@include('back._includes.getTag')
 </div>
+{{Form::open(['route' => 'new_tag_truck_admin_path', 'class' => 'form col-7'])}}
+
+{{Form::label('tags', 'Tag:')}}
+{{Form::select('tags', ['1', 'Buzina Food Truck'])}}
+
+{{Form::submit('Adicionar Tag', ['class' => 'btn btn-green fr'] )}}
+{{Form::close()}}
+
 @stop
 
 @section('scripts')
