@@ -6,6 +6,7 @@ ul.tagit {
     width:100%;
     border-radius:3px;
     border:1px solid @borderGrey;
+    font-size: 12px;
     li {
         display:block;
         float:left;
@@ -15,6 +16,8 @@ ul.tagit {
         position:relative;
         line-height:inherit;
         border: none;
+        background: @lightGrey;
+        color:@grey;
         a.tagit-label {
             cursor:pointer;
             text-decoration:none;
@@ -63,4 +66,7 @@ ul.tagit {
 }
 input.tagit-hidden-field {
     display:none;
+}
+.tagit-autocomplete{
+    font-size: 12px;
 }

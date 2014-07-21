@@ -187,6 +187,7 @@ ul.tagit {
   width: 100%;
   border-radius: 3px;
   border: 1px solid #e0e0e0;
+  font-size: 12px;
 }
 ul.tagit li {
   display: block;
@@ -197,6 +198,8 @@ ul.tagit li.tagit-choice {
   position: relative;
   line-height: inherit;
   border: none;
+  background: #f7f7f7;
+  color: #9e9e9e;
 }
 ul.tagit li.tagit-choice a.tagit-label {
   cursor: pointer;
@@ -244,4 +247,7 @@ ul.tagit input[type="text"] {
 }
 input.tagit-hidden-field {
   display: none;
+}
+.tagit-autocomplete {
+  font-size: 12px;
 }
