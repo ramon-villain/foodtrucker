@@ -198,3 +198,46 @@ select, option{
         background: @darkYellow;
     }
 }
+
+table.table{
+    background: @white;
+    .helvetica;
+    border-collapse: collapse;
+    width: 100%;
+    th:first-of-type{
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    th:last-of-type{
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-right: 0;
+    }
+    th{
+        line-height: 11px;
+        margin: 0;
+        .gothamBold;
+        color:@white;
+        padding:13px 7px;
+        background: @yellow;
+        text-transform: uppercase;
+        border-right: 1px solid @darkYellow;
+    }
+    td{
+        .helvetica;
+        .tac;
+        padding: 14px 0;
+        border-bottom:1px solid @yellow;
+//        border-right: 1px solid @borderGrey;
+    }
+//    td:last-of-type{
+//        border-right: 0px;
+//    }
+    a{
+        color:@yellow;
+//        text-decoration: none;
+        &:hover{
+            color:@darkYellow;
+        }
+    }
+}

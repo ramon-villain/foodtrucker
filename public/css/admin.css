@@ -180,6 +180,49 @@ option {
   border-color: #f09f12;
   background: #f09f12;
 }
+table.table {
+  background: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  border-collapse: collapse;
+  width: 100%;
+}
+table.table th:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+table.table th:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-right: 0;
+}
+table.table th {
+  line-height: 11px;
+  margin: 0;
+  font-family: "GothamBold", Verdana, sans-serif;
+  color: #ffffff;
+  padding: 13px 7px;
+  background: #ffc107;
+  text-transform: uppercase;
+  border-right: 1px solid #f09f12;
+}
+table.table td {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  text-align: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #ffc107;
+}
+table.table a {
+  color: #ffc107;
+}
+table.table a:hover {
+  color: #f09f12;
+}
 * {
   font-family: Gotham;
   -webkit-font-smoothing: antialiased;
