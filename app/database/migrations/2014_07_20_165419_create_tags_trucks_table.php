@@ -15,11 +15,11 @@ class CreateTagsTrucksTable extends Migration {
 		Schema::create('tags_trucks', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('truck');
-			$table->integer('tag')->unsigned()->index();
-			$table->foreign('tag')->references('id')->on('tags')->onDelete('cascade');
-			$table->integer('spot')->nullable()->unsigned()->index();
-			$table->foreign('spot')->references('id')->on('spots')->onDelete('cascade');
+			$table->integer('truck_id');
+			$table->integer('tag_id')->unsigned()->index();
+			$table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
+			$table->integer('spot_id')->nullable()->unsigned()->index();
+			$table->foreign('spot_id')->references('id')->on('spots')->onDelete('cascade');
 			$table->timestamps();
 		});
 	}
