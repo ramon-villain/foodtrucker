@@ -24,6 +24,17 @@ class Spot extends \Eloquent {
 		$this->attributes['password'] = Hash::make($password);
 	}
 
+	public function getAberturaAttribute($value)
+	{
+		$value = explode('-', $value);
+		return $value[2].'/'.$value[1];
+	}
+	public function getInicioAttribute($value)
+	{
+		$value = explode(':', $value);
+		return $value[0].':'.$value[1];
+	}
+
 	public function getSpots(){
 		return Spot::orderBy('created_at', 'desc')->get();
 	}

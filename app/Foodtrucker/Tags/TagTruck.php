@@ -5,14 +5,14 @@ use Foodtrucker\Tags\Events\TagTruckGenerated;
 use Laracasts\Commander\Events\EventGenerator;
 
 class TagTruck extends \Eloquent{
-	protected $fillable = ['truck', 'tag', 'spot'];
+	protected $fillable = ['truck_id', 'tag_id', 'spot_id'];
 	protected $table = 'tags_trucks';
 
 	use EventGenerator;
 
-	public static function register($truck, $tag, $spot) {
+	public static function register($truck_id, $tag_id, $spot_id) {
 
-		$dataObj = new static(compact('truck','tag', 'spot'));
+		$dataObj = new static(compact('truck_id','tag_id', 'spot_id'));
 		$dataObj->raise(new TagTruckGenerated($dataObj));
 		return $dataObj;
 	}
