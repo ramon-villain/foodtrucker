@@ -10,14 +10,12 @@ class AddSpotCommand {
 	public $inicio;
 	public $fim;
 	public $description;
-	public $tags;
 
-	function __construct($truck,$endereco,$inicio,$fim,$description, $tags) {
+	function __construct($truck,$endereco,$inicio,$fim,$description) {
 		$this->truck = $truck;
 		$this->endereco = $endereco;
 		$this->inicio = $inicio;
 		$this->fim = $fim;
 		$this->description = $description;
-		$this->tags = $tags;
 	}
 }

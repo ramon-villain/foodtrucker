@@ -7,10 +7,10 @@ use Laracasts\Commander\CommandHandler;
 
 class AddTagCommandHandler implements CommandHandler {
 
-	public $tags;
+	private $tagRepository;
 
-	function __construct($tags) {
-		$this->tags = $tags;
+	function __construct(TagRepository $tagRepository) {
+		$this->tagRepository = $tagRepository;
 	}
 
 	/**
@@ -21,5 +21,16 @@ class AddTagCommandHandler implements CommandHandler {
 	 * @return mixed
 	 */
 	public function handle( $command ) {
-		// TODO: Implement handle() method.
-	}}
+		$arrTags = $this->parseTags($command->tags);
+		foreach($arrTags as $tag){
+			if(count(Tag::where('tag', $tag)->get()) == 0){
+				$tags = Tag::register($tag);
+				$this->tagRepository->save($tags);
+			}
+		}
+	}
+
+		private function parseTags( $tags ) {
+			return explode(',', $tags);
+		}
+	}

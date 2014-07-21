@@ -11,7 +11,6 @@ class TagTruck extends \Eloquent{
 	use EventGenerator;
 
 	public static function register($truck_id, $tag_id, $spot_id) {
-
 		$dataObj = new static(compact('truck_id','tag_id', 'spot_id'));
 		$dataObj->raise(new TagTruckGenerated($dataObj));
 		return $dataObj;

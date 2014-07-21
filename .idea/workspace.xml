@@ -24,11 +24,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TagController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/Admin/TagController.php">
+      <file leaf-file-name="SpotController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Admin/SpotController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="448" max-vertical-offset="1204">
-              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="335" max-vertical-offset="1260">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="50" />
+              <folding>
+                <element signature="e#7#39#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddTagTruckCommandHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagTruckCommandHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1120">
+              <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/back/pages/dashboard.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1932">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -38,17 +60,7 @@
         <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagCommand.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddSpotCommandHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Spots/AddSpot/AddSpotCommandHandler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="1988">
-              <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -57,8 +69,18 @@
       <file leaf-file-name="AddTagCommandHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagCommandHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="840">
-              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1148">
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/back/_includes/menu.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="392">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -67,9 +89,21 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1063" max-vertical-offset="1848">
-              <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1063" max-vertical-offset="1932">
+              <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TagController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Admin/TagController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1484">
+              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+              <folding>
+                <element signature="e#7#39#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,31 +111,9 @@
       <file leaf-file-name="tags.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/back/pages/tags.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1540">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1736">
+              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TagRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/TagRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
-              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getTag.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/back/_includes/getTag.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -109,21 +121,9 @@
       <file leaf-file-name="specs.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/specs.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5206847" vertical-offset="6831" max-vertical-offset="7672">
-              <caret line="257" column="20" selection-start-line="257" selection-start-column="20" selection-end-line="257" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.49925926" vertical-offset="3667" max-vertical-offset="7812">
+              <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tag.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/Tag.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="896">
-              <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-              <folding>
-                <element signature="e#35#76#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -138,8 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/front/layouts/default.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/jquery.datetimepicker.js" />
         <option value="$PROJECT_DIR$/public/css/vendor/jquery.datetimepicker.css" />
         <option value="$PROJECT_DIR$/app/Foodtrucker/Users/Registration/RegisterUserCommandHandler.php" />
         <option value="$PROJECT_DIR$/app/controllers/RegistrationController.php" />
@@ -161,32 +159,34 @@
         <option value="$PROJECT_DIR$/app/Foodtrucker/Spots/Events/SpotRegistered.php" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/app/lang/pt-br/validation.php" />
-        <option value="$PROJECT_DIR$/app/Foodtrucker/Spots/AddSpot/AddSpotCommand.php" />
         <option value="$PROJECT_DIR$/app/Foodtrucker/Forms/NewSpotForm.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_20_165419_create_tags_trucks_table.php" />
-        <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/TagTruckRepository.php" />
         <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/Events/TagTruckGenerated.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_19_010539_create_spots_table.php" />
         <option value="$PROJECT_DIR$/public/css/admin.less" />
         <option value="$PROJECT_DIR$/app/controllers/Admin/PartialsController.php" />
         <option value="$PROJECT_DIR$/app/Foodtrucker/Spots/SpotRepository.php" />
         <option value="$PROJECT_DIR$/app/controllers/Admin/AdminController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/Admin/SpotController.php" />
-        <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/TagTruck.php" />
-        <option value="$PROJECT_DIR$/app/views/back/_includes/menu.blade.php" />
         <option value="$PROJECT_DIR$/app/views/back/pages/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/views/back/pages/spots.blade.php" />
         <option value="$PROJECT_DIR$/app/Foodtrucker/Spots/Spot.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/views/back/_includes/getSpot.blade.php" />
         <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/TagRepository.php" />
         <option value="$PROJECT_DIR$/app/Foodtrucker/Forms/NewTagForm.php" />
-        <option value="$PROJECT_DIR$/app/controllers/Admin/TagController.php" />
         <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagCommand.php" />
-        <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagCommandHandler.php" />
-        <option value="$PROJECT_DIR$/app/Foodtrucker/Spots/AddSpot/AddSpotCommandHandler.php" />
-        <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/Tag.php" />
         <option value="$PROJECT_DIR$/app/views/back/_includes/getTag.blade.php" />
+        <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/Tag.php" />
+        <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/TagTruckRepository.php" />
+        <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagTruckCommand.php" />
+        <option value="$PROJECT_DIR$/app/Foodtrucker/Spots/AddSpot/AddSpotCommand.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_20_165419_create_tags_trucks_table.php" />
+        <option value="$PROJECT_DIR$/app/Foodtrucker/Spots/AddSpot/AddSpotCommandHandler.php" />
+        <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/TagTruck.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Admin/SpotController.php" />
+        <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagTruckCommandHandler.php" />
+        <option value="$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagCommandHandler.php" />
+        <option value="$PROJECT_DIR$/app/views/back/_includes/menu.blade.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Admin/TagController.php" />
         <option value="$PROJECT_DIR$/app/views/back/pages/tags.blade.php" />
         <option value="$PROJECT_DIR$/public/css/specs.less" />
       </list>
@@ -829,7 +829,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="spe&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/public/css/specs.less&#10;get&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/views/back/_includes/getTag.blade.php&#10;SpotController&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/controllers/Admin/SpotController.php&#10;route&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/routes.php&#10;Buil&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&#10;Builder&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php&#10;defa&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/views/back/layouts/default.blade.php&#10;da&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/views/back/pages/dashboard.blade.php&#10;&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php&#10;QueryB&#9;null&#9;null&#10;dash&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/views/back/pages/dashboard.blade.php&#10;admin&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/public/css/admin.less&#10;FormB&#9;null&#9;null&#10;log&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/views/front/pages/login.blade.php&#10;mai&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/public/js/main.js&#10;rou&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/routes.php&#10;main&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/public/js/main.js&#10;Lo&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/controllers/LoginController.php&#10;compo&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/composer.json&#10;AuthManager&#9;null&#9;null&#10;Guard&#9;null&#9;null&#10;app&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/config/local/app.php&#10;com&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/composer.json&#10;comp&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/composer.json&#10;link_to&#9;null&#9;null&#10;c&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/composer.json&#10;composer.json&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/composer.json" />
+    <property name="SearchEverywhereHistoryKey" value="spe&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/public/css/specs.less&#10;rou&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/routes.php&#10;menu&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/views/back/_includes/menu.blade.php&#10;Tag&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/Foodtrucker/Tags/AddTagCommandHandler.php&#10;&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/controllers/Admin/TagController.php&#10;get&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/views/back/_includes/getTag.blade.php&#10;SpotController&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/controllers/Admin/SpotController.php&#10;route&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/routes.php&#10;Buil&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&#10;Builder&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php&#10;defa&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/views/back/layouts/default.blade.php&#10;da&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/views/back/pages/dashboard.blade.php&#10;QueryB&#9;null&#9;null&#10;dash&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/views/back/pages/dashboard.blade.php&#10;admin&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/public/css/admin.less&#10;FormB&#9;null&#9;null&#10;log&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/views/front/pages/login.blade.php&#10;mai&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/public/js/main.js&#10;main&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/public/js/main.js&#10;Lo&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/controllers/LoginController.php&#10;compo&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/composer.json&#10;AuthManager&#9;null&#9;null&#10;Guard&#9;null&#9;null&#10;app&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/app/config/local/app.php&#10;com&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/composer.json&#10;comp&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/composer.json&#10;link_to&#9;null&#9;null&#10;c&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/composer.json&#10;composer.json&#9;FILE&#9;file:///Users/ignis1/Dropbox/www/foodtrucker/dev/composer.json" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
   </component>
@@ -929,9 +929,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -964,7 +964,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Foodtrucker/Spots/AddSpot/AddSpotCommandHandler.php</url>
-          <line>5</line>
+          <line>3</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -973,31 +973,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_8.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33238232" vertical-offset="24127" max-vertical-offset="30856">
-          <caret line="870" column="9" selection-start-line="870" selection-start-column="9" selection-end-line="870" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_20_184331_create_tags_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1092">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Users/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="172" max-vertical-offset="980">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="50" />
-          <folding>
-            <element signature="e#36#66#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4536">
@@ -1106,40 +1081,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1120">
           <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Spots/AddSpot/AddSpotCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="55" max-vertical-offset="784">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_20_165419_create_tags_trucks_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75891584" vertical-offset="0" max-vertical-offset="1204">
-          <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/Events/TagGenerated.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/TagTruckRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15977176" vertical-offset="0" max-vertical-offset="701">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
+          <folding>
+            <element signature="e#7#46#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1176,6 +1120,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="36373" max-vertical-offset="59332">
           <caret line="1308" column="33" selection-start-line="1308" selection-start-column="33" selection-end-line="1308" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1204,42 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/SpotController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="1064">
-          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-          <folding>
-            <element signature="e#7#39#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Spots/Events/SpotRegistered.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="672">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/TagTruck.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
-          <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
-          <folding>
-            <element signature="e#35#81#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/back/_includes/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/back/_includes/sidebar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
@@ -1248,26 +1157,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/back/pages/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1932">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/back/_includes/getSpot.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="644">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Spots/SpotRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="812">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="9" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1290,14 +1183,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1063" max-vertical-offset="1848">
-          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Forms/NewTagForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19971469" vertical-offset="0" max-vertical-offset="701">
@@ -1306,18 +1191,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/TagController.php">
+    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/TagRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="448" max-vertical-offset="1204">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.67902994" vertical-offset="0" max-vertical-offset="756">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/back/_includes/getTag.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5414365" vertical-offset="0" max-vertical-offset="724">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Spots/Events/SpotRegistered.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="672">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/Events/TagGenerated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Spots/SpotRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11982881" vertical-offset="0" max-vertical-offset="812">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/Tag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38674033" vertical-offset="112" max-vertical-offset="896">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <folding>
+            <element signature="e#35#76#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Spots/AddSpot/AddSpotCommandHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="1988">
-          <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
+        <state vertical-scroll-proportion="1.3195435" vertical-offset="195" max-vertical-offset="1316">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <element signature="e#45#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Spots/AddSpot/AddSpotCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4336662" vertical-offset="4" max-vertical-offset="728">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_20_184331_create_tags_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1092">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_20_165419_create_tags_trucks_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77348065" vertical-offset="0" max-vertical-offset="1204">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagTruckCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43937233" vertical-offset="0" max-vertical-offset="701">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/TagTruckRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/TagTruck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="672">
+          <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+          <folding>
+            <element signature="e#35#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagTruckCommandHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1120">
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1325,59 +1315,75 @@
     <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/AddTagCommandHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="840">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1148">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/Tag.php">
+    <entry file="file://$PROJECT_DIR$/app/views/back/_includes/menu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="896">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="392">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/SpotController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="335" max-vertical-offset="1260">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="50" />
           <folding>
-            <element signature="e#35#76#0#PHP" expanded="true" />
+            <element signature="e#7#39#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/back/_includes/getTag.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1063" max-vertical-offset="1932">
+          <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/TagController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1484">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#7#39#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/back/pages/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1932">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/back/pages/tags.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1540">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Foodtrucker/Tags/TagRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1736">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/specs.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5206847" vertical-offset="6831" max-vertical-offset="7672">
-          <caret line="257" column="20" selection-start-line="257" selection-start-column="20" selection-end-line="257" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.49925926" vertical-offset="3667" max-vertical-offset="7812">
+          <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
           <folding />
         </state>
       </provider>

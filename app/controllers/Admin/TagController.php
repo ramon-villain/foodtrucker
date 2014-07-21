@@ -1,10 +1,8 @@
 <?php
 
 use Foodtrucker\Core\CommandBus;
-use Foodtrucker\Forms\NewSpotForm;
 use Foodtrucker\Forms\NewTagForm;
-use Foodtrucker\Spots\AddSpot\AddSpotCommand;
-use Foodtrucker\Spots\SpotRepository;
+use Foodtrucker\Tags\AddTagCommand;
 use Foodtrucker\Tags\TagRepository;
 
 class Admin_TagController extends BaseController {
@@ -35,7 +33,14 @@ class Admin_TagController extends BaseController {
 	{
 		$this->newTagForm->validate(Input::all());
 		extract(Input::only('tags'));
-		$this->execute( new AddTagCommand($tags));
+		$this->execute(new AddTagCommand($tags));
+		return Redirect::back();
+	}
+
+	public function storeTruck(){
+		$this->newTagForm->validate(Input::all());
+		extract(Input::only('tags'));
+		$this->execute(new AddTagTruckCommand($tags));
 		return Redirect::back();
 	}
 
