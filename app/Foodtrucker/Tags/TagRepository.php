@@ -6,4 +6,6 @@ class TagRepository {
 //		dd($tags);
 		return $tags->save();
 	}
+
+
 } 

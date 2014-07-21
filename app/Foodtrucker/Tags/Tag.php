@@ -16,4 +16,8 @@ class Tag extends \Eloquent{
 		return $dataObj;
 	}
 
+	public function spot(){
+		return $this->belongsTo('Foodtrucker\Spots\Spot');
+	}
+
 } 
