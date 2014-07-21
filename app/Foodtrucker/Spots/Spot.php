@@ -11,6 +11,9 @@ class Spot extends \Eloquent {
 	protected $fillable = ['truck', 'abertura','encerramento','inicio','fim','local', 'description'];
 	protected $table = 'spots';
 
+	public function tagsTrucks(){
+		return $this->hasMany('Foodtrucker\Tags\TagTruck', 'spot');
+	}
 	public static function register( $truck, $abertura, $encerramento, $inicio, $fim, $local , $description) {
 		$spot = new static(compact('truck', 'abertura','encerramento', 'inicio', 'fim', 'local', 'description'));
 		$spot->raise(new SpotRegistered($spot));
@@ -20,4 +23,9 @@ class Spot extends \Eloquent {
 	public function setPasswordAttribute($password){
 		$this->attributes['password'] = Hash::make($password);
 	}
+
+	public function getSpots(){
+		return Spot::with('tagsTrucks')->orderBy('created_at', 'desc')->get();
+	}
+
 }
