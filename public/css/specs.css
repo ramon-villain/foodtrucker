@@ -127,6 +127,13 @@ option {
   padding: 7px;
   background: #ffffff;
 }
+.form {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.form .tagit {
+  width: 99%;
+}
 .form h1 {
   color: #ffc107;
 }
