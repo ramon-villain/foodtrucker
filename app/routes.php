@@ -36,8 +36,13 @@ Route::group(array('before' => 'auth'), function() {
 		});
 		Route::get( 'dashboard', array( "as" => "dashboard", "uses" => 'Admin_AdminController@dashboard' ) );
 
-		Route::post('/spot/new', [
-			'as'    => 'newSpot_path',
+
+		Route::get('spot',[
+			'as'    => 'spot_admin_path',
+			'uses'  => 'Admin_SpotController@index'
+		]);
+		Route::post('spot/new', [
+			'as'    => 'new_spot_admin_path',
 			'uses'  => 'Admin_SpotController@store']);
 	});
 });
