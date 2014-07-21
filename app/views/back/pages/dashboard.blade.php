@@ -1,18 +1,19 @@
 @extends('back.layouts.default')
 
 @section('content')
+@include('front._includes.errors')
 {{Form::open(['route' => 'newSpot_path', 'class' => 'form col-7'])}}
 {{Form::label('truck', 'Escolha um Food Truck:')}}
 {{Form::select('truck', ['1', 'Buzina Food Truck'])}}
 
-{{Form::label('address', 'Endereço do Spot:')}}
-<div class="wrapInput">{{Form::text('address','',['placeholder' => 'Avenida Paulista, 800, São Paulo - SP'])}}</div>
+{{Form::label('endereco', 'Endereço do Spot:')}}
+<div class="wrapInput">{{Form::text('endereco','',['placeholder' => 'Avenida Paulista, 800, São Paulo - SP'])}}</div>
 
-{{Form::label('start', 'Dia e Horário de Início:')}}
-<div class="wrapInput">{{Form::text('start','',['placeholder' => '29/06/2014 - 10:00'])}}</div>
+{{Form::label('inicio', 'Dia e Horário de Início:')}}
+<div class="wrapInput">{{Form::text('inicio','',['placeholder' => '29/06/2014 - 10:00'])}}</div>
 
-{{Form::label('end', 'Dia e Horário de Fim:')}}
-<div class="wrapInput">{{Form::text('end','',['placeholder' => '29/06/2014 - 10:00'])}}</div>
+{{Form::label('fim', 'Dia e Horário de Fim:')}}
+<div class="wrapInput">{{Form::text('fim','',['placeholder' => '29/06/2014 - 10:00'])}}</div>
 
 {{Form::label('tags', 'Tags:')}}
 {{Form::text('tags','',['placeholder' => 'sobremesa, bebida'])}}
@@ -28,7 +29,7 @@
 {{HTML::script('js/tag-it.min.js')}}
 {{HTML::script('js/jquery.datetimepicker.js')}}
 <script>
-	$('#end, #start').appendDtpicker({
+	$('#fim, #inicio').appendDtpicker({
 		"locale": "br",
 		"autodateOnStart": false,
 		"calendarMouseScroll": false,

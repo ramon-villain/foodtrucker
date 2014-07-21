@@ -6,17 +6,17 @@ namespace Foodtrucker\Spots\AddSpot;
 class AddSpotCommand {
 
 	public $truck;
-	public $address;
-	public $start;
-	public $end;
+	public $endereco;
+	public $inicio;
+	public $fim;
 	public $description;
 	public $tags;
 
-	function __construct($truck,$address,$start,$end,$description, $tags) {
+	function __construct($truck,$endereco,$inicio,$fim,$description, $tags) {
 		$this->truck = $truck;
-		$this->address = $address;
-		$this->start = $start;
-		$this->end = $end;
+		$this->endereco = $endereco;
+		$this->inicio = $inicio;
+		$this->fim = $fim;
 		$this->description = $description;
 		$this->tags = $tags;
 	}

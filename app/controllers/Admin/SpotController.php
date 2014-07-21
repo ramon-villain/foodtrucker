@@ -16,8 +16,8 @@ class Admin_SpotController extends BaseController {
 	public function store()
 	{
 		$this->newSpotForm->validate(Input::all());
-		extract(Input::only('truck','address','start', 'end', 'description', 'tags'));
-		$this->execute( new AddSpotCommand($truck,$address,$start,$end,$description, $tags));
+		extract(Input::only('truck','endereco','inicio', 'fim', 'description', 'tags'));
+		$this->execute( new AddSpotCommand($truck,$endereco,$inicio,$fim,$description, $tags));
 		return Redirect::back();
 //		var_dump($spot);
 

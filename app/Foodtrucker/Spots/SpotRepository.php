@@ -7,4 +7,8 @@ class SpotRepository {
 		return $spot->save();
 	}
 
+	public function getThisId(Spot $spot) {
+		return $spot->orderBy('id','desc')->pluck('id');
+	}
+
 } 

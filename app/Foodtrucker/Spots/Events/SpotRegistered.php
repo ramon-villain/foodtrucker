@@ -13,6 +13,7 @@ class SpotRegistered {
 	public  $spot;
 
 	function __construct(Spot $spot) {
+
 		$this->spot = $spot;
 	}
 }

@@ -6,9 +6,9 @@ use Laracasts\Validation\FormValidator;
 class NewSpotForm extends FormValidator{
 
 	protected $rules = [
-		'start'  => 'required',
-		'end'   => 'required',
-		'address'  => 'required',
+		'inicio'  => 'required',
+		'fim'   => 'required',
+		'endereco'  => 'required',
 		'truck'   => 'required'
 	];
 }
