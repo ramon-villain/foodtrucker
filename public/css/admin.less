@@ -1,0 +1,206 @@
+@import "specs";
+@import "fonts";
+
+@import "grid";
+
+body{
+    margin: 0 auto;
+    border-top: 3px solid @yellow;
+    background: @white;
+}
+
+textarea{
+    max-height: 100px;
+}
+h1{
+    font-size: 24px;
+    color:@darkGrey;
+}
+h2{
+    font-family: GothamBold, sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+    letter-spacing: -0.05em;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    li{
+        list-style: none;
+        // background: #e5e5e5;
+        // padding: 10px;
+        // border-bottom: 1px solid  #b4b4b4;
+    }
+}
+.page{
+    padding: 15px;
+    margin-left: 180px;
+    width: auto;
+    #content{
+        .clear;
+    }
+}
+//header{
+//    .clear;
+//    margin-bottom: 17px;
+//    #logo{
+//        a{
+//            img{
+//                color: #f00;
+//            }
+//        }
+//    }
+//    #menu, #busca{
+//        margin-top: 61px;
+//        height: 40px;
+//        .br;
+//        background: @yellow;
+//        overflow: hidden;
+//    }
+//    #busca{
+//        i, input{
+//            color:@white;
+//        }
+//        i{
+//            padding-left: 10px;
+//            cursor: pointer;
+//        }
+//        input{
+//            border: none;
+//            background: transparent;
+//            letter-spacing: 0.075em;
+//            .gothamBold;
+//            line-height: 42px;
+//            font-size: 14px;
+//            padding: 0px;
+//            margin: 0;
+//            &::-moz-placeholder{
+//                color:@white;
+//            }
+//            &::-webkit-input-placeholder{
+//                color:@white;
+//            }
+//        }
+//    }
+//    #menu{
+//        ul{
+//            padding: 0;
+//            margin: 0;
+//            li{
+//                display: block;
+//                .fl;
+//                padding: 0 17px 0 16px;
+//                a{
+//                    letter-spacing: 0.075em;
+//                    .gothamBold;
+//                    line-height: 42px;
+//                    font-size: 14px;
+//                    text-transform: uppercase;
+//                    color:@white;
+//                    text-decoration: none;
+//                    font-style: normal;
+//                    font-variant: normal;
+//                    font-weight: normal;
+//                }
+//            }
+//        }
+//    }
+//}
+//#content {
+//    .clear;
+//    #mapa {
+//        height: 445px;
+//        .br;
+//    }
+//    #truckDaSemana {
+//        position: relative;
+//        img {
+//            position: relative;
+//            max-width: 100%;
+//            border-bottom-left-radius: 3px;
+//            border-bottom-right-radius: 3px;
+//        }
+//        h3 {
+//            position: relative;
+//            bottom: 45px;
+//            margin: 0 10px;
+//        }
+//    }
+//    #anota-ai{
+//        span{
+//            .fr;
+//            .helvetica;
+//            background: @white;
+//            color:@green;
+//            font-size: 12px;
+//            font-weight: bold;
+//            text-transform: uppercase;
+//            .br;
+//            margin-top: 9px;
+//            padding: 3px 4px;
+//            margin-right: 10px;
+//        }
+//    }
+//}
+//#sidebar{
+//    #ultimasParadas {
+//        .body{
+//            max-height: 385px;
+//            overflow-y: scroll;
+//        }
+//        ul{
+//            li{
+//                margin-left: 10px;
+//                font-size: 13px;
+//                text-transform: none;
+//                color:@mediumGrey;
+//                .helvetica;
+//                padding-top: 8px;
+//            }
+//        }
+//    }
+//}
+
+aside{
+    padding-top: 25px;
+    width: 180px;
+    background: @cream;
+    border-right: 1px solid @borderGrey;
+    height: 100%;
+    position: fixed;
+    #logo{
+        text-align: center;
+        margin-bottom: 22px;
+    }
+    #menu{
+        ul{
+            li:first-of-type{
+                border-top: 1px solid @darkYellow;;
+            }
+            li{
+                border-bottom:1px solid @darkYellow;
+                a{
+                    background: @yellow;
+                    padding: 12px 15px 10px;
+                    letter-spacing: 0.075em;
+                    .gothamBold;
+                    color:@white;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-style: normal;
+                    font-variant: normal;
+                    font-weight: normal;
+                    display: block;
+                    line-height: 24px;
+                    &:hover{
+                        background: @darkYellow;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

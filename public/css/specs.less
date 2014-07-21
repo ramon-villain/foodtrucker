@@ -1,0 +1,200 @@
+@yellow: #ffc107;
+@darkYellow: #f09f12;
+@grey: #9e9e9e;
+@darkGrey:#666;
+@red:#ed7f62;
+@darkRed: #b74d32;
+@green: #39bf7e;
+@darkGreen:#0e8e50;
+@blue: #5388e0;
+@darkBlue:#3462b0;
+@white:#fff;
+@black:#000;
+@cream:#fffffd;
+@borderGrey:#e0e0e0;
+@lightGrey:#f7f7f7;
+@mediumGrey:#9e9e9e;
+*{
+    outline: none;
+    box-shadow: none;
+}
+.helvetica{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color:@darkGrey;
+}
+.gothamBold{
+    font-family: "GothamBold", Verdana, sans-serif;
+}
+img{
+    vert-align: bottom;
+}
+.br {
+    border-radius: 3px;
+}
+.tac{
+    text-align: center;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.fn{
+    float: none;
+}
+.clear{
+    clear: both;
+    overflow: hidden;
+}
+
+.widget{
+    margin-bottom: 20px;
+    .title.red{
+        background: @red;
+    }
+    .title.blue{
+        background: @blue;
+    }
+    .title.green{
+        background: @green;
+    }
+    .title{
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        color:@white;
+        padding-left: 10px;
+        h2 {
+            height: 40px;
+            letter-spacing: 0.075em;
+            .gothamBold;
+            line-height: 42px;
+            font-size: 15px;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+        i{
+            margin-right: 5px;
+        }
+    }
+    .body{
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        h3{
+            background: @lightGrey;
+            text-transform: uppercase;
+            color:@mediumGrey;
+            .br;
+            padding-left: 10px;
+            line-height: 30px;
+            height: 30px;
+        }
+    }
+    .body.bordered{
+        h3{
+            margin-top: 20px;
+        }
+        padding: 10px;
+        background: @white;
+        border-left:1px solid @borderGrey;
+        border-bottom:1px solid @borderGrey;
+        border-right:1px solid @borderGrey;
+    }
+}
+.wrapInput{
+    border:1px solid @borderGrey;
+    padding: 8px 7px 8px;
+    .br;
+    background: @white;
+    input[type="text"], textarea, input[type="email"], input[type="password"], input:-webkit-autofill {
+        background: @white;
+        .helvetica;
+        border: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+.wrapTextarea {
+    padding-bottom: 2px;
+}
+
+label{
+    .clear;
+    color:@grey;
+    display: block;
+    font-size: 13px;
+    margin: 15px 0 0;
+    padding-left: 1px;
+}
+select, option{
+    border:1px solid @borderGrey;
+    padding: 7px;
+    background: @white;
+}
+
+.form{
+    h1{
+        color:@yellow;
+    }
+    input{
+
+    }
+}
+
+.btn{
+    .gothamBold;
+    font-size: 12px;
+    line-height: 14px;
+    background: @cream;
+    color:@darkGrey;
+    padding: 8px 10px;
+    .br;
+    border:1px solid @borderGrey;
+    margin: 10px 0 0;
+    &:hover{
+        background: @lightGrey;
+    }
+}
+.btn-blue{
+    background: @blue;
+    border-color:@blue;
+    color:@white;
+    &:hover{
+        border-color:@darkBlue;
+        background: @darkBlue;
+    }
+}
+
+.btn-green{
+    background: @green;
+    border-color:@green;
+    color:@white;
+    &:hover{
+        border-color:@darkGreen;
+        background: @darkGreen;
+    }
+}
+
+.btn-red{
+    background: @red;
+    border-color:@red;
+    color:@white;
+    &:hover{
+        border-color:@darkRed;
+        background: @darkRed;
+    }
+}
+.btn-yellow{
+    background: @yellow;
+    border-color:@yellow;
+    color:@white;
+    &:hover{
+        border-color:@darkYellow;
+        background: @darkYellow;
+    }
+}
