@@ -52,6 +52,9 @@ Route::group(array('before' => 'auth'), function() {
 		Route::post('tag/new', [
 			'as'    => 'new_tag_admin_path',
 			'uses'  => 'Admin_TagController@store']);
+		Route::post('tag/new-truck', [
+			'as'    => 'new_tag_truck_admin_path',
+			'uses'  => 'Admin_TagController@storeTruck']);
 	});
 });
 
