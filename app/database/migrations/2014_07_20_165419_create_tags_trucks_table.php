@@ -16,8 +16,10 @@ class CreateTagsTrucksTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('truck');
-			$table->integer('tag');
-			$table->integer('spot')->nullable();
+			$table->integer('tag')->unsigned()->index();
+			$table->foreign('tag')->references('id')->on('tags')->onDelete('cascade');
+			$table->integer('spot')->nullable()->unsigned()->index();
+			$table->foreign('spot')->references('id')->on('spots')->onDelete('cascade');
 			$table->timestamps();
 		});
 	}

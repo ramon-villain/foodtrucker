@@ -22,6 +22,7 @@ class CreateSpotsTable extends Migration {
 			$table->time('fim');
 			$table->string('local');
 			$table->string('description');
+			$table->integer('active')->default(true);
 			$table->timestamps();
 		});
 	}
