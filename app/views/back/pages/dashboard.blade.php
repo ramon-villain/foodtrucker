@@ -39,7 +39,11 @@
 			<td>{{$spot->truck}}</td>
 			<td>{{$spot->abertura}} - {{$spot->inicio}}</td>
 			<td>{{$spot->local}}</td>
-			<td></td>
+			<td>
+			@foreach($spot->tags as $tag)
+				{{$tag->tag}}
+			@endforeach
+			</td>
 			<td>{{$spot->active}}</td>
 		</tr>
 		@endforeach
