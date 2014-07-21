@@ -23,6 +23,28 @@
 
 {{Form::submit('Adicionar Spot', ['class' => 'btn btn-green fr'] )}}
 {{Form::close()}}
+
+<div class="sidebar col-13">
+	<h1>Últimos Spots Adicionados</h1>
+	<table>
+		<tr>
+			<th>Truck</th>
+			<th>Abertura</th>
+			<th>Endereço</th>
+			<th>Tags</th>
+			<th>Ativo</th>
+		</tr>
+		@foreach($data['spots'] as $spot)
+		<tr>
+			<td>{{$spot->truck}}</td>
+			<td>{{$spot->abertura}} - {{$spot->inicio}}</td>
+			<td>{{$spot->local}}</td>
+			<td></td>
+			<td>{{$spot->active}}</td>
+		</tr>
+		@endforeach
+	</table>
+</div>
 @stop
 
 @section('scripts')
