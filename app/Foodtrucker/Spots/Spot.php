@@ -11,8 +11,8 @@ class Spot extends \Eloquent {
 	protected $fillable = ['truck', 'abertura','encerramento','inicio','fim','local', 'description'];
 	protected $table = 'spots';
 
-	public function tagsTrucks(){
-		return $this->hasMany('Foodtrucker\Tags\TagTruck', 'spot');
+	public function tags(){
+		return $this->belongsToMany('Foodtrucker\Tags\Tag', 'tags_trucks');
 	}
 	public static function register( $truck, $abertura, $encerramento, $inicio, $fim, $local , $description) {
 		$spot = new static(compact('truck', 'abertura','encerramento', 'inicio', 'fim', 'local', 'description'));
@@ -25,7 +25,7 @@ class Spot extends \Eloquent {
 	}
 
 	public function getSpots(){
-		return Spot::with('tagsTrucks')->orderBy('created_at', 'desc')->get();
+		return Spot::orderBy('created_at', 'desc')->get();
 	}
 
 }

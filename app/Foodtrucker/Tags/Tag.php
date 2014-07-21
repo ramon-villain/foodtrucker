@@ -17,7 +17,7 @@ class Tag extends \Eloquent{
 	}
 
 	public function spot(){
-		return $this->belongsTo('Foodtrucker\Spots\Spot');
+		return $this->belongsToMany('Foodtrucker\Spots\Spot', 'tags_trucks');
 	}
 
 } 
