@@ -61,6 +61,13 @@ Route::group(array('before' => 'auth'), function() {
 Route::group(['prefix' => 'js'], function(){
 	Route::get('tags/{tag}', function($tag){
 		$tags = DB::table('tags')->where('tag', 'LIKE', "%$tag%")->lists('tag');
-		return Response::json($tags);
-	});
+		return Response::json($tags);});
+
+	Route::get('spots/{tag}', function($spot){
+		$spots = DB::table('spots')->where('id', 'LIKE', "%$spot%")->lists('id');
+		return Response::json($spots);});
+
+	Route::get('trucks/{tag}', function($truck){
+		$trucks = DB::table('trucks')->where('id', 'LIKE', "%$truck%")->lists('name');
+		return Response::json($trucks);});
 });

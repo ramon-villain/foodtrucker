@@ -1,3 +1,4 @@
+<h2>Spots Cadastrados</h2>
 <table class="table">
 	<tr>
 		<th style="padding: 13px;">#</th>

@@ -21,4 +21,8 @@ class SpotRepository {
 		return $this->spot->getSpots();
 	}
 
+	public function getSpotsId(){
+		return $this->getSpots()->lists('id');
+	}
+
 } 

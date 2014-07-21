@@ -19,9 +19,13 @@ class Tag extends \Eloquent{
 	public function spot(){
 		return $this->belongsToMany('Foodtrucker\Spots\Spot', 'tags_trucks');
 	}
-
-	public function getTags() {
-		return Tag::orderBy('id', 'desc')->paginate(10);
+	public function getTags($filter = 'tag', $order = 'ASC', $paginate = null){
+		if($paginate){
+			return Tag::orderBy( $filter, $order )->paginate($paginate);
+		}else {
+			return Tag::orderBy( $filter, $order )->get();
+		}
 	}
 
-} 
+
+}

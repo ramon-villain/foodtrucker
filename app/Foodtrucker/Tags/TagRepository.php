@@ -1,7 +1,7 @@
 <?php
 namespace Foodtrucker\Tags;
 
-class TagRepository {
+class TagRepository{
 
 	private $tag;
 
@@ -10,13 +10,20 @@ class TagRepository {
 	}
 
 	public function save(Tag $tags){
-//		dd($tags);
 		return $tags->save();
 	}
 
-	public function getTags() {
+	public function getTags(){
 		return $this->tag->getTags();
 	}
 
+	public function getTagsPaginatated() {
+		return $this->tag->getTags('tag', 'ASC', 7);
+	}
 
-} 
+	public function getTagsListingTag(){
+		return $this->getTags()->lists('tag');
+	}
+
+
+}

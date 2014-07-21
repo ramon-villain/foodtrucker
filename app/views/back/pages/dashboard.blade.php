@@ -2,7 +2,8 @@
 
 @section('content')
 @include('front._includes.errors')
-{{Form::open(['route' => 'new_spot_admin_path', 'class' => 'form col-7'])}}
+<div class="col-7">
+{{Form::open(['route' => 'new_spot_admin_path', 'class' => 'form'])}}
 {{Form::label('truck', 'Escolha um Food Truck:')}}
 {{Form::select('truck', ['1', 'Buzina Food Truck'])}}
 
@@ -23,9 +24,18 @@
 
 {{Form::submit('Adicionar Spot', ['class' => 'btn btn-green fr'] )}}
 {{Form::close()}}
+	{{Form::open(['route' => 'new_tag_admin_path', 'class' => 'form'])}}
 
+	{{Form::label('newTag', 'Tag:')}}
+	{{Form::text('newTag','',['placeholder' => 'mexicano'])}}
+
+	{{Form::submit('Adicionar Tag', ['class' => 'btn btn-green fr'] )}}
+	{{Form::close()}}
+
+</div>
 <div class="sidebar col-13">
 	@include('back._includes.getSpot')
+	@include('back._includes.getTag')
 </div>
 @stop
 
@@ -39,7 +49,7 @@
 		"calendarMouseScroll": false,
 		"dateFormat":'DD/MM/YYYY - hh:mm'
 	});
-	$("#tags").tagit({
+	$("#tags, #newTag").tagit({
 		fieldName: "tags",
 		allowSpaces: true,
 		tagSource: function(search, showChoices) {

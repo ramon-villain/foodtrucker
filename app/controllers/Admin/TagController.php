@@ -2,6 +2,7 @@
 
 use Foodtrucker\Core\CommandBus;
 use Foodtrucker\Forms\NewTagForm;
+use Foodtrucker\Spots\SpotRepository;
 use Foodtrucker\Tags\AddTagCommand;
 use Foodtrucker\Tags\TagRepository;
 
@@ -17,15 +18,22 @@ class Admin_TagController extends BaseController {
 	 * @var NewTagForm
 	 */
 	private $newTagForm;
+	/**
+	 * @var SpotRepository
+	 */
+	private $spotRepository;
 
-	function __construct( TagRepository $tagRepository, NewTagForm $newTagForm) {
+	function __construct( TagRepository $tagRepository, NewTagForm $newTagForm, SpotRepository $spotRepository) {
 
 		$this->tagRepository = $tagRepository;
 		$this->newTagForm = $newTagForm;
+		$this->spotRepository = $spotRepository;
 	}
 
 	public function index(){
-		$data['tags'] = $this->tagRepository->getTags();
+
+		$data['getTagsListingTag'] = $this->tagRepository->getTagsListingTag();
+		$data['spots'] = $this->spotRepository->getSpotsId();
 		return View::make('back.pages.tags', compact('data'));
 	}
 
