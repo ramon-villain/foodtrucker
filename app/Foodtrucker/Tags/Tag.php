@@ -20,4 +20,8 @@ class Tag extends \Eloquent{
 		return $this->belongsToMany('Foodtrucker\Spots\Spot', 'tags_trucks');
 	}
 
+	public function getTags() {
+		return Tag::orderBy('id', 'desc')->paginate(10);
+	}
+
 } 

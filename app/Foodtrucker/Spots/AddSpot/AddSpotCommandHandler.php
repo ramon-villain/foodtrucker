@@ -70,7 +70,6 @@ class AddSpotCommandHandler implements CommandHandler{
 
 	private function parseTags( $tags ) {
 		return explode(',', $tags);
-
 	}
 
 }

@@ -223,6 +223,30 @@ table.table a {
 table.table a:hover {
   color: #f09f12;
 }
+ul.pagination {
+  margin: 20px auto;
+  clear: both;
+  overflow: hidden;
+  display: inline-block;
+}
+ul.pagination li {
+  float: left;
+  background: #ffc107;
+  border-radius: 3px;
+  color: #ffffff;
+  margin: 0 4px;
+  padding: 5px 8px 4px;
+  font-size: 13px;
+  line-height: 13px;
+  width: 10px;
+}
+ul.pagination li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+ul.pagination li.active {
+  background: #f09f12;
+}
 * {
   font-family: Gotham;
   -webkit-font-smoothing: antialiased;

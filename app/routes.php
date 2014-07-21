@@ -32,18 +32,26 @@ Route::get('/logout', [
 Route::group(array('before' => 'auth'), function() {
 	Route::group( array( 'prefix' => 'admin' ), function () {
 		Route::get('', function () {
-			return Redirect::to( 'admin/dashboard' );
-		});
+			return Redirect::to( 'admin/dashboard' );});
 		Route::get( 'dashboard', array( "as" => "dashboard", "uses" => 'Admin_AdminController@dashboard' ) );
-
-
+		/*
+		 * Spot Section
+		 */
 		Route::get('spot',[
 			'as'    => 'spot_admin_path',
-			'uses'  => 'Admin_SpotController@index'
-		]);
+			'uses'  => 'Admin_SpotController@index']);
 		Route::post('spot/new', [
 			'as'    => 'new_spot_admin_path',
 			'uses'  => 'Admin_SpotController@store']);
+		/*
+		 * Tag Section
+		 */
+		Route::get('tag',[
+			'as'    => 'tag_admin_path',
+			'uses'  => 'Admin_TagController@index']);
+		Route::post('tag/new', [
+			'as'    => 'new_tag_admin_path',
+			'uses'  => 'Admin_TagController@store']);
 	});
 });
 

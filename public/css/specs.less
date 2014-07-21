@@ -241,3 +241,28 @@ table.table{
         }
     }
 }
+ul.pagination{
+//    display: block;
+    margin: 20px auto;
+    .clear;
+    display: inline-block;
+    li{
+        .fl;
+        background: @yellow;
+        .br;
+        color:@white;
+        margin: 0 4px;
+        padding: 5px 8px 4px;
+        font-size: 13px;
+        line-height: 13px;
+        width: 10px;
+        a{
+
+            color:@white;
+            text-decoration: none;
+        }
+    }
+    li.active{
+        background: @darkYellow;
+    }
+}
