@@ -15,7 +15,13 @@ class ConfigRepository {
 	}
 
 	public function getFeatured() {
-		return $this->config->getFeatured();
+			$config = Config::where('config_name','featured_home')->pluck('config_value');
+			$config = unserialize($config);
+			return $config;
+	}
+
+	public function save(Config $config){
+		return $config->save();
 	}
 
 }
