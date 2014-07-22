@@ -13,12 +13,16 @@ class TagRepository{
 		return $tags->save();
 	}
 
-	public function getTags(){
-		return $this->tag->getTags();
+	public function getTags($filter = 'tag', $order = 'ASC', $paginate = null){
+		if($paginate){
+			return $this->tag->orderBy( $filter, $order )->paginate($paginate);
+		}else {
+			return $this->tag->orderBy( $filter, $order )->get();
+		}
 	}
 
 	public function getTagsPaginatated() {
-		return $this->tag->getTags('tag', 'ASC', 7);
+		return $this->getTags('tag', 'ASC', 7);
 	}
 
 	public function getTagsListingTag(){
