@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
         "laracasts/commander": "~1.0",
-        "laracasts/validation": "~1.0"
+        "laracasts/validation": "~1.0",
+        "intervention/image": "2.*"
 	},
 	"autoload": {
 		"classmap": [

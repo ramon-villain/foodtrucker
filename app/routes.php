@@ -73,3 +73,14 @@ Route::group(['prefix' => 'js'], function(){
 		$trucks = DB::table('trucks')->where('id', 'LIKE', "%$truck%")->lists('name');
 		return Response::json($trucks);});
 });
+
+Route::get('teste', [
+	'uses'=> 'HomeController@teste',
+	'as'    => 'upload_image']);
+Route::post('teste', [
+	'uses'=> 'HomeController@testeUp',
+	'as'    => 'upload_image']);
+
+Route::post('testea', [
+	'uses'=> 'HomeController@testeCrop',
+	'as'    => 'crop_upload_image']);
