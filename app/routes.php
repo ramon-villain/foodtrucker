@@ -57,6 +57,12 @@ Route::group(array('before' => 'auth'), function() {
 		Route::post('tag/new-truck', [
 			'as'    => 'new_tag_truck_admin_path',
 			'uses'  => 'Admin_TagController@storeTruck']);
+		Route::get('config',[
+			'as'    => 'config_admin_path',
+			'uses'  => 'Admin_ConfigController@index']);
+		Route::post('config/featured', [
+			'as'    => 'destaque_upload',
+			'uses'  => 'Admin_ConfigController@featuredPost']);
 	});
 });
 
