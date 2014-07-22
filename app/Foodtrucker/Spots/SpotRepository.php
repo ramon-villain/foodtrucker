@@ -18,7 +18,7 @@ class SpotRepository {
 	}
 
 	public function getSpots() {
-		return $this->spot->getSpots();
+		return $this->spot->orderBy('created_at', 'desc')->get();
 	}
 
 	public function getSpotsId(){

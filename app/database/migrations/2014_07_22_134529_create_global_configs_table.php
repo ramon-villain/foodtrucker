@@ -15,7 +15,8 @@ class CreateGlobalConfigsTable extends Migration {
 		Schema::create('global_configs', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('home_destaque');
+			$table->string('config_name');
+			$table->longtext('config_value');
 			$table->timestamps();
 		});
 	}

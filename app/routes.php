@@ -61,8 +61,11 @@ Route::group(array('before' => 'auth'), function() {
 			'as'    => 'config_admin_path',
 			'uses'  => 'Admin_ConfigController@index']);
 		Route::post('config/featured', [
-			'as'    => 'destaque_upload',
+			'as'    => 'featured_upload',
 			'uses'  => 'Admin_ConfigController@featuredPost']);
+		Route::post('config/featured/crop', [
+			'uses'=> 'Admin_ConfigController@cropImage',
+			'as'    => 'crop_upload_image']);
 	});
 });
 
@@ -87,6 +90,3 @@ Route::post('teste', [
 	'uses'=> 'HomeController@testeUp',
 	'as'    => 'upload_image']);
 
-Route::post('testea', [
-	'uses'=> 'HomeController@testeCrop',
-	'as'    => 'crop_upload_image']);

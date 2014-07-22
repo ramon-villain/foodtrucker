@@ -35,8 +35,5 @@ class Spot extends \Eloquent {
 		return $value[0].':'.$value[1];
 	}
 
-	public function getSpots(){
-		return Spot::orderBy('created_at', 'desc')->get();
-	}
 
 }
