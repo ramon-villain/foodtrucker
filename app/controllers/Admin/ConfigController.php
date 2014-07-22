@@ -37,7 +37,7 @@ class Admin_ConfigController extends BaseController {
 		$this->featuredHomeForm->validate(Input::all());
 		if(Input::hasFile('image')){
 			$image = Input::file('image');
-			$path = 'images';
+			$path = 'simages/upload';
 			$image->move($path, $image->getClientOriginalName());
 			$final_image = $path."/".$image->getClientOriginalName();
 			$img = Image::make($final_image);

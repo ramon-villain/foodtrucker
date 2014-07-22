@@ -33,6 +33,9 @@ img {
   clear: both;
   overflow: hidden;
 }
+.mb20 {
+  margin-bottom: 20px;
+}
 .widget {
   margin-bottom: 20px;
 }
@@ -151,39 +154,47 @@ option {
 .btn:hover {
   background: #f7f7f7;
 }
-.btn-blue {
+.btn-blue,
+.set-blue {
   background: #5388e0;
   border-color: #5388e0;
   color: #ffffff;
 }
-.btn-blue:hover {
+.btn-blue:hover,
+.set-blue:hover {
   border-color: #3462b0;
   background: #3462b0;
 }
-.btn-green {
+.btn-green,
+.set-green {
   background: #39bf7e;
   border-color: #39bf7e;
   color: #ffffff;
 }
-.btn-green:hover {
+.btn-green:hover,
+.set-green:hover {
   border-color: #0e8e50;
   background: #0e8e50;
 }
-.btn-red {
+.btn-red,
+.set-red {
   background: #ed7f62;
   border-color: #ed7f62;
   color: #ffffff;
 }
-.btn-red:hover {
+.btn-red:hover,
+.set-red:hover {
   border-color: #b74d32;
   background: #b74d32;
 }
-.btn-yellow {
+.btn-yellow,
+.set-yellow {
   background: #ffc107;
   border-color: #ffc107;
   color: #ffffff;
 }
-.btn-yellow:hover {
+.btn-yellow:hover,
+.set-yellow:hover {
   border-color: #f09f12;
   background: #f09f12;
 }

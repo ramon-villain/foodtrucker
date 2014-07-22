@@ -49,9 +49,15 @@ img{
     clear: both;
     overflow: hidden;
 }
+.mb20{
+    margin-bottom: 20px;
+}
 
 .widget{
-    margin-bottom: 20px;
+    .mb20;
+    .title.yellow{
+        background: @yellow;
+    }
     .title.red{
         background: @red;
     }
@@ -90,6 +96,14 @@ img{
             padding-left: 10px;
             line-height: 30px;
             height: 30px;
+        }
+        .form{
+            label:first-of-type{
+                margin-top: 0;
+            }
+        }
+        table.table{
+            margin-bottom: 0;
         }
     }
     .body.bordered{
@@ -138,7 +152,6 @@ select, option{
 }
 
 .form{
-    margin-bottom: 20px;
     overflow: hidden;
     .tagit{
         width: 99%;
@@ -165,7 +178,7 @@ select, option{
         background: @lightGrey;
     }
 }
-.btn-blue{
+.btn-blue, .set-blue{
     background: @blue;
     border-color:@blue;
     color:@white;
@@ -175,7 +188,7 @@ select, option{
     }
 }
 
-.btn-green{
+.btn-green, .set-green{
     background: @green;
     border-color:@green;
     color:@white;
@@ -185,7 +198,7 @@ select, option{
     }
 }
 
-.btn-red{
+.btn-red, .set-red{
     background: @red;
     border-color:@red;
     color:@white;
@@ -194,7 +207,7 @@ select, option{
         background: @darkRed;
     }
 }
-.btn-yellow{
+.btn-yellow, .set-yellow{
     background: @yellow;
     border-color:@yellow;
     color:@white;
@@ -209,41 +222,68 @@ table.table{
     .helvetica;
     border-collapse: collapse;
     width: 100%;
-    margin-bottom: 20px;
+    .mb20;
+    tr{
+        border-left:1px solid @lightGrey;
+        border-right:1px solid @lightGrey;
+    }
+    tr:first-of-type{
+//        border-top-left-radius: 3px;
+//        border-top-right-radius: 3px;
+        background: @lightGrey;
+//        border-right: 0;
+//        border-left: 0;
+    }
     th:first-of-type{
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px;
+
+//        border-bottom-left-radius: 3px;
+    }
+    tr:last-of-type{
+//        border-bottom-left-radius: 3px;
+//        border-bottom-right-radius: 3px;
     }
     th:last-of-type{
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
+//        border-top-right-radius: 3px;
+//        border-bottom-right-radius: 3px;
         border-right: 0;
     }
+
     th{
         line-height: 11px;
         margin: 0;
-        .gothamBold;
-        color:@white;
+        .helvetica;
+        font-size: 12px;
+        font-weight: bold;
+
         padding:13px 7px;
-        background: @yellow;
+        color:@mediumGrey;
         text-transform: uppercase;
-        border-right: 1px solid @darkYellow;
+        border-right: 1px solid @white;
+    }
+    th.yellow{
+        background: @yellow;
+        color:@white;
+        border-right-color: @darkYellow;
     }
     td{
         .helvetica;
         .tac;
+        font-size: 11px;
         padding: 14px 0;
-        border-bottom:1px solid @yellow;
+        border-bottom:1px solid @lightGrey;
 //        border-right: 1px solid @borderGrey;
+    }
+    td.yellow{
+        border-bottom-color: @yellow;
     }
 //    td:last-of-type{
 //        border-right: 0px;
 //    }
     a{
-        color:@yellow;
+        color:@grey;
 //        text-decoration: none;
         &:hover{
-            color:@darkYellow;
+            color:@darkGrey;
         }
     }
 }
@@ -254,9 +294,9 @@ ul.pagination{
     display: inline-block;
     li{
         .fl;
-        background: @yellow;
+        background: @lightGrey;
         .br;
-        color:@white;
+        color:@grey;
         margin: 0 4px;
         padding: 5px 8px 4px;
         font-size: 13px;
@@ -264,11 +304,13 @@ ul.pagination{
         width: 10px;
         a{
 
-            color:@white;
+            color:@grey;
             text-decoration: none;
         }
     }
     li.active{
-        background: @darkYellow;
+        background: @darkGrey;
+        color:@white;
+
     }
 }

@@ -33,8 +33,14 @@ img {
   clear: both;
   overflow: hidden;
 }
+.mb20 {
+  margin-bottom: 20px;
+}
 .widget {
   margin-bottom: 20px;
+}
+.widget .title.yellow {
+  background: #ffc107;
 }
 .widget .title.red {
   background: #ed7f62;
@@ -75,6 +81,12 @@ img {
   padding-left: 10px;
   line-height: 30px;
   height: 30px;
+}
+.widget .body .form label:first-of-type {
+  margin-top: 0;
+}
+.widget .body table.table {
+  margin-bottom: 0;
 }
 .widget .body.bordered {
   padding: 10px;
@@ -128,7 +140,6 @@ option {
   background: #ffffff;
 }
 .form {
-  margin-bottom: 20px;
   overflow: hidden;
 }
 .form .tagit {
@@ -151,39 +162,47 @@ option {
 .btn:hover {
   background: #f7f7f7;
 }
-.btn-blue {
+.btn-blue,
+.set-blue {
   background: #5388e0;
   border-color: #5388e0;
   color: #ffffff;
 }
-.btn-blue:hover {
+.btn-blue:hover,
+.set-blue:hover {
   border-color: #3462b0;
   background: #3462b0;
 }
-.btn-green {
+.btn-green,
+.set-green {
   background: #39bf7e;
   border-color: #39bf7e;
   color: #ffffff;
 }
-.btn-green:hover {
+.btn-green:hover,
+.set-green:hover {
   border-color: #0e8e50;
   background: #0e8e50;
 }
-.btn-red {
+.btn-red,
+.set-red {
   background: #ed7f62;
   border-color: #ed7f62;
   color: #ffffff;
 }
-.btn-red:hover {
+.btn-red:hover,
+.set-red:hover {
   border-color: #b74d32;
   background: #b74d32;
 }
-.btn-yellow {
+.btn-yellow,
+.set-yellow {
   background: #ffc107;
   border-color: #ffc107;
   color: #ffffff;
 }
-.btn-yellow:hover {
+.btn-yellow:hover,
+.set-yellow:hover {
   border-color: #f09f12;
   background: #f09f12;
 }
@@ -197,24 +216,34 @@ table.table {
   width: 100%;
   margin-bottom: 20px;
 }
-table.table th:first-of-type {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+table.table tr {
+  border-left: 1px solid #f7f7f7;
+  border-right: 1px solid #f7f7f7;
+}
+table.table tr:first-of-type {
+  background: #f7f7f7;
 }
 table.table th:last-of-type {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
   border-right: 0;
 }
 table.table th {
   line-height: 11px;
   margin: 0;
-  font-family: "GothamBold", Verdana, sans-serif;
-  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  font-size: 12px;
+  font-weight: bold;
   padding: 13px 7px;
-  background: #ffc107;
+  color: #9e9e9e;
   text-transform: uppercase;
-  border-right: 1px solid #f09f12;
+  border-right: 1px solid #ffffff;
+}
+table.table th.yellow {
+  background: #ffc107;
+  color: #ffffff;
+  border-right-color: #f09f12;
 }
 table.table td {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -222,14 +251,18 @@ table.table td {
   font-weight: 400;
   color: #666666;
   text-align: center;
+  font-size: 11px;
   padding: 14px 0;
-  border-bottom: 1px solid #ffc107;
+  border-bottom: 1px solid #f7f7f7;
+}
+table.table td.yellow {
+  border-bottom-color: #ffc107;
 }
 table.table a {
-  color: #ffc107;
+  color: #9e9e9e;
 }
 table.table a:hover {
-  color: #f09f12;
+  color: #666666;
 }
 ul.pagination {
   margin: 20px auto;
@@ -239,9 +272,9 @@ ul.pagination {
 }
 ul.pagination li {
   float: left;
-  background: #ffc107;
+  background: #f7f7f7;
   border-radius: 3px;
-  color: #ffffff;
+  color: #9e9e9e;
   margin: 0 4px;
   padding: 5px 8px 4px;
   font-size: 13px;
@@ -249,11 +282,12 @@ ul.pagination li {
   width: 10px;
 }
 ul.pagination li a {
-  color: #ffffff;
+  color: #9e9e9e;
   text-decoration: none;
 }
 ul.pagination li.active {
-  background: #f09f12;
+  background: #666666;
+  color: #ffffff;
 }
 ul.tagit {
   padding: 3px 0px 4px;
