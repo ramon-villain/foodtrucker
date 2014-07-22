@@ -14,7 +14,7 @@ class SetFeaturedCommandHandler implements CommandHandler{
 
 	public function handle( $command ) {
 		$config = Config::register('featured_home', serialize($command));
-		$this->configRepository->save($config);
+		$this->configRepository->saveFeatured($config);
 		$this->dispatchEventsFor($config);
 		return $config;
 

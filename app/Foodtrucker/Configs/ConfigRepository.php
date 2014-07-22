@@ -20,8 +20,14 @@ class ConfigRepository {
 			return $config;
 	}
 
-	public function save(Config $config){
-		return $config->save();
+	public function saveFeatured(Config $config){
+		$cfg = Config::where('config_name','featured_home')->first();
+		if($cfg){
+			return Config::where('config_name','featured_home')->update(['config_value' => $config['config_value']]);
+		}else{
+			return $config->save();
+		}
+//		return $config->save();
 	}
 
 }

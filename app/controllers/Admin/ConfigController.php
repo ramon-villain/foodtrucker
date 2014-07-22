@@ -26,6 +26,7 @@ class Admin_ConfigController extends BaseController {
 		$featured = $this->configRepository->getFeatured();
 		if($featured == null){
 			$featured = new \Foodtrucker\Configs\SetFeaturedCommand('','','','');
+			Session::forget('modal');
 		}
 		$data['modal'] = (Session::get('modal') == null ? 'false' : 'true');
 		$data['imagemDestaque'] = Session::get('img');
@@ -44,10 +45,10 @@ class Admin_ConfigController extends BaseController {
 				$constraint->aspectRatio();
 			});
 			$img->save($final_image);
+			Session::put( 'modal', 'true' );
 		}else{
 			$final_image = Input::get('image_bckp');
 		}
-		Session::put( 'modal', 'true' );
 		Session::put('img', $final_image);
 		extract(Input::only('image','image_bckp','body','title'));
 		$this->execute(new SetFeaturedCommand($final_image, $image_bckp, $body, $title));

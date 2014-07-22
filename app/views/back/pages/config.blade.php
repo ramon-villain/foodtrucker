@@ -17,7 +17,6 @@
 					<input type="hidden" id="y" name="y" />
 					<input type="hidden" id="w" name="w" />
 					<input type="hidden" id="h" name="h" />
-
 				</div>
 				<div class="modal-footer">
 					<button type="submit" class="btn btn-primary">Save changes</button>
@@ -27,16 +26,17 @@
 		</div>
 	</div>
 	{{Form::open(['route' => 'featured_upload', 'files'=> 'true'])}}
-		{{Form::label('title', 'Título do Destaque:')}}
-		<div class="wrapInput">{{Form::text('title',$featured->title,['placeholder' => 'Foodtruck da Semana'])}}</div>
-		{{Form::label('body', 'Conteúdo do Destaque:')}}
-		<div class="wrapInput">{{Form::text('body',$featured->body,['placeholder' => 'La Buena Station'])}}</div>
-		@if($featured->image != '')
-			{{HTML::image($featured->image)}}
-		@endif
-		{{Form::file('image')}}
-		{{Form::hidden('image_bckp', $featured->image)}}
-		{{Form::submit('Atualizar Destaque', ['class' => 'btn btn-green fr'] )}}
+	{{Form::label('title', 'Título do Destaque:')}}
+	<div class="wrapInput">{{Form::text('title',$featured->title,['placeholder' => 'Foodtruck da Semana'])}}</div>
+	{{Form::label('body', 'Conteúdo do Destaque:')}}
+	<div class="wrapInput">{{Form::text('body',$featured->body,['placeholder' => 'La Buena Station'])}}</div>
+	{{Form::label('image', 'Imagem em Destaque:')}}
+	@if($featured->image != '')
+	{{HTML::image($featured->image)}}
+	@endif
+	{{Form::file('image')}}
+	{{Form::hidden('image_bckp', $featured->image)}}
+	{{Form::submit('Atualizar Destaque', ['class' => 'btn btn-green fr'] )}}
 	{{Form::close()}}
 </div>
 <div class="sidebar col-13">
