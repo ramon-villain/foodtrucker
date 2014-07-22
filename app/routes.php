@@ -4,6 +4,8 @@
  * Front-end URLS
  */
 
+use Illuminate\Support\Facades\Session;
+
 Route::get('/', [
 
 	'as'    => 'home',
