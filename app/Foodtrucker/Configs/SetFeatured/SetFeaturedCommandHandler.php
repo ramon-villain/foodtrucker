@@ -1,5 +1,8 @@
-<?php namespace Foodtrucker\Configs\SetFeatured;
+<?php
+namespace Foodtrucker\Configs\SetFeatured;
 
+use Foodtrucker\Configs\Config;
+use Foodtrucker\Configs\ConfigRepository;
 use Laracasts\Commander\CommandHandler;
 use Laracasts\Commander\Events\DispatchableTrait;
 

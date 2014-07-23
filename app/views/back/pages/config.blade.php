@@ -3,9 +3,10 @@
 @section('content')
 @include('front._includes.errors')
 <div class="col-10">
-	@include('back._includes.homeFeatured')
+	@include('back._includes.setHomeFeatured')
 </div>
 <div class="col-10">
+
 	@include('back._includes.getSlider')
 </div>
 <input name="modal" id="modal" value="{{$data['modal']}}" type="hidden"/>
@@ -23,8 +24,12 @@
 	};
 	$( document ).ready( function() {
 		$( '#myModal' ).modal( {show: modal} );
-		$('#cropbox').Jcrop({
+		$('#featured').Jcrop({
 			aspectRatio: 1,
+			onSelect: updateCoords
+		});
+		$('#slider').Jcrop({
+			aspectRatio: 1.6489795918,
 			onSelect: updateCoords
 		});
 	});
@@ -35,6 +40,8 @@
 		$('#w').val(c.w);
 		$('#h').val(c.h);
 	};
+
+
 
 	function checkCoords()
 	{

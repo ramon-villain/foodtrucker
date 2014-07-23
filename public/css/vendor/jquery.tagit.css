@@ -72,6 +72,7 @@ img {
 .widget .body {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+  overflow: hidden;
 }
 .widget .body h3 {
   background: #f7f7f7;
@@ -172,6 +173,8 @@ option {
 .set-blue:hover {
   border-color: #3462b0;
   background: #3462b0;
+  color: #ffffff;
+  text-decoration: none;
 }
 .btn-green,
 .set-green {
@@ -183,6 +186,8 @@ option {
 .set-green:hover {
   border-color: #0e8e50;
   background: #0e8e50;
+  color: #ffffff;
+  text-decoration: none;
 }
 .btn-red,
 .set-red {

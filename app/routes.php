@@ -4,8 +4,6 @@
  * Front-end URLS
  */
 
-use Illuminate\Support\Facades\Session;
-
 Route::get('/', [
 
 	'as'    => 'home',
@@ -66,6 +64,15 @@ Route::group(array('before' => 'auth'), function() {
 		Route::post('config/featured/crop', [
 			'uses'=> 'Admin_ConfigController@cropImage',
 			'as'    => 'crop_upload_image']);
+		Route::get('config/banners', [
+			'as'    => 'add_banner_path',
+			'uses'  => 'Admin_ConfigController@addBanner']);
+		Route::post('config/banners', [
+			'as'    => 'banner_upload',
+			'uses'  => 'Admin_ConfigController@bannerPost']);
+		Route::post('config/banners/crop', [
+			'uses'=> 'Admin_ConfigController@cropBanner',
+			'as'    => 'crop_upload_banner']);
 	});
 });
 

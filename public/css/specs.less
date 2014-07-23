@@ -88,6 +88,7 @@ img{
     .body{
         border-bottom-left-radius: 3px;
         border-bottom-right-radius: 3px;
+        overflow: hidden;
         h3{
             background: @lightGrey;
             text-transform: uppercase;
@@ -185,6 +186,8 @@ select, option{
     &:hover{
         border-color:@darkBlue;
         background: @darkBlue;
+        color:@white;
+        text-decoration: none;
     }
 }
 
@@ -195,6 +198,8 @@ select, option{
     &:hover{
         border-color:@darkGreen;
         background: @darkGreen;
+        color:@white;
+        text-decoration: none;
     }
 }
 
@@ -304,7 +309,6 @@ ul.pagination{
         line-height: 13px;
         width: 10px;
         a{
-
             color:@grey;
             text-decoration: none;
         }
@@ -312,6 +316,5 @@ ul.pagination{
     li.active{
         background: @darkGrey;
         color:@white;
-
     }
 }
