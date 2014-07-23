@@ -553,6 +553,9 @@ aside #menu ul li a {
 aside #menu ul li a:hover {
   background: #f09f12;
 }
+aside #menu ul li a.active {
+  background: #b74d32;
+}
 .stats {
   border-radius: 3px;
   padding: 10px 0;
