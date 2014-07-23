@@ -31,8 +31,7 @@ class Admin_TagController extends BaseController {
 	}
 
 	public function index(){
-
-		$data['getTagsListingTag'] = $this->tagRepository->getTagsListingTag();
+		$data['tags'] = $this->tagRepository->getTagsPaginatated();
 		$data['spots'] = $this->spotRepository->getSpotsId();
 		return View::make('back.pages.tags', compact('data'));
 	}

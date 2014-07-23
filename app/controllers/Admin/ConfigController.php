@@ -23,6 +23,7 @@ class Admin_ConfigController extends BaseController {
 
 	public function index()
 	{
+		$data['title'] = 'Configurações';
 		$featured = $this->configRepository->getFeatured();
 		if($featured == null){
 			$featured = new \Foodtrucker\Configs\SetFeaturedCommand('','','','');

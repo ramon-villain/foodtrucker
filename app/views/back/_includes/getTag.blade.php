@@ -8,7 +8,7 @@
 				<th style="padding: 13px;">#</th>
 				<th>Tag</th>
 			</tr>
-			@foreach($data['tagsPaginated'] as $tag)
+			@foreach($data['tags'] as $tag)
 			<tr>
 				<td><a href="tags/{{$tag->id}}/edit">{{$tag->id}}</td>
 				<td>{{$tag->tag}}</td>
@@ -16,7 +16,7 @@
 			@endforeach
 		</table>
 		<div style="width: 100%;text-align: center;">
-			{{$data['tagsPaginated']->links()}}
+			{{$data['tags']->links()}}
 		</div>
 	</div>
 </div>

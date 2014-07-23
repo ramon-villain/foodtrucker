@@ -22,7 +22,7 @@ class Admin_AdminController extends BaseController {
 
 	public function dashboard()
 	{
-		$data['tagsPaginated'] = $this->tagRepository->getTagsPaginatated();
+		$data['tags'] = $this->tagRepository->getTagsPaginatated();
 		$data['spots'] = $this->spotRepository->getSpots();
 		return View::make('back.pages.dashboard', compact('data'));
 	}
