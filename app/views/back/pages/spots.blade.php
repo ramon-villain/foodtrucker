@@ -2,10 +2,10 @@
 
 @section('content')
 @include('front._includes.errors')
-<div class="col-10">
+<div class="col-7">
 	@include('back._includes.addSpot')
 </div>
-<div class="sidebar col-10">
+<div class="sidebar col-13">
 	@include('back._includes.getSpot')
 </div>
 @stop

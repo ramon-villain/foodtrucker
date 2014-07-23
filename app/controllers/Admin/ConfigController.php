@@ -1,7 +1,7 @@
 <?php
 
 use Foodtrucker\Configs\ConfigRepository;
-use Foodtrucker\Configs\SetFeaturedCommand;
+use Foodtrucker\Configs\SetFeatured\SetFeaturedCommand;
 use Foodtrucker\Forms\FeaturedHomeForm;
 
 class Admin_ConfigController extends BaseController {
@@ -26,7 +26,7 @@ class Admin_ConfigController extends BaseController {
 		$data['title'] = 'Configurações';
 		$featured = $this->configRepository->getFeatured();
 		if($featured == null){
-			$featured = new \Foodtrucker\Configs\SetFeaturedCommand('','','','');
+			$featured = new SetFeaturedCommand('','','','');
 			Session::forget('modal');
 		}
 		$data['modal'] = (Session::get('modal') == null ? 'false' : 'true');

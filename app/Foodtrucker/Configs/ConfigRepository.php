@@ -27,7 +27,6 @@ class ConfigRepository {
 		}else{
 			return $config->save();
 		}
-//		return $config->save();
 	}
 
 }

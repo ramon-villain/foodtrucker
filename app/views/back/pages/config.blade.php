@@ -5,11 +5,10 @@
 <div class="col-10">
 	@include('back._includes.homeFeatured')
 </div>
-<div class="sidebar col-13">
-
+<div class="col-10">
+	@include('back._includes.getSlider')
 </div>
 <input name="modal" id="modal" value="{{$data['modal']}}" type="hidden"/>
-
 @stop
 
 @section('scripts')
