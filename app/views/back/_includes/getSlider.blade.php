@@ -1,22 +1,24 @@
 <div class="widget">
 	<div class="title yellow">
-		<h2>Tags Cadastradas</h2>
+		<h2>Banners Cadastradas</h2>
 	</div>
 	<div class="body bordered">
 		<table class="table">
 			<tr>
 				<th style="padding: 13px;">#</th>
-				<th>Tag</th>
+				<th>Título</th>
+				<th>URL</th>
+				<th>Ativo</th>
 			</tr>
-			@foreach($data['tags'] as $tag)
+			@foreach($sliders as $slider)
 			<tr>
-				<td><a href="tags/{{$tag->id}}/edit">{{$tag->id}}</td>
-				<td>{{$tag->tag}}</td>
+				<td><a href="sliders/{{$slider->id}}/edit">{{$slider->id}}</td>
+				<td>{{$slider->body}}</td>
+				<td>{{$slider->url}}</td>
+				<td>@if($slider->status == '1')Sim @else Não @endif</td>
 			</tr>
 			@endforeach
 		</table>
-		<div style="width: 100%;text-align: center;">
-			{{$data['tags']->links()}}
-		</div>
+		{{link_to_route('add_banner_path', 'Adicionar Banner', null , ['class' => 'btn btn-green fr'])}}
 	</div>
 </div>
