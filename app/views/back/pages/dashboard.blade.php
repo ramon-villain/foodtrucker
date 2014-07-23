@@ -8,8 +8,6 @@
 	@include('back._includes.getSpot')
 </div>
 
-
-
 <div class="col-10">
 	@include('back._includes.addTag')
 	@include('back._includes.getTag')

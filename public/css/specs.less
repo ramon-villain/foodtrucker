@@ -224,13 +224,14 @@ table.table{
     width: 100%;
     .mb20;
     tr{
-        border-left:1px solid @lightGrey;
-        border-right:1px solid @lightGrey;
+        border-left:1px solid @borderGrey;
+        border-right:1px solid @borderGrey;
     }
     tr:first-of-type{
 //        border-top-left-radius: 3px;
 //        border-top-right-radius: 3px;
         background: @lightGrey;
+        border:1px solid @borderGrey;
 //        border-right: 0;
 //        border-left: 0;
     }
@@ -258,7 +259,7 @@ table.table{
         padding:13px 7px;
         color:@mediumGrey;
         text-transform: uppercase;
-        border-right: 1px solid @white;
+        border-right: 1px solid @borderGrey;
     }
     th.yellow{
         background: @yellow;
@@ -270,7 +271,7 @@ table.table{
         .tac;
         font-size: 11px;
         padding: 14px 0;
-        border-bottom:1px solid @lightGrey;
+        border-bottom:1px solid @borderGrey;
 //        border-right: 1px solid @borderGrey;
     }
     td.yellow{
