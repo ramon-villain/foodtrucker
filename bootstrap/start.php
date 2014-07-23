@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('IGNISCODE-1.local'),
+	'local' => array('igniscode-1.home'),
 
 ));
 
