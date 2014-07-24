@@ -12,7 +12,7 @@ $I->fillField('Confirmação da Senha', 'secret');
 $I->click('Registrar');
 
 $I->seeCurrentUrlEquals('');
-$I->see('registrado');
+$I->see('Hoje');
 $I->seeRecord('users', [
 	'email' => 'ramon@teste.com'
 ]);
