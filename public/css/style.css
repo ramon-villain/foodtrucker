@@ -301,11 +301,11 @@ ul.pagination li.active {
   font-weight: normal;
   outline: none;
   text-rendering: optimizeLegibility;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -ms-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 @font-face {
   font-family: Gotham;
@@ -478,6 +478,10 @@ header #menu ul li a {
 #content #truckDaSemana {
   position: relative;
 }
+#content #truckDaSemana .body {
+  height: 245px;
+  position: relative;
+}
 #content #truckDaSemana img {
   position: relative;
   max-width: 100%;
@@ -485,9 +489,10 @@ header #menu ul li a {
   border-bottom-right-radius: 3px;
 }
 #content #truckDaSemana h3 {
-  position: relative;
-  bottom: 45px;
+  position: absolute;
+  bottom: 10px;
   margin: 0 10px;
+  width: 215px;
 }
 #content #anota-ai span {
   float: right;
@@ -504,6 +509,23 @@ header #menu ul li a {
   margin-top: 9px;
   padding: 3px 4px;
   margin-right: 10px;
+}
+#content #anota-ai a {
+  text-decoration: none;
+}
+#content #anota-ai a:hover h3 {
+  background: #ffffff;
+  color: #666666;
+}
+#content #anota-ai img {
+  position: relative;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#content #anota-ai h3 {
+  position: relative;
+  bottom: 45px;
+  margin: 0 10px;
 }
 #sidebar #ultimasParadas .body {
   max-height: 385px;

@@ -106,6 +106,10 @@ header{
     }
     #truckDaSemana {
         position: relative;
+        .body{
+            height: 245px;
+            position: relative;
+        }
         img {
             position: relative;
             max-width: 100%;
@@ -113,9 +117,10 @@ header{
             border-bottom-right-radius: 3px;
         }
         h3 {
-            position: relative;
-            bottom: 45px;
+            position: absolute;
+            bottom: 10px;
             margin: 0 10px;
+            width: 215px;
         }
     }
     #anota-ai{
@@ -131,6 +136,26 @@ header{
             margin-top: 9px;
             padding: 3px 4px;
             margin-right: 10px;
+        }
+        a{
+            text-decoration: none;
+            &:hover{
+                h3{
+                    background: @white;
+                    color:@darkGrey;
+                }
+            }
+        }
+        img{
+            position: relative;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        h3{
+            position: relative;
+            bottom: 45px;
+            margin: 0 10px;
+
         }
     }
 }

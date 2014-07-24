@@ -47,8 +47,8 @@
 }
 
 .datepicker > .datepicker_header > a:active {
-    color: #ffffff;
-    background-color:	#9e9e9e;
+    color: #666;
+    background-color:	#e0e0e0;
 }
 
 .datepicker > .datepicker_header > span {
@@ -188,8 +188,8 @@
 }
 
 .datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.active {
-    color: #ffffff;
-    background-color:	#9e9e9e;
+    color: #666;
+    background-color:	#e0e0e0;
 }
 
 .datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.hover {
