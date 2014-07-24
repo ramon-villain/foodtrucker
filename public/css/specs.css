@@ -211,6 +211,11 @@ option {
   border-color: #f09f12;
   background: #f09f12;
 }
+.text-btn {
+  background: transparent;
+  font-family: "GothamBold", Verdana, sans-serif;
+  border: none;
+}
 table.table {
   background: #ffffff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

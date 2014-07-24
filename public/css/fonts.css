@@ -211,6 +211,11 @@ option {
   border-color: #f09f12;
   background: #f09f12;
 }
+.text-btn {
+  background: transparent;
+  font-family: "GothamBold", Verdana, sans-serif;
+  border: none;
+}
 table.table {
   background: #ffffff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -374,6 +379,17 @@ h3 {
   font-style: normal;
   font-variant: normal;
   font-weight: bold;
+  margin: 0;
+  line-height: normal;
+  vertical-align: baseline;
+  padding: 0;
+}
+h2 {
+  font-family: "GothamBold", Verdana, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
   margin: 0;
   line-height: normal;
   vertical-align: baseline;
