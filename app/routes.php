@@ -17,6 +17,10 @@ Route::post('/cadastrar', [
 	'as'    => 'register_path',
 	'uses'  => 'RegistrationController@store']);
 
+Route::post('/newsletter', [
+	'as'    => 'newsletter_path',
+	'uses'  => 'HomeController@newsletter']);
+
 Route::get('/login', [
 	'as'    => 'login_path',
 	'uses'  => 'LoginController@index']);

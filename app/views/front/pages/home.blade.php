@@ -1,5 +1,5 @@
 @extends('front.layouts.default')
-
+@include('back._includes.errors')
 @section('content')
 <div id="main" class="col-13">
 	<div id="mapa" class="mb20" style="background: #000;height: 446px;display: block;width: 100%;"></div>
@@ -29,6 +29,7 @@
 </div>
 <div id="sidebar" class="col-7">
 	@include('front._includes.next-spots')
+	@include('front._includes.newsletter')
 </div>
 @stop
 @section('scripts')

@@ -3,6 +3,7 @@
 use Foodtrucker\BannersHome\BannerRepository;
 use Foodtrucker\Configs\ConfigRepository;
 use Foodtrucker\Configs\SetFeatured\SetFeaturedCommand;
+use Foodtrucker\Forms\NewsletterForm;
 
 class HomeController extends BaseController {
 
@@ -11,10 +12,15 @@ class HomeController extends BaseController {
 	 * @var BannerRepository
 	 */
 	private $bannerRepository;
+	/**
+	 * @var NewsletterForm
+	 */
+	private $newsletterForm;
 
-	function __construct( ConfigRepository $configRepository, BannerRepository $bannerRepository) {
+	function __construct( ConfigRepository $configRepository, BannerRepository $bannerRepository, NewsletterForm $newsletterForm) {
 		$this->configRepository = $configRepository;
 		$this->bannerRepository = $bannerRepository;
+		$this->newsletterForm = $newsletterForm;
 	}
 
 	public function index()
@@ -26,6 +32,11 @@ class HomeController extends BaseController {
 			Session::forget('modal');
 		}
 		return View::make('front.pages.home', compact('featured', 'banners'));
+	}
+
+	public function newsletter(){
+		dd(Input::all());
+		$newsletter = $this->newsletterForm->validate(Input::all());
 	}
 
 }
