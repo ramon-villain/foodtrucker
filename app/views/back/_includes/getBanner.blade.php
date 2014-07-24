@@ -10,12 +10,12 @@
 				<th>URL</th>
 				<th>Ativo</th>
 			</tr>
-			@foreach($sliders as $slider)
+			@foreach($banners as $banner)
 			<tr>
-				<td><a href="sliders/{{$slider->id}}/edit">{{$slider->id}}</td>
-				<td>{{$slider->body}}</td>
-				<td>{{$slider->url}}</td>
-				<td>@if($slider->status == '1')Sim @else Não @endif</td>
+				<td><a href="banners/{{$banner->id}}/edit">{{$banner->id}}</td>
+				<td>{{$banner->body}}</td>
+				<td>{{$banner->url}}</td>
+				<td>@if($banner->status == '1')Sim @else Não @endif</td>
 			</tr>
 			@endforeach
 		</table>

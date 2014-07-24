@@ -3,7 +3,7 @@
 @section('content')
 @include('front._includes.errors')
 <div class="col-10">
-	@include('back._includes.addSlider')
+	@include('back._includes.addBanner')
 </div>
 <div class="col-10">
 
@@ -24,7 +24,7 @@
 	};
 	$( document ).ready( function() {
 		$( '#myModal' ).modal( {show: modal} );
-		$('#slider').Jcrop({
+		$('#banner').Jcrop({
 			aspectRatio: 1.6489795918,
 			onSelect: updateCoords
 		});

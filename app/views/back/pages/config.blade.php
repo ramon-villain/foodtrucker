@@ -7,7 +7,7 @@
 </div>
 <div class="col-10">
 
-	@include('back._includes.getSlider')
+	@include('back._includes.getBanner')
 </div>
 <input name="modal" id="modal" value="{{$data['modal']}}" type="hidden"/>
 @stop
@@ -26,10 +26,6 @@
 		$( '#myModal' ).modal( {show: modal} );
 		$('#featured').Jcrop({
 			aspectRatio: 1,
-			onSelect: updateCoords
-		});
-		$('#slider').Jcrop({
-			aspectRatio: 1.6489795918,
 			onSelect: updateCoords
 		});
 	});

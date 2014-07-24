@@ -10,4 +10,6 @@ Thumbs.db
 .idea
 tests/_output/*
 public/images/upload/*
+public/images/banners/*
+public/images/featured/*
 .idea

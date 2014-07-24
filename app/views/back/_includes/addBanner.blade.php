@@ -5,9 +5,9 @@
 				<h4 class="modal-title" id="myModalLabel">Recortar Imagem</h4>
 			</div>
 			<div class="modal-body">
-				{{HTML::image($data['imagemSlider'],'', ['id'=> 'slider'])}}
+				{{HTML::image($data['imagemBanner'],'', ['id'=> 'banner'])}}
 				{{Form::open(['route' => 'crop_upload_banner', 'files'=> 'true', 'onsubmit' => 'return checkCoords();'])}}
-				<input type="hidden" id="src" name="src" value="{{$data['imagemSlider'] or 'a'}}" />
+				<input type="hidden" id="src" name="src" value="{{$data['imagemBanner'] or 'a'}}" />
 				<input type="hidden" id="x" name="x" />
 				<input type="hidden" id="y" name="y" />
 				<input type="hidden" id="w" name="w" />

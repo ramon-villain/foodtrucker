@@ -3,7 +3,7 @@ namespace Foodtrucker\Forms;
 
 use Laracasts\Validation\FormValidator;
 
-class SliderHomeForm extends FormValidator{
+class BannerHomeForm extends FormValidator{
 
 	protected $rules = [
 		'body'      => 'required',

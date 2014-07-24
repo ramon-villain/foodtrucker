@@ -5,7 +5,7 @@ use Foodtrucker\BannersHome\BannerRepository;
 use Foodtrucker\Configs\ConfigRepository;
 use Foodtrucker\Configs\SetFeatured\SetFeaturedCommand;
 use Foodtrucker\Forms\FeaturedHomeForm;
-use Foodtrucker\Forms\SliderHomeForm;
+use Foodtrucker\Forms\BannerHomeForm;
 
 class Admin_ConfigController extends BaseController {
 
@@ -19,18 +19,18 @@ class Admin_ConfigController extends BaseController {
 	 */
 	private $featuredHomeForm;
 	/**
-	 * @var SliderHomeForm
+	 * @var BannerHomeForm
 	 */
-	private $sliderHomeForm;
+	private $bannerHomeForm;
 	/**
 	 * @var BannerRepository
 	 */
 	private $bannerRepository;
 
-	function __construct( ConfigRepository $configRepository, FeaturedHomeForm $featuredHomeForm, SliderHomeForm $sliderHomeForm, BannerRepository $bannerRepository) {
+	function __construct( ConfigRepository $configRepository, FeaturedHomeForm $featuredHomeForm, BannerHomeForm $bannerHomeForm, BannerRepository $bannerRepository) {
 		$this->configRepository = $configRepository;
 		$this->featuredHomeForm = $featuredHomeForm;
-		$this->sliderHomeForm = $sliderHomeForm;
+		$this->bannerHomeForm = $bannerHomeForm;
 		$this->bannerRepository = $bannerRepository;
 	}
 
@@ -42,10 +42,10 @@ class Admin_ConfigController extends BaseController {
 			$featured = new SetFeaturedCommand('','','','');
 			Session::forget('modal');
 		}
-		$sliders = $this->bannerRepository->getBanners();
+		$banners = $this->bannerRepository->getBanners();
 		$data['modal'] = (Session::get('modal') == null ? 'false' : 'true');
 		$data['imagemDestaque'] = Session::get('img');
-		return View::make('back.pages.config', compact('data', 'featured', 'sliders'));
+		return View::make('back.pages.config', compact('data', 'featured', 'banners'));
 	}
 
 	public function featuredPost(){
@@ -82,13 +82,13 @@ class Admin_ConfigController extends BaseController {
 	}
 
 	public function addBanner(){
-		$data['imagemSlider'] = Session::get('img');
+		$data['imagemBanner'] = Session::get('img');
 		$data['modal'] = (Session::get('modal') == null ? 'false' : 'true');
 		return View::make('back.pages.banner', compact('data'));
 	}
 
 	public function bannerPost(){
-		$this->sliderHomeForm->validate(Input::all());
+		$this->bannerHomeForm->validate(Input::all());
 		if(Input::hasFile('image')){
 			$image = Input::file('image');
 			$path = 'images/banners';
@@ -119,12 +119,12 @@ class Admin_ConfigController extends BaseController {
 		return Redirect::route('config_admin_path');
 	}
 
-//	public function sliderPost(){
+//	public function bannerPost(){
 //		Session::forget( 'img_featured' );
-//		$this->sliderHomeForm->validate(Input::all());
+//		$this->bannerHomeForm->validate(Input::all());
 //		if(Input::hasFile('image')){
 //			$image = Input::file('image');
-//			$path = 'images/slider';
+//			$path = 'images/banner';
 //			$image->move($path, $image->getClientOriginalName());
 //			$final_image = $path."/".$image->getClientOriginalName();
 //			$img = Image::make($final_image);
@@ -136,7 +136,7 @@ class Admin_ConfigController extends BaseController {
 //		}else{
 //			$final_image = Input::get('image_bckp');
 //		}
-//		Session::put('img_slider', $final_image);
+//		Session::put('img_banner', $final_image);
 //		extract(Input::only('image','image_bckp','body','title'));
 //		$this->execute(new SetFeaturedCommand($final_image, $image_bckp, $body, $title));
 //		return Redirect::route('config_admin_path');
