@@ -42,37 +42,8 @@ header{
             }
         }
     }
-    #menu, #busca{
+    #menu, .busca{
         margin-top: 61px;
-        height: 40px;
-        .br;
-        background: @yellow;
-        overflow: hidden;
-    }
-    #busca{
-        i, input{
-            color:@white;
-        }
-        i{
-            padding-left: 10px;
-            cursor: pointer;
-        }
-        input{
-            border: none;
-            background: transparent;
-            letter-spacing: 0.075em;
-            .gothamBold;
-            line-height: 42px;
-            font-size: 14px;
-            padding: 0px;
-            margin: 0;
-            &::-moz-placeholder{
-                color:@white;
-            }
-            &::-webkit-input-placeholder{
-                color:@white;
-            }
-        }
     }
     #menu{
         ul{
@@ -216,6 +187,38 @@ header{
         padding: 10px 0;
         i{
             margin-right: 4px;
+        }
+    }
+}
+
+#menu, .busca{
+    height: 40px;
+    .br;
+    background: @yellow;
+    overflow: hidden;
+}
+.busca{
+    i, input{
+        color:@white;
+    }
+    i{
+        padding-left: 10px;
+        cursor: pointer;
+    }
+    input{
+        border: none;
+        background: transparent;
+        letter-spacing: 0.075em;
+        .gothamBold;
+        line-height: 42px;
+        font-size: 14px;
+        padding: 0px;
+        margin: 0;
+        &::-moz-placeholder{
+            color:@white;
+        }
+        &::-webkit-input-placeholder{
+            color:@white;
         }
     }
 }

@@ -30,6 +30,7 @@
 <div id="sidebar" class="col-7">
 	@include('front._includes.next-spots')
 	@include('front._includes.newsletter')
+	@include('front._includes.busca')
 </div>
 @stop
 @section('scripts')

@@ -431,36 +431,8 @@ header #logo a img {
   color: #f00;
 }
 header #menu,
-header #busca {
+header .busca {
   margin-top: 61px;
-  height: 40px;
-  border-radius: 3px;
-  background: #ffc107;
-  overflow: hidden;
-}
-header #busca i,
-header #busca input {
-  color: #ffffff;
-}
-header #busca i {
-  padding-left: 10px;
-  cursor: pointer;
-}
-header #busca input {
-  border: none;
-  background: transparent;
-  letter-spacing: 0.075em;
-  font-family: "GothamBold", Verdana, sans-serif;
-  line-height: 42px;
-  font-size: 14px;
-  padding: 0px;
-  margin: 0;
-}
-header #busca input::-moz-placeholder {
-  color: #ffffff;
-}
-header #busca input::-webkit-input-placeholder {
-  color: #ffffff;
 }
 header #menu ul {
   padding: 0;
@@ -600,4 +572,35 @@ header #menu ul li a {
 }
 #newsletter.red h2 i {
   margin-right: 4px;
+}
+#menu,
+.busca {
+  height: 40px;
+  border-radius: 3px;
+  background: #ffc107;
+  overflow: hidden;
+}
+.busca i,
+.busca input {
+  color: #ffffff;
+}
+.busca i {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.busca input {
+  border: none;
+  background: transparent;
+  letter-spacing: 0.075em;
+  font-family: "GothamBold", Verdana, sans-serif;
+  line-height: 42px;
+  font-size: 14px;
+  padding: 0px;
+  margin: 0;
+}
+.busca input::-moz-placeholder {
+  color: #ffffff;
+}
+.busca input::-webkit-input-placeholder {
+  color: #ffffff;
 }

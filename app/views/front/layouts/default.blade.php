@@ -14,7 +14,7 @@
 		<header>
 			<div id="logo" class="col-3"><a href="/"><img src="/images/foodtrucker-t.svg" alt="" height="100"/></a></div>
 			<div id="menu" class="col-12">@include('front._includes.menu')</div>
-			<div id="busca" class="col-5">@include('front._includes.busca')</div>
+			<div class="col-5">@include('front._includes.busca')</div>
 		</header>
 		<div id="content">
 			@yield('content')
