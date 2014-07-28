@@ -30,7 +30,8 @@
 <div id="sidebar" class="col-7">
 	@include('front._includes.next-spots')
 	@include('front._includes.newsletter')
-	@include('front._includes.busca')
+	@include('front._includes.busca', ['formClass' => 'white'])
+	<div style="height: 110px;display: block;background: #000; margin-top: 20px;"></div>
 </div>
 @stop
 @section('scripts')
