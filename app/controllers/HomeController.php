@@ -39,4 +39,5 @@ class HomeController extends BaseController {
 		$newsletter = $this->newsletterForm->validate(Input::all());
 	}
 
+
 }

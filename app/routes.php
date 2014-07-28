@@ -39,6 +39,15 @@ Route::group(array('before' => 'auth'), function() {
 			return Redirect::to( 'admin/dashboard' );});
 		Route::get( 'dashboard', array( "as" => "dashboard", "uses" => 'Admin_AdminController@dashboard' ) );
 		/*
+		 * Truck Section
+		 */
+		Route::get('truck',[
+			'as'    => 'truck_admin_path',
+			'uses'  => 'Admin_TruckController@index']);
+		Route::post('truck/new', [
+			'as'    => 'new_truck_admin_path',
+			'uses'  => 'Admin_TruckController@store']);
+		/*
 		 * Spot Section
 		 */
 		Route::get('spot',[
