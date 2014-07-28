@@ -580,6 +580,10 @@ header #menu ul li a {
   background: #ffc107;
   overflow: hidden;
 }
+.busca.white {
+  background: #ffffff;
+  border: 1px solid #ffc107;
+}
 .busca i,
 .busca input {
   color: #ffffff;
@@ -603,4 +607,73 @@ header #menu ul li a {
 }
 .busca input::-webkit-input-placeholder {
   color: #ffffff;
+}
+.busca.white i,
+.busca.white input {
+  color: #ffc107;
+}
+.busca.white i::-moz-placeholder,
+.busca.white input::-moz-placeholder {
+  color: #ffc107;
+}
+.busca.white i::-webkit-input-placeholder,
+.busca.white input::-webkit-input-placeholder {
+  color: #ffc107;
+}
+footer {
+  background: #303030;
+  padding: 30px 0;
+}
+footer .copyright p {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ed7f62;
+}
+footer .copyright p a {
+  color: #fffffd;
+  text-decoration: none;
+}
+footer .copyright p a:hover {
+  text-decoration: underline;
+}
+footer .sitemap {
+  background: #fffffd;
+  border-radius: 3px;
+}
+footer .sitemap ul {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 20px 19px;
+}
+footer .sitemap ul h3 {
+  color: #ed7f62;
+}
+footer .sitemap ul li {
+  margin-top: 6px;
+}
+footer .sitemap ul li a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #303030;
+  text-decoration: none;
+}
+footer .sitemap ul li a:hover {
+  text-decoration: underline;
 }

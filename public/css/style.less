@@ -197,6 +197,10 @@ header{
     background: @yellow;
     overflow: hidden;
 }
+.busca.white{
+    background: @white;
+    border: 1px solid @yellow;
+}
 .busca{
     i, input{
         color:@white;
@@ -219,6 +223,69 @@ header{
         }
         &::-webkit-input-placeholder{
             color:@white;
+        }
+    }
+}
+.busca.white{
+    i, input{
+        color:@yellow;
+        &::-moz-placeholder{
+            color:@yellow;
+        }
+        &::-webkit-input-placeholder{
+            color:@yellow;
+        }
+    }
+
+}
+
+footer{
+    background: @greyFooter;
+    padding: 30px 0;
+    .copyright{
+        p{
+            margin-top: 0;
+            .helvetica;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            color:@red;
+            a{
+                color:@cream;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .sitemap{
+        background: @cream;
+        .br;
+        ul{
+            .helvetica;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 20px 19px;
+            h3{
+                color:@red;
+            }
+            li{
+                margin-top: 6px;
+                a{
+                    .helvetica;
+                    font-weight: bold;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color:@greyFooter;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
     }
 }
