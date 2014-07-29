@@ -9,12 +9,12 @@ class TruckRepository {
 		$this->truck = $truck;
 	}
 
-	public function save(Spot $spot){
-		return $spot->save();
+	public function save(Truck $truck){
+		return $truck->save();
 	}
 
-	public function getThisId(Spot $spot) {
-		return $spot->orderBy('id','desc')->pluck('id');
+	public function getThisId(Truck $truck) {
+		return $truck->orderBy('id','desc')->pluck('id');
 	}
 
 	public function getTrucks() {
@@ -22,7 +22,7 @@ class TruckRepository {
 	}
 
 	public function getSpotsId(){
-		return $this->getSpots()->lists('id');
+		return $this->getTrucks()->lists('id');
 	}
 
 } 

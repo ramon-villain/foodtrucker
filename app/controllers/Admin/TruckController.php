@@ -1,25 +1,22 @@
 <?php
 
 use Foodtrucker\Core\CommandBus;
-use Foodtrucker\Forms\NewSpotForm;
-use Foodtrucker\Spots\AddSpot\AddSpotCommand;
+use Foodtrucker\Forms\newTruckForm;
 use Foodtrucker\Spots\Spot;
-use Foodtrucker\Spots\SpotRepository;
-use Foodtrucker\Tags\AddTagCommand;
-use Foodtrucker\Tags\AddTagTruckCommand;
+use Foodtrucker\Trucks\AddTruck\AddTruckCommand;
 use Foodtrucker\Trucks\TruckRepository;
 
 class Admin_TruckController extends BaseController {
 
 	use CommandBus;
-	private $newSpotForm;
 	private $truckRepository;
 	private $spot;
+	private $newTruckForm;
 
-	function __construct( NewSpotForm $newSpotForm, TruckRepository $truckRepository, Spot $spot) {
-		$this->newSpotForm = $newSpotForm;
+	function __construct( NewTruckForm $newTruckForm, TruckRepository $truckRepository, Spot $spot) {
 		$this->truckRepository = $truckRepository;
 		$this->spot = $spot;
+		$this->newTruckForm = $newTruckForm;
 	}
 
 	public function index(){
@@ -30,12 +27,17 @@ class Admin_TruckController extends BaseController {
 
 	public function store()
 	{
-		$this->newSpotForm->validate(Input::all());
-		extract(Input::only('truck','endereco','inicio', 'fim', 'description', 'tags'));
-		$this->execute( new AddSpotCommand($truck,$endereco,$inicio,$fim,$description));
-		$this->execute( new AddTagCommand($tags));
-		$this->execute( new AddTagTruckCommand($tags,$this->spotRepository->getThisId($this->spot),$truck));
+		$this->newTruckForm->validate(Input::all());
+		extract(Input::only('nome', 'logo','description','pagamento','facebook','instagram', 'maisPedido', 'extras'));
+		$logo = $this->extractLogo(Input::file('logo'));
+		$this->execute( new AddTruckCommand($nome, $logo, $description, $pagamento, $facebook, $instagram , $maisPedido, $extras));
 		return Redirect::back();
+	}
+
+	private function extractLogo( $image ) {
+		$path = 'images/trucks/logos';
+		$image->move($path, $image->getClientOriginalName());
+		return $final_image = $path."/".$image->getClientOriginalName();
 	}
 
 }
