@@ -23,9 +23,9 @@ class AddSpotCommandHandler implements CommandHandler{
 
 	public function handle( $command ) {
 		$data = $this->getDayAndBegin($command);
-		$truck = $this->getTruckIDfromName($command->truck);
+
 		$spot = Spot::register(
-			$truck, $data['inicioDay'], $data['fimDay'], $data['inicioTime'], $data['fimTime'], $command->endereco, $command->description
+			$command->truck, $data['inicioDay'], $data['fimDay'], $data['inicioTime'], $data['fimTime'], $command->endereco, $command->description
 		);
 		$this->spotRepository->save($spot);
 		$this->dispatchEventsFor($spot);
@@ -47,7 +47,5 @@ class AddSpotCommandHandler implements CommandHandler{
 		return $data;
 	}
 
-	private function getTruckIDfromName( $truck ) {
-		return $truck + 1;
-	}
+
 }

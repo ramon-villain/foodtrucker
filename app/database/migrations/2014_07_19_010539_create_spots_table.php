@@ -15,7 +15,8 @@ class CreateSpotsTable extends Migration {
 		Schema::create('spots', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('truck');
+			$table->integer('truck_id')->unsigned()->index();
+			$table->foreign('truck_id')->references('id')->on('trucks')->onDelete('cascade');
 			$table->date('abertura');
 			$table->date('encerramento');
 			$table->time('inicio');
