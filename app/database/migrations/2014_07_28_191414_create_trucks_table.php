@@ -21,7 +21,7 @@ class CreateTrucksTable extends Migration {
 			$table->string('pagamento');
 			$table->string('facebook');
 			$table->string('instagram');
-			$table->string('mais-pedido');
+			$table->string('maisPedido');
 			$table->string('extras');
 			$table->timestamps();
 		});
