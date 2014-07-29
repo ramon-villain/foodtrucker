@@ -3,7 +3,7 @@
 		<h2>Adicionar Truck</h2>
 	</div>
 	<div class="body bordered">
-		{{Form::open(['route' => 'new_truck_admin_path', 'class' => 'form'])}}
+		{{Form::open(['route' => 'new_truck_admin_path', 'class' => 'form', 'files' => true])}}
 		{{Form::label('nome', 'Nome do Food Truck:')}}
 		<div class="wrapInput">{{Form::text('nome', '', ['placeholder' => 'Buzina Food Truck'])}}</div>
 
@@ -22,8 +22,8 @@
 		{{Form::label('instagram', 'Instagram:')}}
 		<div class="wrapInput">{{Form::text('instagram','',['placeholder' => '@foodtruckerbr'])}}</div>
 
-		{{Form::label('mais-pedido', 'Mais Pedido:')}}
-		<div class="wrapInput">{{Form::text('mais-pedido','',['placeholder' => 'Hamburguer de Carne'])}}</div>
+		{{Form::label('maisPedido', 'Mais Pedido:')}}
+		<div class="wrapInput">{{Form::text('maisPedido','',['placeholder' => 'Hamburguer de Carne'])}}</div>
 
 		{{Form::label('extras', 'Extras:')}}
 		<div class="wrapInput wrapTextarea">{{Form::textarea('extras','',['placeholder' => 'Música hype.'])}}</div>
