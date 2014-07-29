@@ -3,7 +3,7 @@
 @section('content')
 @include('front._includes.errors')
 <div class="col-10">
-	@include('back._includes.addSpot')
+	@include('back._includes.addTruck')
 </div>
 <div class="sidebar col-10">
 	@include('back._includes.getTruck')
