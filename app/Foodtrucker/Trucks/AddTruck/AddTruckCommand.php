@@ -1,10 +1,6 @@
-<?php
-
-namespace Foodtrucker\Trucks\AddTruck;
-
+<?php namespace Foodtrucker\Trucks\AddTruck;
 
 class AddTruckCommand {
-
 
 	public $nome;
 	public $logo;

@@ -21,8 +21,12 @@ class TruckRepository {
 		return $this->truck->orderBy('created_at', 'desc')->get();
 	}
 
-	public function getSpotsId(){
+	public function getTrucksId(){
 		return $this->getTrucks()->lists('id');
+	}
+
+	public function getTrucksName(){
+		return $this->getTrucks()->lists('nome');
 	}
 
 } 

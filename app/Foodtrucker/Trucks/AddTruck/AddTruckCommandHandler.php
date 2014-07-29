@@ -2,8 +2,6 @@
 
 namespace Foodtrucker\Trucks\AddTruck;
 
-use Foodtrucker\Spots\Spot;
-use Foodtrucker\Spots\SpotRepository;
 use Foodtrucker\Trucks\Truck;
 use Foodtrucker\Trucks\TruckRepository;
 use Laracasts\Commander\CommandHandler;

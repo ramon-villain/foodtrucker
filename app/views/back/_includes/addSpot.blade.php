@@ -5,7 +5,7 @@
 	<div class="body bordered">
 		{{Form::open(['route' => 'new_spot_admin_path', 'class' => 'form'])}}
 		{{Form::label('truck', 'Escolha um Food Truck:')}}
-		{{Form::select('truck', ['1', 'Buzina Food Truck'])}}
+		{{Form::select('truck', $data['trucks'])}}
 
 		{{Form::label('endereco', 'Endereço do Spot:')}}
 		<div class="wrapInput">{{Form::text('endereco','',['placeholder' => 'Avenida Paulista, 800, São Paulo - SP'])}}</div>

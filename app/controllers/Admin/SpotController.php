@@ -7,6 +7,7 @@ use Foodtrucker\Spots\Spot;
 use Foodtrucker\Spots\SpotRepository;
 use Foodtrucker\Tags\AddTagCommand;
 use Foodtrucker\Tags\AddTagTruckCommand;
+use Foodtrucker\Trucks\TruckRepository;
 
 class Admin_SpotController extends BaseController {
 
@@ -14,15 +15,21 @@ class Admin_SpotController extends BaseController {
 	private $newSpotForm;
 	private $spotRepository;
 	private $spot;
+	/**
+	 * @var TruckRepository
+	 */
+	private $truckRepository;
 
-	function __construct( NewSpotForm $newSpotForm, SpotRepository $spotRepository, Spot $spot) {
+	function __construct( NewSpotForm $newSpotForm, SpotRepository $spotRepository, Spot $spot, TruckRepository $truckRepository) {
 		$this->newSpotForm = $newSpotForm;
 		$this->spotRepository = $spotRepository;
 		$this->spot = $spot;
+		$this->truckRepository = $truckRepository;
 	}
 
 	public function index(){
 		$data['spots'] = $this->spotRepository->getSpots();
+		$data['trucks'] = $this->truckRepository->getTrucksName();
 		return View::make('back.pages.spots', compact('data'));
 	}
 
