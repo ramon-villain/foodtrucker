@@ -26,7 +26,7 @@ class TruckRepository {
 	}
 
 	public function getTrucksName(){
-		return $this->getTrucks()->lists('nome');
+		return Truck::lists('nome');
 	}
 
 } 

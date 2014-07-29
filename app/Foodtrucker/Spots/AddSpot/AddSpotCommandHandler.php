@@ -4,21 +4,28 @@ namespace Foodtrucker\Spots\AddSpot;
 
 use Foodtrucker\Spots\Spot;
 use Foodtrucker\Spots\SpotRepository;
+use Foodtrucker\Trucks\TruckRepository;
 use Laracasts\Commander\CommandHandler;
 use Laracasts\Commander\Events\DispatchableTrait;
 
 class AddSpotCommandHandler implements CommandHandler{
 	use DispatchableTrait;
 	private $spotRepository;
+	/**
+	 * @var TruckRepository
+	 */
+	private $truckRepository;
 
-	function __construct(SpotRepository $spotRepository) {
+	function __construct(SpotRepository $spotRepository, TruckRepository $truckRepository) {
 		$this->spotRepository = $spotRepository;
+		$this->truckRepository = $truckRepository;
 	}
 
 	public function handle( $command ) {
 		$data = $this->getDayAndBegin($command);
+		$truck = $this->getTruckIDfromName($command->truck);
 		$spot = Spot::register(
-			$command->truck, $data['inicioDay'], $data['fimDay'], $data['inicioTime'], $data['fimTime'], $command->endereco, $command->description
+			$truck, $data['inicioDay'], $data['fimDay'], $data['inicioTime'], $data['fimTime'], $command->endereco, $command->description
 		);
 		$this->spotRepository->save($spot);
 		$this->dispatchEventsFor($spot);
@@ -38,5 +45,9 @@ class AddSpotCommandHandler implements CommandHandler{
 		$data['fimDay'] = gmdate("Y-m-d", strtotime($encerramento));
 		$data['fimTime']    = trim( $fim[1] );
 		return $data;
+	}
+
+	private function getTruckIDfromName( $truck ) {
+		return $truck + 1;
 	}
 }
