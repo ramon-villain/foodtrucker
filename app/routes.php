@@ -115,10 +115,3 @@ Route::group(['prefix' => 'js'], function(){
 		return Response::json($trucks);});
 });
 
-Route::get('teste', [
-	'uses'=> 'HomeController@teste',
-	'as'    => 'upload_image']);
-Route::post('teste', [
-	'uses'=> 'HomeController@testeUp',
-	'as'    => 'upload_image']);
-
