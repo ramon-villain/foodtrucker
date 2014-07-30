@@ -6,7 +6,7 @@
 	@include('back._includes.addPost')
 </div>
 <div class="col-10">
- {{-- @include('back._includes.getPosts') --}}
+ @include('back._includes.getPosts')
 </div>
 @stop
 

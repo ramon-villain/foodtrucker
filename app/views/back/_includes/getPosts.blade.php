@@ -12,10 +12,13 @@
 			@foreach($data['posts'] as $post)
 			<tr>
 				<td><a href="post/{{$post->id}}/edit">{{$post->id}}</td>
-				<td>{{$spot->title}}</td>
-				<td>{{$spot->published_at}}</td>
+				<td>{{$post->titulo}}</td>
+				<td>{{$post->publish_at}}</td>
 			</tr>
 			@endforeach
 		</table>
+		<div style="width: 100%;text-align: center;">
+			{{$data['posts']->links()}}
+		</div>
 	</div>
 </div>
