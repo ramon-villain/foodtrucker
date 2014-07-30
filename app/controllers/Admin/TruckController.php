@@ -30,6 +30,7 @@ class Admin_TruckController extends BaseController {
 		$this->newTruckForm->validate(Input::all());
 		extract(Input::only('nome', 'logo','description','pagamento','facebook','instagram', 'maisPedido', 'extras'));
 		$logo = $this->extractLogo(Input::file('logo'));
+
 		$this->execute( new AddTruckCommand($nome, $logo, $description, $pagamento, $facebook, $instagram , $maisPedido, $extras));
 		return Redirect::back();
 	}
