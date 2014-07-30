@@ -32,9 +32,9 @@
 		<div class="wrapInput">{{Form::text('body',$featured->body,['placeholder' => 'La Buena Station'])}}</div>
 		{{Form::label('image', 'Imagem em Destaque:')}}
 		@if($featured->image != '')
-		{{HTML::image($featured->image, '',['style' => 'margin-bottom:20px'])}}
+			{{HTML::image($featured->image, '',['style' => 'margin-bottom:20px'])}}
 		@endif
-		{{Form::file('image')}}
+		<div class="wrapInput">{{Form::file('image')}}</div>
 		{{Form::hidden('image_bckp', $featured->image)}}
 		{{Form::submit('Atualizar Destaque', ['class' => 'btn btn-green fr'] )}}
 		{{Form::close()}}

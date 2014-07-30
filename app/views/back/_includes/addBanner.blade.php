@@ -31,7 +31,7 @@
 		{{Form::label('url', 'Link do Banner:')}}
 		<div class="wrapInput">{{Form::text('url','',['placeholder' => 'http://foodtrucker.com.br/trucks/abc'])}}</div>
 		{{Form::label('image', 'Imagem em Destaque:')}}
-		{{Form::file('image')}}
+		<div class="wrapInput">{{Form::file('image')}}</div>
 		{{Form::submit('Atualizar Destaque', ['class' => 'btn btn-green fr'] )}}
 		{{Form::close()}}
 	</div>
