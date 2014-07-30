@@ -68,6 +68,9 @@ Route::group(array('before' => 'auth'), function() {
 		Route::post('tag/new-truck', [
 			'as'    => 'new_tag_truck_admin_path',
 			'uses'  => 'Admin_TagController@storeTruck']);
+		/*
+		 * Configuration Section
+		 */
 		Route::get('config',[
 			'as'    => 'config_admin_path',
 			'uses'  => 'Admin_ConfigController@index']);
@@ -86,6 +89,15 @@ Route::group(array('before' => 'auth'), function() {
 		Route::post('config/banners/crop', [
 			'uses'=> 'Admin_ConfigController@cropBanner',
 			'as'    => 'crop_upload_banner']);
+		/*
+		 * Blog Section
+		 */
+		Route::get('blog',[
+			'as'    => 'blog_admin_path',
+			'uses'  => 'Admin_BlogController@index']);
+		Route::post('blog/new', [
+			'as'    => 'new_post_admin_path',
+			'uses'  => 'Admin_BlogController@store']);
 	});
 });
 
