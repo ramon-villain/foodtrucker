@@ -33,6 +33,15 @@ Route::get('/logout', [
 	'as'    => 'logout_path',
 	'uses'  => 'LoginController@logout']);
 
+
+Route::get('/contato', [
+	'as'    => 'contato_path',
+	'uses'  => 'ContatoController@index']);
+
+Route::post('/contato', [
+	'as'    => 'contato_path',
+	'uses'  => 'ContatoController@post']);
+
 Route::group(array('before' => 'auth'), function() {
 	Route::group( array( 'prefix' => 'admin' ), function () {
 		Route::get('', function () {
