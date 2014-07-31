@@ -9,7 +9,7 @@
 	</div>
 	<div class="col-5 stats set-red">
 		<h1>10</h1>
-		<span>Visitas Ontem</span>
+		<span>Posts Publicados</span>
 	</div>
 	<div class="col-5 stats set-green">
 		<h1>100</h1>

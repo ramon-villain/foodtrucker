@@ -1,7 +1,9 @@
 <?php
 
-class BaseController extends Controller {
+use Foodtrucker\Core\CommandBus;
 
+class BaseController extends Controller {
+	use CommandBus;
 	/**
 	 * Setup the layout used by the controller.
 	 *

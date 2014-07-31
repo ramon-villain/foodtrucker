@@ -1,6 +1,5 @@
 <?php
 
-use Foodtrucker\Core\CommandBus;
 use Foodtrucker\Forms\newTruckForm;
 use Foodtrucker\Spots\Spot;
 use Foodtrucker\Trucks\AddTruck\AddTruckCommand;
@@ -8,7 +7,6 @@ use Foodtrucker\Trucks\TruckRepository;
 
 class Admin_TruckController extends BaseController {
 
-	use CommandBus;
 	private $truckRepository;
 	private $spot;
 	private $newTruckForm;
@@ -30,7 +28,6 @@ class Admin_TruckController extends BaseController {
 		$this->newTruckForm->validate(Input::all());
 		extract(Input::only('nome', 'logo','description','pagamento','facebook','instagram', 'maisPedido', 'extras'));
 		$logo = $this->extractLogo(Input::file('logo'));
-
 		$this->execute( new AddTruckCommand($nome, $logo, $description, $pagamento, $facebook, $instagram , $maisPedido, $extras));
 		return Redirect::back();
 	}

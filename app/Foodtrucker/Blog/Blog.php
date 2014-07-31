@@ -1,7 +1,6 @@
 <?php
 namespace Foodtrucker\Blog;
 
-use DateTime;
 use Foodtrucker\Blog\Events\PostPublished;
 use Laracasts\Commander\Events\EventGenerator;
 use Hash, Eloquent;

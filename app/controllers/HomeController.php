@@ -35,7 +35,6 @@ class HomeController extends BaseController {
 	}
 
 	public function newsletter(){
-//		dd(Input::all());
 		$newsletter = $this->newsletterForm->validate(Input::all());
 	}
 

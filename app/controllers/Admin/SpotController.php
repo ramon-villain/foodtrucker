@@ -1,6 +1,5 @@
 <?php
 
-use Foodtrucker\Core\CommandBus;
 use Foodtrucker\Forms\NewSpotForm;
 use Foodtrucker\Spots\AddSpot\AddSpotCommand;
 use Foodtrucker\Spots\Spot;
@@ -11,7 +10,6 @@ use Foodtrucker\Trucks\TruckRepository;
 
 class Admin_SpotController extends BaseController {
 
-	use CommandBus;
 	private $newSpotForm;
 	private $spotRepository;
 	private $spot;

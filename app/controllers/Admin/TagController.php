@@ -1,6 +1,5 @@
 <?php
 
-use Foodtrucker\Core\CommandBus;
 use Foodtrucker\Forms\NewTagForm;
 use Foodtrucker\Spots\SpotRepository;
 use Foodtrucker\Tags\AddTagCommand;
@@ -8,7 +7,6 @@ use Foodtrucker\Tags\TagRepository;
 
 class Admin_TagController extends BaseController {
 
-	use CommandBus;
 
 	/**
 	 * @var TagRepository

@@ -4,11 +4,9 @@ use Foodtrucker\Forms\RegistrationForm;
 use Foodtrucker\Users\Registration\RegisterUserCommand;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-use Foodtrucker\Core\CommandBus;
 
 class RegistrationController extends BaseController {
 
-	use CommandBus;
 	private $registrationForm;
 
 	function __construct( RegistrationForm $registrationForm){

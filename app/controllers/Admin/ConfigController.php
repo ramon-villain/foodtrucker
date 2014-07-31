@@ -8,8 +8,6 @@ use Foodtrucker\Forms\FeaturedHomeForm;
 use Foodtrucker\Forms\BannerHomeForm;
 
 class Admin_ConfigController extends BaseController {
-
-	use \Foodtrucker\Core\CommandBus;
 	/**
 	 * @var ConfigRepository
 	 */

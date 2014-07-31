@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Redirect;
 
 
 class LoginController extends BaseController {
-
 	private $form;
+
 
 	function __construct( LoginForm $form) {
 		$this->beforeFilter('guest', ['except' => 'logout']);

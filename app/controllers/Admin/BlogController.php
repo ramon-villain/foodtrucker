@@ -2,12 +2,11 @@
 
 use Foodtrucker\Blog\AddPost\AddPostCommand;
 use Foodtrucker\Blog\BlogRepository;
-use Foodtrucker\Core\CommandBus;
 use Foodtrucker\Forms\NewPostForm;
 
 class Admin_BlogController extends BaseController {
 
-	use CommandBus;
+
 	/**
 	 * @var NewPostForm
 	 */
@@ -24,7 +23,7 @@ class Admin_BlogController extends BaseController {
 
 	public function index(){
 		$data['title'] = 'Blog';
-		$data['posts'] = $this->blogRepository->getPosts('id', '', 5);
+		$data['posts'] = $this->blogRepository->getPosts('id', '', 10);
 		return View::make('back.pages.blog', compact('data'));
 	}
 
