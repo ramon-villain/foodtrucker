@@ -159,6 +159,7 @@ option {
   border-radius: 3px;
   border: 1px solid #e0e0e0;
   margin: 10px 0 0;
+  text-decoration: none;
 }
 .btn:hover {
   background: #f7f7f7;
@@ -299,6 +300,11 @@ ul.pagination li a {
 ul.pagination li.active {
   background: #666666;
   color: #ffffff;
+}
+.wysihtml5-toolbar .btn {
+  margin-top: 0;
+  display: block;
+  background: #ffffff;
 }
 ul.tagit {
   padding: 3px 0px 4px;

@@ -9,7 +9,7 @@
 		<div class="wrapInput">{{Form::text('titulo','',['placeholder' => 'Postagem marota'])}}</div>
 
 		{{Form::label('body', 'Conteúdo:')}}
-		<div class="wrapInput wrapTextarea">{{Form::textarea('body','',['placeholder' => 'Conteúdo legal'])}}</div>
+		<div class="wrapInput wrapTextarea">{{Form::textarea('body','',['placeholder' => 'Conteúdo legal', 'class' => 'editor'])}}</div>
 
 		{{Form::label('imagem', 'Imagem em Publicação:')}}
 		<div class="wrapInput">{{Form::file('imagem')}}</div>
