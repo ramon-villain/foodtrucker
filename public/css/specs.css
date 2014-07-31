@@ -306,3 +306,20 @@ ul.pagination li.active {
   display: block;
   background: #ffffff;
 }
+.alert ul li {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  font-size: 12px;
+  background: #ed7f62;
+  border-radius: 3px;
+  color: #ffffff;
+  margin-bottom: 3px;
+  padding: 10px;
+}
+.alert ul li span {
+  float: right;
+  color: #ffffff;
+  cursor: pointer;
+}
