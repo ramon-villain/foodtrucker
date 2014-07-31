@@ -1,6 +1,6 @@
 @extends('front.layouts.default')
-@include('back._includes.errors')
 @section('content')
+@include('front._includes.errors')
 <div id="main" class="col-13">
 	<div id="mapa" class="mb20" style="background: #000;height: 446px;display: block;width: 100%;"></div>
 	<div id="truckDaSemana" class="col-5 alpha widget">

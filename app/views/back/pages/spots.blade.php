@@ -1,7 +1,7 @@
 @extends('back.layouts.default')
 
 @section('content')
-@include('front._includes.errors')
+@include('back._includes.errors')
 <div class="col-7">
 	@include('back._includes.addSpot')
 </div>
