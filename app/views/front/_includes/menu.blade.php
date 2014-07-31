@@ -4,5 +4,5 @@
 	<li><a href="">Trucks</a></li>
 	<li><a href="">Eventos</a></li>
 	<li><a href="">Blog</a></li>
-	<li><a href="">Contato</a></li>
+	<li>{{link_to_route('contato_path', 'Contato' )}}</li>
 </ul>
