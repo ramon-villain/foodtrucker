@@ -14,7 +14,7 @@
 			@foreach($data['spots'] as $spot)
 			<tr>
 				<td><a href="spot/{{$spot->id}}/edit">{{$spot->id}}</td>
-				<td>{{$spot->truck}}</td>
+				<td>{{$spot->truck_id}}</td>
 				<td>{{$spot->abertura}} - {{$spot->inicio}}</td>
 				<td>{{$spot->local}}</td>
 				<td>{{$spot->active}}</td>

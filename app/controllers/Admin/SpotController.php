@@ -6,6 +6,7 @@ use Foodtrucker\Spots\Spot;
 use Foodtrucker\Spots\SpotRepository;
 use Foodtrucker\Tags\AddTagCommand;
 use Foodtrucker\Tags\AddTagTruckCommand;
+use Foodtrucker\Trucks\Truck;
 use Foodtrucker\Trucks\TruckRepository;
 
 class Admin_SpotController extends BaseController {
@@ -27,6 +28,9 @@ class Admin_SpotController extends BaseController {
 
 	public function index(){
 		$data['spots'] = $this->spotRepository->getSpots();
+		foreach ($data['spots'] as $spot){
+			$spot['truck_id'] = Truck::where('id', $spot['truck_id'])->pluck('nome');
+		}
 		$data['trucks'] = $this->truckRepository->getTrucksName();
 		return View::make('back.pages.spots', compact('data'));
 	}
@@ -34,11 +38,11 @@ class Admin_SpotController extends BaseController {
 	public function store()
 	{
 		$this->newSpotForm->validate(Input::all());
-		extract(Input::only('truck','endereco','inicio', 'fim', 'description', 'tags'));
-		$truck = $this->getTruckIDfromName($truck);
-		$this->execute( new AddSpotCommand($truck,$endereco,$inicio,$fim,$description));
+		extract(Input::only('truck_id','endereco','inicio', 'fim', 'description', 'tags'));
+		$truck_id = $this->getTruckIDfromName($truck_id);
+		$this->execute( new AddSpotCommand($truck_id,$endereco,$inicio,$fim,$description));
 		$this->execute( new AddTagCommand($tags));
-		$this->execute( new AddTagTruckCommand($tags,$this->spotRepository->getThisId($this->spot),$truck));
+		$this->execute( new AddTagTruckCommand($tags,$this->spotRepository->getThisId($this->spot),$truck_id));
 		return Redirect::back();
 	}
 
