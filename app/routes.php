@@ -111,16 +111,21 @@ Route::group(array('before' => 'auth'), function() {
 		Route::post('post/new', [
 			'as'    => 'new_post_admin_path',
 			'uses'  => 'Admin_BlogController@store']);
-
+		Route::get('post/{id}/edit',[
+			'as'    => 'edit_post_admin_path',
+			'uses'  => 'Admin_BlogController@edit']);
+		Route::post('post/{id}/edit',[
+			'as'    => 'edit_post_admin_path',
+			'uses'  => 'Admin_BlogController@update']);
 		/*
 		 * Sobre Nós Section
 		 */
 		Route::get('sobre',[
-			'as'    => 'blog_admin_path',
-			'uses'  => 'Admin_BlogController@index']);
+			'as'    => 'sobre_admin_path',
+			'uses'  => 'Admin_SobreController@index']);
 		Route::post('sobre', [
-			'as'    => 'new_post_admin_path',
-			'uses'  => 'Admin_BlogController@store']);
+			'as'    => 'sobre_admin_path',
+			'uses'  => 'Admin_SobreController@store']);
 	});
 });
 
