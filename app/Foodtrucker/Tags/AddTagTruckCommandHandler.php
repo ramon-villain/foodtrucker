@@ -22,7 +22,6 @@ class AddTagTruckCommandHandler implements CommandHandler {
 	 */
 	public function handle( $command ) {
 		$arrTags = $this->parseTags($command->tags);
-		dd($command);
 		foreach($arrTags as $tag){
 			$tagId = Tag::where('tag', $tag)->pluck('id');
 			$tagTruck = TagTruck::register($command->truckId,$tagId,$command->spotId);

@@ -8,14 +8,14 @@ use Hash, Eloquent;
 class Spot extends \Eloquent {
 	use EventGenerator;
 
-	protected $fillable = ['truck', 'abertura','encerramento','inicio','fim','local', 'description'];
+	protected $fillable = ['truck_id', 'abertura','encerramento','inicio','fim','local', 'description'];
 	protected $table = 'spots';
 
 	public function tags(){
 		return $this->belongsToMany('Foodtrucker\Tags\Tag', 'tags_trucks');
 	}
-	public static function register( $truck, $abertura, $encerramento, $inicio, $fim, $local , $description) {
-		$spot = new static(compact('truck', 'abertura','encerramento', 'inicio', 'fim', 'local', 'description'));
+	public static function register( $truck_id, $abertura, $encerramento, $inicio, $fim, $local , $description) {
+		$spot = new static(compact('truck_id', 'abertura','encerramento', 'inicio', 'fim', 'local', 'description'));
 		$spot->raise(new SpotRegistered($spot));
 		return $spot;
 	}

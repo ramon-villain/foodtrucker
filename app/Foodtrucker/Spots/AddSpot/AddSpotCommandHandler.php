@@ -25,7 +25,7 @@ class AddSpotCommandHandler implements CommandHandler{
 		$data = $this->getDayAndBegin($command);
 
 		$spot = Spot::register(
-			$command->truck, $data['inicioDay'], $data['fimDay'], $data['inicioTime'], $data['fimTime'], $command->endereco, $command->description
+			$command->truck_id, $data['inicioDay'], $data['fimDay'], $data['inicioTime'], $data['fimTime'], $command->endereco, $command->description
 		);
 		$this->spotRepository->save($spot);
 		$this->dispatchEventsFor($spot);

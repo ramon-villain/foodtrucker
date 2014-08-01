@@ -1,6 +1,8 @@
 <?php
 namespace Foodtrucker\Spots;
 
+use Foodtrucker\Trucks\Truck;
+
 class SpotRepository {
 
 	private $spot;
