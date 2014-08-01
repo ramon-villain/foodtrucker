@@ -53,11 +53,13 @@ class Admin_SpotController extends BaseController {
 	public function edit($id){
 		$data['spot'] = $this->spotRepository->getSpotById($id);
 		$data['title'] = 'Editando Spot';
+		$data['spot']['truck_id'] = $data['spot']['truck_id'] - 1;
 		return View::make('back.pages.spot_edit', compact('data'));
 	}
 
 	public function update($id){
 		extract(Input::only('truck_id','endereco','inicio', 'fim', 'description', 'tags'));
+		$truck_id = $this->getTruckIDfromName($truck_id);
 		$this->spotRepository->updateSpot($id, $truck_id, $endereco, $inicio, $fim, $description);
 		return Redirect::back();
 	}
