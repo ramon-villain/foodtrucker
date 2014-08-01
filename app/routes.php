@@ -75,6 +75,12 @@ Route::group(array('before' => 'auth'), function() {
 		Route::post('spot', [
 			'as'    => 'new_spot_admin_path',
 			'uses'  => 'Admin_SpotController@store']);
+		Route::get('spot/{id}/edit',[
+			'as'    => 'edit_spot_admin_path',
+			'uses'  => 'Admin_SpotController@edit']);
+		Route::post('spot/{id}/edit',[
+			'as'    => 'edit_spot_admin_path',
+			'uses'  => 'Admin_SpotController@update']);
 		/*
 		 * Tag Section
 		 */
