@@ -12,4 +12,5 @@ tests/_output/*
 public/images/upload/*
 public/images/banners/*
 public/images/featured/*
+public/images/blog/*
 .idea
