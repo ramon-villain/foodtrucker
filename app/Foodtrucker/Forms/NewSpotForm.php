@@ -9,6 +9,5 @@ class NewSpotForm extends FormValidator{
 		'inicio'  => 'required',
 		'fim'   => 'required',
 		'endereco'  => 'required',
-		'truck'   => 'required'
 	];
 }
