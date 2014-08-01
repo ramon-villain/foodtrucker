@@ -36,11 +36,15 @@ Route::get('/logout', [
 
 Route::get('/contato', [
 	'as'    => 'contato_path',
-	'uses'  => 'ContatoController@index']);
+	'uses'  => 'PagesController@contato_index']);
 
 Route::post('/contato', [
 	'as'    => 'contato_path',
-	'uses'  => 'ContatoController@post']);
+	'uses'  => 'PagesController@contato_post']);
+
+Route::get('/sobre-nos', [
+	'as'    => 'sobre_path',
+	'uses'  => 'PagesController@sobre_index']);
 
 Route::group(array('before' => 'auth'), function() {
 	Route::group( array( 'prefix' => 'admin' ), function () {
@@ -53,7 +57,7 @@ Route::group(array('before' => 'auth'), function() {
 		Route::get('truck',[
 			'as'    => 'truck_admin_path',
 			'uses'  => 'Admin_TruckController@index']);
-		Route::post('truck/new', [
+		Route::post('truck', [
 			'as'    => 'new_truck_admin_path',
 			'uses'  => 'Admin_TruckController@store']);
 		/*
@@ -62,7 +66,7 @@ Route::group(array('before' => 'auth'), function() {
 		Route::get('spot',[
 			'as'    => 'spot_admin_path',
 			'uses'  => 'Admin_SpotController@index']);
-		Route::post('spot/new', [
+		Route::post('spot', [
 			'as'    => 'new_spot_admin_path',
 			'uses'  => 'Admin_SpotController@store']);
 		/*
@@ -71,7 +75,7 @@ Route::group(array('before' => 'auth'), function() {
 		Route::get('tag',[
 			'as'    => 'tag_admin_path',
 			'uses'  => 'Admin_TagController@index']);
-		Route::post('tag/new', [
+		Route::post('tag', [
 			'as'    => 'new_tag_admin_path',
 			'uses'  => 'Admin_TagController@store']);
 		Route::post('tag/new-truck', [
@@ -104,7 +108,17 @@ Route::group(array('before' => 'auth'), function() {
 		Route::get('blog',[
 			'as'    => 'blog_admin_path',
 			'uses'  => 'Admin_BlogController@index']);
-		Route::post('blog/new', [
+		Route::post('post/new', [
+			'as'    => 'new_post_admin_path',
+			'uses'  => 'Admin_BlogController@store']);
+
+		/*
+		 * Sobre Nós Section
+		 */
+		Route::get('sobre',[
+			'as'    => 'blog_admin_path',
+			'uses'  => 'Admin_BlogController@index']);
+		Route::post('sobre', [
 			'as'    => 'new_post_admin_path',
 			'uses'  => 'Admin_BlogController@store']);
 	});
