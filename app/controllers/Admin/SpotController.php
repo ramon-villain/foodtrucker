@@ -50,4 +50,16 @@ class Admin_SpotController extends BaseController {
 		return $truck + 1;
 	}
 
+	public function edit($id){
+		$data['spot'] = $this->spotRepository->getSpotById($id);
+		$data['title'] = 'Editando Spot';
+		return View::make('back.pages.spot_edit', compact('data'));
+	}
+
+	public function update($id){
+		extract(Input::only('truck_id','endereco','inicio', 'fim', 'description', 'tags'));
+		$this->spotRepository->updateSpot($id, $truck_id, $endereco, $inicio, $fim, $description);
+		return Redirect::back();
+	}
+
 }
