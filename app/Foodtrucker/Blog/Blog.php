@@ -20,14 +20,17 @@ class Blog extends \Eloquent {
 		return $post;
 	}
 
-	public function SetPublishAtAttribute($att){
-		$att = explode('-', $att);
-		$horario = trim($att[1].":00");
-		$data = explode('/', $att[0]);
-		$data = trim($data[2]).'-'.$data[1].'-'.$data[0];
-		$final = $data.' '.$horario;
-		return $this->attributes['publish_at'] = $final;
-
-	}
+//	public function SetPublishAtAttribute($att){
+//		$att = explode('-', $att);
+//		$horario = trim($att[1].":00");
+//		$data = explode('/', $att[0]);
+//		$data = trim($data[2]).'-'.$data[1].'-'.$data[0];
+//		$final = $data.' '.$horario;
+//		return $this->attributes['publish_at'] = $final;
+//	}
+//
+//	public function GetPublishAtAttribute($att){
+//		return substr($att, 0, -3);
+//	}
 
 }

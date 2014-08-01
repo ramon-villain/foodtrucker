@@ -25,7 +25,7 @@
 		"locale": "br",
 		"autodateOnStart": false,
 		"calendarMouseScroll": false,
-		"dateFormat":'DD/MM/YYYY - hh:mm'
+		"dateFormat":'YYYY-MM-DD hh:mm:00'
 	});
 
 </script>

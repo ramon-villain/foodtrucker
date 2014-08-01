@@ -35,10 +35,27 @@ class Admin_BlogController extends BaseController {
 		return Redirect::back();
 	}
 
-	private function extractImagem( $image ) {
-		$path = 'images/blog';
-		$image->move($path, $image->getClientOriginalName());
-		return $final_image = $path."/".$image->getClientOriginalName();
+
+	public function edit($id){
+		$data['post'] = $this->blogRepository->getPostById($id);
+		$data['title'] = 'Editando '. $data['post']->titulo;
+		return View::make('back.pages.post_edit', compact('data'));
 	}
 
+	public function update($id){
+		extract(Input::only('titulo', 'body', 'imagem', 'publish_at'));
+		if(Input::hasFile('imagem')){
+			$imagem = $this->extractImagem(Input::file('imagem'));
+		}
+		$this->blogRepository->updatePost($id, $titulo, $body, $imagem,$publish_at);
+		return Redirect::back();
+	}
+
+	private function extractImagem( $image ) {
+		$path = 'images/blog';
+		$nome_original = str_replace(' ', '-', $image->getClientOriginalName());
+		$nome = md5(time()) . '_' . $nome_original;
+		$image->move($path, $nome);
+		return $final_image = $path."/".$nome;
+	}
 }
