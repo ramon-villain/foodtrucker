@@ -306,6 +306,9 @@ ul.pagination li.active {
   display: block;
   background: #ffffff;
 }
+.alert {
+  margin-bottom: 10px;
+}
 .alert ul li {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
