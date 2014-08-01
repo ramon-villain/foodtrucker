@@ -22,7 +22,7 @@ class AddSpotCommandHandler implements CommandHandler{
 	}
 
 	public function handle( $command ) {
-		$data = $this->getDayAndBegin($command);
+		$data = $this->spotRepository->getDayAndBegin($command->inicio, $command->fim);
 
 		$spot = Spot::register(
 			$command->truck_id, $data['inicioDay'], $data['fimDay'], $data['inicioTime'], $data['fimTime'], $command->endereco, $command->description
@@ -31,21 +31,5 @@ class AddSpotCommandHandler implements CommandHandler{
 		$this->dispatchEventsFor($spot);
 		return $spot;
 	}
-
-	private function getDayAndBegin( $command ) {
-		$inicio    = explode( '-', $command->inicio );
-		$abertura = explode('/', trim($inicio[0]));
-		$abertura = $abertura[2].'-'.$abertura[1].'-'.$abertura[0];
-		$data['inicioDay'] = gmdate("Y-m-d", strtotime($abertura));
-		$data['inicioTime']    = trim( $inicio[1] );
-
-		$fim    = explode( '-', $command->fim );
-		$encerramento = explode('/', trim($fim[0]));
-		$encerramento = $encerramento[2].'-'.$encerramento[1].'-'.$encerramento[0];
-		$data['fimDay'] = gmdate("Y-m-d", strtotime($encerramento));
-		$data['fimTime']    = trim( $fim[1] );
-		return $data;
-	}
-
 
 }

@@ -8,9 +8,14 @@ use Laracasts\Commander\CommandHandler;
 class AddTagCommandHandler implements CommandHandler {
 
 	private $tagRepository;
+	/**
+	 * @var TagTruckRepository
+	 */
+	private $tagTruckRepository;
 
-	function __construct(TagRepository $tagRepository) {
+	function __construct(TagRepository $tagRepository, TagTruckRepository $tagTruckRepository) {
 		$this->tagRepository = $tagRepository;
+		$this->tagTruckRepository = $tagTruckRepository;
 	}
 
 	/**
@@ -21,7 +26,7 @@ class AddTagCommandHandler implements CommandHandler {
 	 * @return mixed
 	 */
 	public function handle( $command ) {
-		$arrTags = $this->parseTags($command->tags);
+		$arrTags = $this->tagTruckRepository->parseTags($command->tags);
 		foreach($arrTags as $tag){
 			if(count(Tag::where('tag', $tag)->get()) == 0){
 				$tags = Tag::register($tag);
@@ -30,7 +35,4 @@ class AddTagCommandHandler implements CommandHandler {
 		}
 	}
 
-		private function parseTags( $tags ) {
-			return explode(',', $tags);
-		}
-	}
+}

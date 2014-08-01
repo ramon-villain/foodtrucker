@@ -44,17 +44,13 @@ class SpotRepository {
 		]);
 	}
 
-	private function getDayAndBegin( $command_inicio, $command_fim ) {
-		$inicio    = explode( '-', $command_inicio );
-		$abertura = explode('/', trim($inicio[0]));
-		$abertura = $abertura[2].'-'.$abertura[1].'-'.$abertura[0];
-		$data['inicioDay'] = gmdate("Y-m-d", strtotime($abertura));
-		$data['inicioTime']    = trim( $inicio[1] );
+	public function getDayAndBegin( $command_inicio, $command_fim ) {
+		$inicio    = explode( ' ', $command_inicio );
+		$data['inicioDay'] = trim($inicio[0]);
+		$data['inicioTime']    = trim($inicio[1]);
 
-		$fim    = explode( '-', $command_fim );
-		$encerramento = explode('/', trim($fim[0]));
-		$encerramento = $encerramento[2].'-'.$encerramento[1].'-'.$encerramento[0];
-		$data['fimDay'] = gmdate("Y-m-d", strtotime($encerramento));
+		$fim    = explode( ' ', $command_fim );
+		$data['fimDay'] = trim($fim[0]);
 		$data['fimTime']    = trim( $fim[1] );
 		return $data;
 	}
