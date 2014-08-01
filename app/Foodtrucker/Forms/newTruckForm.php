@@ -7,5 +7,6 @@ class newTruckForm extends FormValidator{
 
 	protected $rules = [
 		'nome'  => 'required',
+		'logo'  => 'required'
 	];
 }
