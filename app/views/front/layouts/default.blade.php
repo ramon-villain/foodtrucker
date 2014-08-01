@@ -33,10 +33,10 @@
 				<ul>
 					<h3>MAPA DO SITE</h3>
 					<li>{{link_to_route('home', '- HOME')}}</li>
-					<li>{{link_to_route('home', '- SOBRE NÓS')}}</li>
+					<li>{{link_to_route('sobre_path', '- SOBRE NÓS')}}</li>
 					<li>{{link_to_route('home', '- TRUCKS')}}</li>
 					<li>{{link_to_route('home', '- BLOG')}}</li>
-					<li>{{link_to_route('home', '- CONTATO')}}</li>
+					<li>{{link_to_route('contato_path', '- CONTATO')}}</li>
 				</ul>
 			</div>
 		</div>
