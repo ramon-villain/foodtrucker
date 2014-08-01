@@ -60,6 +60,12 @@ Route::group(array('before' => 'auth'), function() {
 		Route::post('truck', [
 			'as'    => 'new_truck_admin_path',
 			'uses'  => 'Admin_TruckController@store']);
+		Route::get('truck/{id}/edit',[
+			'as'    => 'edit_truck_admin_path',
+			'uses'  => 'Admin_TruckController@edit']);
+		Route::post('truck/{id}/edit',[
+			'as'    => 'edit_truck_admin_path',
+			'uses'  => 'Admin_TruckController@update']);
 		/*
 		 * Spot Section
 		 */

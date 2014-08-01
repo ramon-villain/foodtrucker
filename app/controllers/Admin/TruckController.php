@@ -38,4 +38,19 @@ class Admin_TruckController extends BaseController {
 		return $final_image = $path."/".$image->getClientOriginalName();
 	}
 
+	public function edit($id){
+		$data['truck'] = $this->truckRepository->getTruckById($id);
+		$data['title'] = 'Editando '. $data['truck']->nome;
+		return View::make('back.pages.truck_edit', compact('data'));
+	}
+
+	public function update($id){
+		extract(Input::only('nome', 'logo', 'description', 'pagamento', 'facebook', 'instagram', 'maisPedido', 'extras'));
+		if(Input::hasFile('logo')){
+			$logo = $this->extractImagem(Input::file('logo'));
+		}
+		$this->truckRepository->updateTruck($id, $nome, $logo, $description,$pagamento, $facebook, $instagram, $maisPedido, $extras);
+		return Redirect::back();
+	}
+
 }

@@ -20,8 +20,8 @@ class BlogRepository {
 	}
 
 	public function updatePost($id, $titulo, $body, $imagem, $publish_at) {
-		$lastPost = $this->getPostById($id);
-		$imagem_atual = $lastPost->imagem;
+		$actual_post = $this->getPostById($id);
+		$imagem_atual = $actual_post->imagem;
 		if($imagem == null){
 			$imagem = $imagem_atual;
 		}
