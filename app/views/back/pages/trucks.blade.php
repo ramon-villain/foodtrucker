@@ -1,8 +1,8 @@
 @extends('back.layouts.default')
 
 @section('content')
-@include('back._includes.errors')
 <div class="col-10">
+	@include('back._includes.errors_alert')
 	@include('back._includes.addTruck')
 </div>
 <div class="sidebar col-10">

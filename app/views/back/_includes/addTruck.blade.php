@@ -17,10 +17,10 @@
 		<div class="wrapInput">{{Form::text('pagamento','',['placeholder' => 'Dinheiro, Cartão Visa ou Mastercard'])}}</div>
 
 		{{Form::label('facebook', 'Facebook:')}}
-		<div class="wrapInput">{{Form::text('facebook','',['placeholder' => '@foodtruckerbr'])}}</div>
+		<div class="wrapInput">{{Form::text('facebook','',['placeholder' => 'foodtruckerbr'])}}</div>
 
 		{{Form::label('instagram', 'Instagram:')}}
-		<div class="wrapInput">{{Form::text('instagram','',['placeholder' => '@foodtruckerbr'])}}</div>
+		<div class="wrapInput">{{Form::text('instagram','',['placeholder' => 'foodtruckerbr'])}}</div>
 
 		{{Form::label('maisPedido', 'Mais Pedido:')}}
 		<div class="wrapInput">{{Form::text('maisPedido','',['placeholder' => 'Hamburguer de Carne'])}}</div>

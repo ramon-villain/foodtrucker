@@ -1,10 +1,10 @@
 @extends('front.layouts.default')
 @section('content')
 <div id="main" class="col-13">
+	@include('front._includes.errors_alert')
 	<div class="pageTitle">
 		<h1>Fale Conosco</h1>
 	</div>
-	@include('front._includes.errors_alert')
 	{{ Form::open(['route' => 'contato_path', 'class' => 'form']) }}
 		{{Form::label('nome', 'Seu Nome:*')}}
 		<div class="wrapInput">{{Form::text('nome','',['placeholder' => 'Antônio Amigo da Silva'])}}</div>
