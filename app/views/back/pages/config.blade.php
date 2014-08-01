@@ -16,7 +16,7 @@
 {{HTML::script('js/bootstrap.min.js')}}
 {{HTML::script('js/jquery.Jcrop.min.js')}}
 <script>
-	var modal
+	var modal;
 	if($('#modal').val() == 'true'){
 		modal = true
 	}else{
@@ -29,18 +29,14 @@
 			onSelect: updateCoords
 		});
 	});
-	function updateCoords(c)
-	{
+	function updateCoords(c){
 		$('#x').val(c.x);
 		$('#y').val(c.y);
 		$('#w').val(c.w);
 		$('#h').val(c.h);
 	};
 
-
-
-	function checkCoords()
-	{
+	function checkCoords(){
 		if (parseInt($('#w').val())) return true;
 		alert('Selecione a região para recortar.');
 		return false;

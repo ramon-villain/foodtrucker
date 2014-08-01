@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>{{$data['title'] or 'Home'}} | Foodtrucker.com.br</title>
+	<title>{{$data['title'] or 'Home'}} | Foodtrucker [ADMIN AREA]</title>
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	{{HTML::style('css/admin.css?ver=1')}}
 	@yield('css')

@@ -28,6 +28,7 @@ class Admin_AdminController extends BaseController {
 
 	public function dashboard()
 	{
+		$data['title'] = 'Dashboard';
 		$data['trucks'] = $this->truckRepository->getTrucksName();
 		$data['tags'] = $this->tagRepository->getTagsPaginatated();
 		$data['spots'] = $this->spotRepository->getSpots();
