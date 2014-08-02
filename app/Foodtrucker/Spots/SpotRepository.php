@@ -1,6 +1,7 @@
 <?php
 namespace Foodtrucker\Spots;
 
+use DateTime;
 use Foodtrucker\Trucks\Truck;
 
 class SpotRepository {
@@ -46,13 +47,24 @@ class SpotRepository {
 
 	public function getDayAndBegin( $command_inicio, $command_fim ) {
 		$inicio    = explode( ' ', $command_inicio );
-		$data['inicioDay'] = trim($inicio[0]);
+		$data['inicioDay'] = gmdate("Y-m-d", strtotime(trim($inicio[0])));
 		$data['inicioTime']    = trim($inicio[1]);
 
 		$fim    = explode( ' ', $command_fim );
 		$data['fimDay'] = trim($fim[0]);
 		$data['fimTime']    = trim( $fim[1] );
 		return $data;
+	}
+
+	public function getSpotsActive() {
+		$trucks = Truck::lists('id');
+		$spots = [];
+		for($i=0; $i < count($trucks); $i++){
+			$spots[] = $this->spot->where('truck_id', $trucks[$i])->where('active', 1)->where('abertura', '>=', new DateTime('today'))->orderBy('abertura', 'asc')->get();
+			$spots[$i]['nome'] = Truck::where('id', $trucks[$i])->pluck('nome');
+		}
+		return $spots;
+//		return $this->spot->where('active', 1)->where('abertura', '>=', new DateTime('today'))->orderBy('abertura', 'asc')->get();
 	}
 
 } 

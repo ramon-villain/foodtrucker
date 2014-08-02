@@ -24,6 +24,11 @@ class Spot extends \Eloquent {
 		$this->attributes['password'] = Hash::make($password);
 	}
 
+	public function truck()
+	{
+		return $this->belongsTo('Foodtrucker\Trucks\Truck');
+	}
+
 //	public function getAberturaAttribute($value)
 //	{
 //		$value = explode('-', $value);
