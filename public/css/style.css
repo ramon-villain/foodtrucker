@@ -603,7 +603,6 @@ header #menu ul li a.active {
 #newsletter.red h2 {
   color: #b74d32;
   font-family: "GothamBold", Verdana, sans-serif;
-  text-transform: uppercase;
 }
 #newsletter.red input::-moz-placeholder,
 #newsletter.red h2::-moz-placeholder {
