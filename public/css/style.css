@@ -83,6 +83,9 @@ img {
   line-height: 30px;
   height: 30px;
 }
+.widget .body ul:first-of-type h3 {
+  margin-top: 0;
+}
 .widget .body .form label:first-of-type {
   margin-top: 0;
 }
@@ -429,6 +432,16 @@ h2 {
   margin-top: 7px;
   margin-bottom: 10px;
 }
+b {
+  font-weight: bold;
+}
+.pageBody p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 13px;
+  color: #666666;
+}
 body {
   margin: 0 auto;
   border-top: 3px solid #ffc107;
@@ -564,7 +577,15 @@ header #menu ul li a.active {
   font-size: 13px;
   font-weight: 400;
   color: #666666;
-  padding-top: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+#sidebar #ultimasParadas ul li b {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  font-weight: bold;
 }
 #newsletter {
   background: #ffc107;
