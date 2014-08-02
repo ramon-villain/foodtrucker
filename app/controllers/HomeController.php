@@ -38,11 +38,18 @@ class HomeController extends BaseController {
 			$featured = new SetFeaturedCommand('https://res.cloudinary.com/enjoei/image/upload/c_fill,h_330,w_276/avvdeqvbnj0omkxnvuub','https://res.cloudinary.com/enjoei/image/upload/c_fill,h_330,w_276/avvdeqvbnj0omkxnvuub        ','Food Trucker','Em Destaque');
 			Session::forget('modal');
 		}
-		return View::make('front.pages.home', compact('featured', 'banners', 'spots'));
+		$mensagem = (Session::get('message') ? Session::get('message') : null);
+		return View::make('front.pages.home', compact('featured', 'banners', 'spots', 'mensagem'));
 	}
 
 	public function newsletter(){
-		$newsletter = $this->newsletterForm->validate(Input::all());
+		$email = Input::get('email');
+		DB::table('newsletter_users')->insert([
+			'email'         => $email,
+			'created_at'    => new DateTime,
+			'updated_at'    => new DateTime
+		]);
+		return Redirect::back()->with('message','Email Cadastrado com Sucesso!');
 	}
 
 

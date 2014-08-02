@@ -1,23 +1,23 @@
 <?php
 
 use Foodtrucker\Forms\ContatoForm;
+use Foodtrucker\Spots\SpotRepository;
 
 class PagesController extends BaseController {
 
-
-	/**
-	 * @var ContatoForm
-	 */
 	private $contatoForm;
+	private $spotRepository;
 
-	function __construct( ContatoForm $contatoForm) {
+	function __construct( ContatoForm $contatoForm, SpotRepository $spotRepository) {
 		$this->contatoForm = $contatoForm;
+		$this->spotRepository = $spotRepository;
 	}
 
 	public function contato_index()
 	{
 		$data['title'] = 'Contato';
-		return View::make('front.pages.contato', compact('data'));
+		$spots = $this->spotRepository->getSpotsActive();
+		return View::make('front.pages.contato', compact('data', 'spots'));
 	}
 
 	public function contato_post(){
@@ -27,7 +27,8 @@ class PagesController extends BaseController {
 
 	public function sobre_index(){
 		$data['title'] = 'Sobre Nós';
-		return View::make('front.pages.sobre', compact('data'));
+		$spots = $this->spotRepository->getSpotsActive();
+		return View::make('front.pages.sobre', compact('data', 'spots'));
 	}
 
 
