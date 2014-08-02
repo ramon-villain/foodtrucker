@@ -16,8 +16,12 @@ class Tag extends \Eloquent{
 		return $dataObj;
 	}
 
-	public function spot(){
+	public function spots(){
 		return $this->belongsToMany('Foodtrucker\Spots\Spot', 'tags_trucks');
+	}
+
+	public function trucks(){
+		return $this->belongsToMany('Foodtrucker\Trucks\Truck', 'tags_trucks');
 	}
 
 
