@@ -54,8 +54,7 @@ class Admin_BlogController extends BaseController {
 
 	private function extractImagem( $image ) {
 		$path = 'images/blog';
-		$nome_original = str_replace(' ', '-', $image->getClientOriginalName());
-		$nome = md5(time()) . '_' . $nome_original;
+		$nome = md5(time()).'.'.$image->getClientOriginalExtension();
 		$image->move($path, $nome);
 		return $final_image = $path."/".$nome;
 	}

@@ -51,8 +51,9 @@ class Admin_ConfigController extends BaseController {
 		if(Input::hasFile('image')){
 			$image = Input::file('image');
 			$path = 'images/featured';
-			$image->move($path, $image->getClientOriginalName());
-			$final_image = $path."/".$image->getClientOriginalName();
+			$nome = md5(time()).'.'.$image->getClientOriginalExtension();
+			$image->move($path, $nome);
+			$final_image = $path."/".$nome;
 			$img = Image::make($final_image);
 			$img->resize(768, null, function ($constraint) {
 				$constraint->aspectRatio();
@@ -90,8 +91,9 @@ class Admin_ConfigController extends BaseController {
 		if(Input::hasFile('image')){
 			$image = Input::file('image');
 			$path = 'images/banners';
-			$image->move($path, $image->getClientOriginalName());
-			$final_image = $path."/".$image->getClientOriginalName();
+			$nome = md5(time()).'.'.$image->getClientOriginalExtension();
+			$image->move($path, $nome);
+			$final_image = $path."/".$nome;
 			$img = Image::make($final_image);
 			$img->resize(768, null, function ($constraint) {
 				$constraint->aspectRatio();
@@ -123,8 +125,8 @@ class Admin_ConfigController extends BaseController {
 //		if(Input::hasFile('image')){
 //			$image = Input::file('image');
 //			$path = 'images/banner';
-//			$image->move($path, $image->getClientOriginalName());
-//			$final_image = $path."/".$image->getClientOriginalName();
+//			$image->move($path, $nome);
+//			$final_image = $path."/".$nome;
 //			$img = Image::make($final_image);
 //			$img->resize(768, null, function ($constraint) {
 //				$constraint->aspectRatio();

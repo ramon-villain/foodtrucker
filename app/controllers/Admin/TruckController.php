@@ -34,7 +34,8 @@ class Admin_TruckController extends BaseController {
 
 	private function extractLogo( $image ) {
 		$path = 'images/trucks/logos';
-		$image->move($path, $image->getClientOriginalName());
+		$nome = md5(time()).'.'.$image->getClientOriginalExtension();
+		$image->move($path, $nome);
 		return $final_image = $path."/".$image->getClientOriginalName();
 	}
 
