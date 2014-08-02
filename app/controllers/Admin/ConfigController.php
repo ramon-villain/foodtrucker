@@ -74,7 +74,7 @@ class Admin_ConfigController extends BaseController {
 		$img = Image::make($imageFinal);
 
 		$img->crop(intval(Input::get('w')), intval(Input::get('h')), intval(Input::get('x')), intval(Input::get('y')));
-		$img->fit(300);
+		$img->fit(250);
 		$img->save($imageFinal);
 		return Redirect::route('config_admin_path');
 	}
