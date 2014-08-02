@@ -27,7 +27,8 @@
 		"locale": "br",
 		"autodateOnStart": false,
 		"calendarMouseScroll": false,
-		"dateFormat":'DD/MM/YYYY - hh:mm'
+		"closeOnSelected": true,
+		"dateFormat":'YYYY-MM-DD hh:mm:00'
 	});
 	$("#tags, #newTag").tagit({
 		fieldName: "tags",
