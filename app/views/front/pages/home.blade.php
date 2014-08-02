@@ -1,6 +1,9 @@
 @extends('front.layouts.default')
 @section('content')
 @include('front._includes.errors')
+@if ($mensagem != '')
+<script>alert('{{$mensagem}}')</script>
+@endif
 <div id="main" class="col-13">
 	<div id="mapa" class="mb20" style="background: #000;height: 446px;display: block;width: 100%;"></div>
 	<div id="truckDaSemana" class="col-5 alpha widget">
@@ -9,7 +12,6 @@
 			<h3>{{$featured->body}}</h3>
 		</div>
 	</div>
-
 	<div id="anota-ai" class="col-8 omega widget ">
 		<div class="title green"><i class="fa fa-calendar-o"></i><h2>Anota Ai!</h2> <!--<span>Hoje</span>--></div>
 		<div class="body carousel">
