@@ -64,7 +64,6 @@ class SpotRepository {
 			$spots[$i]['nome'] = Truck::where('id', $trucks[$i])->pluck('nome');
 		}
 		return $spots;
-//		return $this->spot->where('active', 1)->where('abertura', '>=', new DateTime('today'))->orderBy('abertura', 'asc')->get();
 	}
 
 } 
