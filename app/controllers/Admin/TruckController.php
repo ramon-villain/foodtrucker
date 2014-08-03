@@ -49,6 +49,8 @@ class Admin_TruckController extends BaseController {
 		extract(Input::only('nome', 'logo', 'description', 'pagamento', 'facebook', 'instagram', 'maisPedido', 'extras'));
 		if(Input::hasFile('logo')){
 			$logo = $this->extractImagem(Input::file('logo'));
+		}else{
+			$logo = $this->truckRepository->getActualImage($id);
 		}
 		$this->truckRepository->updateTruck($id, $nome, $logo, $description,$pagamento, $facebook, $instagram, $maisPedido, $extras);
 		return Redirect::back();

@@ -39,10 +39,27 @@ class Admin_EventoController extends BaseController {
 		return Redirect::back();
 	}
 
+	public function edit($id){
+		$data['eventos'] = $this->eventosRepository->getEventoById($id);
+		return View::make('back.pages.eventos_edit', compact('data'));
+	}
+
+	public function update($id){
+		extract(Input::only('nome', 'local', 'imagem', 'data', 'description'));
+		if(Input::hasFile('imagem')){
+			$imagem = $this->extractLogo($imagem);
+		}else{
+			$imagem = $this->eventosRepository->getActualImage($id);
+		}
+		$this->eventosRepository->updateEvento($id, $nome, $local, $imagem, $data, $description);
+		return Redirect::back();
+	}
+
 	private function extractLogo( $image ) {
 		$path = 'images/eventos';
 		$nome = md5(time()).'.'.$image->getClientOriginalExtension();
 		$image->move($path, $nome);
 		return $final_image = $path."/".$nome;
 	}
+
 }
