@@ -142,6 +142,21 @@ Route::group(array('before' => 'auth'), function() {
 		Route::post('sobre', [
 			'as'    => 'sobre_admin_path',
 			'uses'  => 'Admin_SobreController@store']);
+		/*
+		 * Evento Section
+		 */
+		Route::get('evento',[
+			'as'    => 'evento_admin_path',
+			'uses'  => 'Admin_EventoController@index']);
+		Route::post('evento', [
+			'as'    => 'new_evento_admin_path',
+			'uses'  => 'Admin_EventoController@store']);
+		Route::get('evento/{id}/edit',[
+			'as'    => 'edit_evento_admin_path',
+			'uses'  => 'Admin_EventoController@edit']);
+		Route::post('evento/{id}/edit',[
+			'as'    => 'edit_evento_admin_path',
+			'uses'  => 'Admin_EventoController@update']);
 	});
 });
 
