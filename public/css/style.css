@@ -508,6 +508,9 @@ header #menu ul li a {
   font-variant: normal;
   font-weight: normal;
 }
+header #menu ul li a:hover {
+  color: #ed7f62;
+}
 header #menu ul li a.active {
   color: #b74d32;
 }
