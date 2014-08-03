@@ -13,7 +13,7 @@
 			<tr>
 				<td><a href="eventos/{{$evento->id}}/edit">{{$evento->id}}</td>
 				<td>{{$evento->nome}}</td>
-				<td>{{$evento->data}}</td>
+				<td>{{dataSpotFront($evento->data, '')}}</td>
 			</tr>
 			@endforeach
 		</table>
