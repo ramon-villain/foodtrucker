@@ -126,7 +126,7 @@
 }
 
 .datepicker > .datepicker_inner_container > .datepicker_calendar > table {
-    padding: 5px;
+    padding: 5px 0;
 }
 
 /*
@@ -147,14 +147,16 @@
 
 .datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td {
     color:	#000000;
-    font: 13px/1.5 "Helvetica Neue", mplus-2c, Helvetica, Arial, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    font: 12px/1.5 "Helvetica Neue", mplus-2c, Helvetica, Arial, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
     text-align:center;
 
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     cursor: pointer;
-    padding: 5px 7px;
+    padding: 8px 5px 7px;
+    line-height: 14px;
+    font-size: 12px;
 }
 
 .datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.today {
