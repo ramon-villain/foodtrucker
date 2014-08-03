@@ -135,6 +135,7 @@ img{
         margin: 0;
         max-width: 100%;
         min-width: 100%;
+        color:@darkGrey;
     }
 }
 .wrapTextarea {
@@ -157,14 +158,15 @@ select, option{
 
 .form{
     overflow: hidden;
+
     .tagit{
         width: 99%;
     }
     h1{
         color:@yellow;
     }
-    input{
-
+    input, textarea, .editor{
+        color:@darkGrey;
     }
 }
 
@@ -198,7 +200,7 @@ select, option{
 .btn-green, .set-green{
     background: @green;
     border-color:@green;
-    color:@white;
+    color:@white !important;
     &:hover{
         border-color:@darkGreen;
         background: @darkGreen;

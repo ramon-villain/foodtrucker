@@ -122,6 +122,7 @@ img {
   margin: 0;
   max-width: 100%;
   min-width: 100%;
+  color: #666666;
 }
 .wrapTextarea {
   padding-bottom: 2px;
@@ -149,6 +150,11 @@ option {
 }
 .form h1 {
   color: #ffc107;
+}
+.form input,
+.form textarea,
+.form .editor {
+  color: #666666;
 }
 .btn {
   font-family: "GothamBold", Verdana, sans-serif;
@@ -182,7 +188,7 @@ option {
 .set-green {
   background: #39bf7e;
   border-color: #39bf7e;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 .btn-green:hover,
 .set-green:hover {
@@ -789,6 +795,7 @@ footer .sitemap ul li a:hover {
   margin-right: 10px;
   max-height: 120px;
   border-radius: 3px;
+  max-width: 150px;
 }
 .evento .body .infos {
   text-transform: none;
