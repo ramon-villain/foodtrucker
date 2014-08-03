@@ -46,6 +46,10 @@ Route::get('/sobre-nos', [
 	'as'    => 'sobre_path',
 	'uses'  => 'PagesController@sobre_index']);
 
+Route::get('/eventos', [
+	'as'    => 'eventos_path',
+	'uses'  => 'PagesController@eventos_index']);
+
 Route::group(array('before' => 'auth'), function() {
 	Route::group( array( 'prefix' => 'admin' ), function () {
 		Route::get('', function () {
