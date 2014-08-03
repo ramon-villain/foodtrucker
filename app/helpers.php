@@ -1,8 +1,15 @@
 <?php
 
 function dataSpotFront($dia, $hora){
+	$hoje = date('Y-m-d');
 	$final = new DateTime($dia.' '. $hora);
-	return $final->format('d/m - h:i');
+	if($dia == $hoje){
+		$dia = 'HOJE';
+		$hora = new DateTime($hora);
+		return $dia. $hora->format(' - h:i');
+	}else{
+		return $final->format('d/m - h:i');
+	}
 }
 function dataEvento($data){
 	$data = explode('-', $data);
