@@ -36,7 +36,7 @@ class Admin_TruckController extends BaseController {
 		$path = 'images/trucks/logos';
 		$nome = md5(time()).'.'.$image->getClientOriginalExtension();
 		$image->move($path, $nome);
-		return $final_image = $path."/".$image->getClientOriginalName();
+		return $final_image = $path."/".$nome;
 	}
 
 	public function edit($id){
