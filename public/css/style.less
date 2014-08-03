@@ -297,4 +297,73 @@ footer{
     }
 }
 
+.evento{
+    position: relative;
+    padding-left:28px;
+    .data{
+        background: @red;
+        color:@white;
+        .br;
+        width: 20px;
+        padding: 4px;
+        position: absolute;
+        left:0px;
+        top:10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        .dia, .mes{
+            .helvetica;
+            font-size: 14px;
+            text-align: center;
+            font-weight: bold;
+            display: block;
+            line-height: 14px;
+        }
+        .dia{
 
+            padding-bottom: 2px;
+            margin-bottom: 1px;
+            border-bottom: 1px solid @white;
+        }
+        .mes{
+        }
+    }
+    .body{
+        border:1px solid @borderGrey;
+        .br;
+        padding: 10px;
+        background: @white;
+        img{
+            .fl;
+            margin-right: 10px;
+            max-height: 120px;
+            .br;
+        }
+        .infos{
+            text-transform: none;
+            color:@mediumGrey;
+            .fl;
+            h3{
+                text-transform: none;
+                color: @red;
+                margin-top: 5px;
+                background: transparent;
+                padding: 0;
+                height: auto;
+                line-height: 15px;
+                .br;
+            }
+            h2{
+                text-transform: none;
+                color:@yellow;
+                letter-spacing: normal;
+                margin-bottom: 10px;
+            }
+            div{
+                .helvetica;
+                margin-bottom: 5px;
+                line-height: 13px;
+            }
+        }
+    }
+}

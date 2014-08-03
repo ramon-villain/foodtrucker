@@ -6,13 +6,12 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
 }
 .gothamBold {
   font-family: "GothamBold", Verdana, sans-serif;
 }
 img {
-  vert-align: bottom;
+  vertical-align: bottom;
 }
 .br {
   border-radius: 3px;
@@ -117,7 +116,6 @@ img {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   border: none;
   width: 100%;
   padding: 0;
@@ -225,7 +223,6 @@ table.table {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 20px;
@@ -247,7 +244,6 @@ table.table th {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   font-size: 12px;
   font-weight: bold;
   padding: 13px 7px;
@@ -264,7 +260,6 @@ table.table td {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   text-align: center;
   font-size: 11px;
   padding: 14px 0;
@@ -316,7 +311,6 @@ ul.pagination li.active {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   font-size: 12px;
   background: #ed7f62;
   border-radius: 3px;
@@ -330,7 +324,9 @@ ul.pagination li.active {
   cursor: pointer;
 }
 * {
-  font-family: Gotham;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-weight: normal;
   outline: none;
@@ -399,11 +395,21 @@ ul.pagination li.active {
   /* IE9 Compat Modes */
   /* Legacy iOS */
 }
+a {
+  text-decoration: none;
+  color: #9e9e9e;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: #3462b0;
+  text-decoration: none;
+}
 h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   font-size: 14px;
   font-style: normal;
   font-variant: normal;
@@ -537,7 +543,6 @@ header #menu ul li a.active {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   background: #ffffff;
   color: #39bf7e;
   font-size: 12px;
@@ -576,7 +581,6 @@ header #menu ul li a.active {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   padding: 8px 0;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -584,7 +588,6 @@ header #menu ul li a.active {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   font-weight: bold;
 }
 #newsletter {
@@ -686,7 +689,6 @@ footer .copyright p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
@@ -707,7 +709,6 @@ footer .sitemap ul {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
@@ -724,7 +725,6 @@ footer .sitemap ul li a {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #666666;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
@@ -733,4 +733,76 @@ footer .sitemap ul li a {
 }
 footer .sitemap ul li a:hover {
   text-decoration: underline;
+}
+.evento {
+  position: relative;
+  padding-left: 28px;
+}
+.evento .data {
+  background: #ed7f62;
+  color: #ffffff;
+  border-radius: 3px;
+  width: 20px;
+  padding: 4px;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.evento .data .dia,
+.evento .data .mes {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  line-height: 14px;
+}
+.evento .data .dia {
+  padding-bottom: 2px;
+  margin-bottom: 1px;
+  border-bottom: 1px solid #ffffff;
+}
+.evento .body {
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  padding: 10px;
+  background: #ffffff;
+}
+.evento .body img {
+  float: left;
+  margin-right: 10px;
+  max-height: 120px;
+  border-radius: 3px;
+}
+.evento .body .infos {
+  text-transform: none;
+  color: #9e9e9e;
+  float: left;
+}
+.evento .body .infos h3 {
+  text-transform: none;
+  color: #ed7f62;
+  margin-top: 5px;
+  background: transparent;
+  padding: 0;
+  height: auto;
+  line-height: 15px;
+  border-radius: 3px;
+}
+.evento .body .infos h2 {
+  text-transform: none;
+  color: #ffc107;
+  letter-spacing: normal;
+  margin-bottom: 10px;
+}
+.evento .body .infos div {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  line-height: 13px;
 }

@@ -1,6 +1,6 @@
 @import "specs";
 *{
-    font-family:Gotham;
+    .helvetica;
     -webkit-font-smoothing: antialiased;
     font-weight: normal;
     outline:none;
@@ -67,6 +67,17 @@
     url('../fonts/proxima/proximanovaregular.svg#2c1459d58560f08b4b0586fbe80aa4cd') format('svg'); /* Legacy iOS */
     font-style:   normal;
     font-weight:  400;
+}
+a{
+    text-decoration: none;
+    color:@mediumGrey;
+    &:hover{
+        text-decoration: underline;
+    }
+    &:visited{
+        color:@darkBlue;
+        text-decoration: none;
+    }
 }
 
 h3{
