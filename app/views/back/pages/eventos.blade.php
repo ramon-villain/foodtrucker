@@ -8,6 +8,7 @@
 <div class="col-10">
 	@include('back._includes.getEvento')
 </div>
+<input name="" type="hidden" id="parent_url" value="{{route('evento_admin_path')}}"/>
 @stop
 @section('scripts')
 {{HTML::script('js/jquery.datetimepicker.js')}}

@@ -8,6 +8,7 @@
 <div class="col-10">
 	@include('back._includes.getTag')
 </div>
+<input name="" type="hidden" id="parent_url" value="{{route('tag_admin_path')}}"/>
 @stop
 
 @section('scripts')

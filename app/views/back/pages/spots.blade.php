@@ -8,6 +8,7 @@
 <div class="sidebar col-13">
 	@include('back._includes.getSpot')
 </div>
+<input name="" type="hidden" id="parent_url" value="{{route('spot_admin_path')}}"/>
 @stop
 
 @section('scripts')

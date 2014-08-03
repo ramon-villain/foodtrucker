@@ -10,6 +10,7 @@
 	@include('back._includes.getBanner')
 </div>
 <input name="modal" id="modal" value="{{$data['modal']}}" type="hidden"/>
+<input name="" type="hidden" id="parent_url" value="{{route('config_admin_path')}}"/>
 @stop
 
 @section('scripts')

@@ -22,7 +22,6 @@
 {{HTML::script('js/jquery.min.js')}}
 {{HTML::script('js/jquery-ui.min.js')}}
 {{HTML::script('js/jquery.cookie.min.js')}}
-<input id="current_url" name="current_url" value="{{URL::current()}}" type="hidden"/>
 @yield('scripts')
 {{HTML::script('js/main.js')}}
 </body>

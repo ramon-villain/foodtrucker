@@ -8,6 +8,7 @@
 <div class="sidebar col-10">
 	@include('back._includes.getTruck')
 </div>
+<input name="" type="hidden" id="parent_url" value="{{route('truck_admin_path')}}"/>
 @stop
 
 @section('scripts')

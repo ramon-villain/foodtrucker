@@ -40,7 +40,7 @@
 		</div>
 	</div>
 </div>
-
+<input name="" type="hidden" id="parent_url" value="{{route('evento_admin_path')}}"/>
 @stop
 
 @section('scripts')

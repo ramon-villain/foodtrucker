@@ -35,7 +35,7 @@
 <div class="col-10">
 
 </div>
-
+<input name="" type="hidden" id="parent_url" value="{{route('spot_admin_path')}}"/>
 @stop
 @section('scripts')
 {{HTML::script('js/tag-it.min.js')}}

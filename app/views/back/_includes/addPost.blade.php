@@ -3,7 +3,7 @@
 		<h2>Adicionar Post</h2>
 	</div>
 	<div class="body bordered">
-		{{Form::open(['route' => 'new_post_admin_path', 'class' => 'form', 'files' => true])}}
+		{{Form::open(['class' => 'form','route' => 'new_post_admin_path', 'files' => true])}}
 
 		{{Form::label('titulo', 'Título:')}}
 		<div class="wrapInput">{{Form::text('titulo','',['placeholder' => 'Postagem marota'])}}</div>

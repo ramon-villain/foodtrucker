@@ -49,6 +49,6 @@
 		</div>
 	</div>
 </div>
-
+<input name="" type="hidden" id="parent_url" value="{{route('truck_admin_path')}}"/>
 @stop
 

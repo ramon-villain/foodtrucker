@@ -12,6 +12,7 @@
 	@include('back._includes.addTag')
 	@include('back._includes.getTag')
 </div>
+<input name="" type="hidden" id="parent_url" value="{{route('dashboard')}}"/>
 @stop
 
 @section('scripts')

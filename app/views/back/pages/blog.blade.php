@@ -1,14 +1,14 @@
 @extends('back.layouts.default')
 
 @section('content')
-@include('back._includes.errors')
+@include('back._includes.errors_alert')
 <div class="col-10">
 	@include('back._includes.addPost')
 </div>
 <div class="col-10">
  @include('back._includes.getPosts')
 </div>
-
+<input name="" type="hidden" id="parent_url" value="{{route('blog_admin_path')}}"/>
 @stop
 
 @section('scripts')
