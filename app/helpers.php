@@ -5,13 +5,13 @@ function dataSpotFront($dia, $hora = null){
 	$final = new DateTime($dia.' '. $hora);
 	if($dia == $hoje){
 		$dia = 'HOJE';
-		$hora = new DateTime($hora);
-		if($hora== null){
+		if($hora == null){
 			return $dia;
 		}
+		$hora = new DateTime($hora);
 		return $dia. $hora->format(' - h:i');
 	}else{
-		if($hora== null){
+		if($hora == null){
 			return $final->format('d/m');
 		}
 		return $final->format('d/m - h:i');
