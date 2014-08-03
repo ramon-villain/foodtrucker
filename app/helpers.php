@@ -1,13 +1,19 @@
 <?php
 
-function dataSpotFront($dia, $hora){
+function dataSpotFront($dia, $hora = null){
 	$hoje = date('Y-m-d');
 	$final = new DateTime($dia.' '. $hora);
 	if($dia == $hoje){
 		$dia = 'HOJE';
 		$hora = new DateTime($hora);
+		if($hora== null){
+			return $dia;
+		}
 		return $dia. $hora->format(' - h:i');
 	}else{
+		if($hora== null){
+			return $final->format('d/m');
+		}
 		return $final->format('d/m - h:i');
 	}
 }
