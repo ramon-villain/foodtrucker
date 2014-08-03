@@ -11,7 +11,7 @@
 			</tr>
 			@foreach($data['eventos'] as $evento)
 			<tr>
-				<td><a href="eventos/{{$evento->id}}/edit">{{$evento->id}}</td>
+				<td><a href="evento/{{$evento->id}}/edit">{{$evento->id}}</td>
 				<td>{{$evento->nome}}</td>
 				<td>{{dataSpotFront($evento->data, '')}}</td>
 			</tr>
