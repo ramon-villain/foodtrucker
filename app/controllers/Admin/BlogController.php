@@ -37,7 +37,6 @@ class Admin_BlogController extends BaseController {
 
 
 	public function edit($id){
-		$this->newPostForm->validate(Input::all());
 		$data['post'] = $this->blogRepository->getPostById($id);
 		$data['title'] = 'Editando '. $data['post']->titulo;
 		return View::make('back.pages.post_edit', compact('data'));
