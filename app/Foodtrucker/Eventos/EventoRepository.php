@@ -22,4 +22,22 @@ class EventosRepository {
 	public function getEventos(){
 		return Evento::orderBy('created_at', 'desc')->get();
 	}
+
+	public function getEventoById( $id ) {
+		return Evento::where('id', $id)->first();
+	}
+
+	public function updateEvento( $id, $nome, $local, $img, $data, $description ) {
+		return Evento::where('id', $id)->update([
+			'nome' => $nome,
+			'local' => $local,
+			'imagem' => $img,
+			'data' => $data,
+			'description' => $description
+		]);
+	}
+
+	public function getActualImage( $id ) {
+		return Evento::where('id', $id)->pluck('imagem');
+	}
 }

@@ -33,11 +33,6 @@ class TruckRepository {
 	}
 
 	public function updateTruck($id, $nome, $logo, $description,$pagamento, $facebook, $instagram, $maisPedido, $extras) {
-		$actual_truck = $this->getTruckById($id);
-		$imagem_atual = $actual_truck->logo;
-		if($logo == null){
-			$logo = $imagem_atual;
-		}
 		return Truck::where('id', $id)->update([
 			'nome' => $nome,
 			'logo' => $logo,
@@ -48,6 +43,10 @@ class TruckRepository {
 			'maisPedido' => $maisPedido,
 			'extras' => $extras
 		]);
+	}
+
+	public function getActualImage( $id ) {
+		return Truck::where('id', $id)->pluck('logo');
 	}
 
 } 
