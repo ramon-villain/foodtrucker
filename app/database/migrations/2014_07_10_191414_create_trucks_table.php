@@ -16,12 +16,19 @@ class CreateTrucksTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('nome');
+			$table->string('slug');
 			$table->string('logo');
-			$table->longtext('description');
-			$table->string('pagamento');
+			$table->string('especialidade');
+			$table->integer('cat_id')->unsigned()->index();
+			$table->foreign('cat_id')->references('id')->on('categorias')->onDelete('cascade');
+			$table->string('mais_pedido');
+			$table->string('site');
 			$table->string('facebook');
 			$table->string('instagram');
-			$table->string('maisPedido');
+			$table->string('preco');
+			$table->string('pagamento');
+			$table->longtext('description');
+			$table->string('imagens', 5000);
 			$table->string('extras');
 			$table->timestamps();
 		});
