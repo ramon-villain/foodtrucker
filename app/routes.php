@@ -50,6 +50,14 @@ Route::get('/eventos', [
 	'as'    => 'eventos_path',
 	'uses'  => 'PagesController@eventos_index']);
 
+Route::get('/trucks', [
+	'as'    => 'trucks_path',
+	'uses'  => 'TrucksController@index']);
+
+Route::get('/trucks/{nome}', [
+	'as'    => 'trucks_path',
+	'uses'  => 'TrucksController@truck']);
+
 Route::group(array('before' => 'auth'), function() {
 	Route::group( array( 'prefix' => 'admin' ), function () {
 		Route::get('', function () {
