@@ -66,4 +66,8 @@ class SpotRepository {
 		return $spots;
 	}
 
+	public function getSpotsActiveTruck($id){
+		return Spot::where('truck_id', $id)->where('active', 1)->where('abertura', '>=', new DateTime('today'))->orderBy('abertura', 'asc')->get();
+	}
+
 } 
