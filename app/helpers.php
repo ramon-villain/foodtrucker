@@ -9,12 +9,12 @@ function dataSpotFront($dia, $hora = null){
 			return $dia;
 		}
 		$hora = new DateTime($hora);
-		return $dia. $hora->format(' - h:i');
+		return $dia. $hora->format(' - H:i');
 	}else{
 		if($hora == null){
 			return $final->format('d/m');
 		}
-		return $final->format('d/m - h:i');
+		return $final->format('d/m - H:i');
 	}
 }
 function dataEvento($data){
