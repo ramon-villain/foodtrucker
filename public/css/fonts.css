@@ -41,6 +41,9 @@ img {
 .widget .title.yellow {
   background: #ffc107;
 }
+.widget .title.grey {
+  background: #9e9e9e;
+}
 .widget .title.red {
   background: #ed7f62;
 }
