@@ -3,7 +3,7 @@
 @section('content')
 
 @include('front._includes.errors')
-
+<div id="main" class="col-13">
 {{Form::open(['route' => 'login_path','class' => 'form col-8'])}}
 	<h1>Faça seu login, aqui. :)</h1>
 	{{Form::label('email', 'Email')}}
@@ -15,4 +15,5 @@
 	{{Form::submit('Logar', ['class' => 'btn btn-green fr'])}}
 
 {{Form::close()}}
+	</div>
 @stop
