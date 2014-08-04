@@ -1,8 +1,8 @@
 @extends('front.layouts.default')
 @section('content')
-<div id="main" class="col-13 truck">
+<div id="main" class="col-13 truck widget">
 	<h1>{{$truck->nome}}</h1>
-	<div class="widget">
+	<div class="widget" style="margin-bottom: 10px;">
 		{{HTML::image($truck->logo, '', ['class' => 'logo col-5 alpha'])}}
 		<div id="infos" class="col-8 omega">
 			<ul>
@@ -20,17 +20,22 @@
 		</div>
 	</div>
 	<div id="imagens">
-		{{HTML::image($imagens[0], '')}}
-		{{HTML::image($imagens[1], '')}}
-		{{HTML::image($imagens[2], '')}}
+		<a href="{{url($imagens[0])}}" data-lightbox="{{$truck->nome}}"> {{HTML::image($imagens[0], '' )}}</a>
+		<a href="{{url($imagens[1])}}" data-lightbox="{{$truck->nome}}"> {{HTML::image($imagens[1], '' )}}</a>
+		<a href="{{url($imagens[2])}}" data-lightbox="{{$truck->nome}}"> {{HTML::image($imagens[2], '' )}}</a>
 	</div>
+	<span><i class="fa fa-search fa-lg"></i> Clique nas imagens para ampliar</span>
 </div>
 <div id="sidebar" class="col-7">
+	@include('front._includes.next-spots-truck')
 	@include('front._includes.newsletter')
 </div>
 @stop
+
 @section('scripts')
-{{HTML::script('js/jquery.mask.min.js')}}
-<script>
-</script>
+{{HTML::script('js/lightbox.min.js')}}
+@stop
+
+@section('css')
+{{HTML::style('css/vendor/lightbox.css')}}
 @stop

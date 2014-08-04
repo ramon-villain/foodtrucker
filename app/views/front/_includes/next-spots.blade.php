@@ -1,5 +1,5 @@
 <div id="ultimasParadas" class="widget">
-	<div class="title red"><i class="fa fa-check-square"></i><h2>Próximas Paradas</h2></div>
+	<div class="title grey"><i class="fa fa-check-square"></i><h2>Próximas Paradas</h2></div>
 	<div class="body bordered">
 		@for($i=0;$i < count($spots); $i++)
 			<ul>
