@@ -445,10 +445,14 @@ h2 {
   vertical-align: baseline;
   padding: 0;
 }
-.pageTitle h1 {
+h1 {
   font-family: "GothamBold", Verdana, sans-serif;
-  color: #ed7f62;
+  color: #9e9e9e;
   text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.pageTitle h1 {
+  color: #ed7f62;
   border-bottom: 2px solid;
   margin-top: 7px;
   margin-bottom: 10px;

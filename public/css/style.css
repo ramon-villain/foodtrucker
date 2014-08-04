@@ -445,10 +445,14 @@ h2 {
   vertical-align: baseline;
   padding: 0;
 }
-.pageTitle h1 {
+h1 {
   font-family: "GothamBold", Verdana, sans-serif;
-  color: #ed7f62;
+  color: #9e9e9e;
   text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.pageTitle h1 {
+  color: #ed7f62;
   border-bottom: 2px solid;
   margin-top: 7px;
   margin-bottom: 10px;
@@ -474,7 +478,6 @@ textarea {
 }
 h1 {
   font-size: 24px;
-  color: #666666;
 }
 h2 {
   font-family: "GothamBold", Verdana, sans-serif;
@@ -824,4 +827,39 @@ footer .sitemap ul li a:hover {
   font-weight: 400;
   margin-bottom: 5px;
   line-height: 13px;
+}
+#main.truck .widget {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  padding: 10px;
+}
+#main.truck .widget .col-8 {
+  width: 393px;
+}
+#main.truck .widget .col-5 {
+  width: 244px;
+  margin-right: 0px;
+}
+#main.truck .logo {
+  max-width: 245px;
+  float: left;
+  border-radius: 3px;
+}
+#main.truck #infos ul {
+  padding-top: 5px;
+}
+#main.truck #infos ul li {
+  color: #9e9e9e;
+  margin-bottom: 10px;
+}
+#main.truck #about {
+  display: block;
+  clear: both;
+  overflow: hidden;
+  color: #9e9e9e;
+  text-align: justify;
+}
+#main.truck #about p {
+  margin-bottom: 0;
 }
