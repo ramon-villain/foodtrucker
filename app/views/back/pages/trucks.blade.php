@@ -1,11 +1,11 @@
 @extends('back.layouts.default')
 
 @section('content')
-<div class="col-10">
+<div class="col-9">
 	@include('back._includes.errors_alert')
 	@include('back._includes.addTruck')
 </div>
-<div class="sidebar col-10">
+<div class="sidebar col-11">
 	@include('back._includes.getTruck')
 </div>
 <input name="" type="hidden" id="parent_url" value="{{route('truck_admin_path')}}"/>
