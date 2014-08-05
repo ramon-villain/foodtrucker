@@ -17,6 +17,14 @@
 		</div>
 		<div id="about">
 			<p>{{$truck->description}}</p>
+			<p class="servicos">
+				<span>{{ respostaServico($servico[0]) }}<b>Sobremesa</b></span>
+				<span>{{ respostaServico($servico[1]) }}<b>Bebidas</b></span>
+				<span>{{ respostaServico($servico[2]) }}<b>Música</b></span>
+				<span>{{ respostaServico($servico[3]) }}<b>Cartão de Crédito</b></span>
+				<span>{{ respostaServico($servico[4]) }}<b>Cartão de Débito</b></span>
+				<span>{{ respostaServico($servico[5]) }}<b>Vale-Refeição</b></span>
+			</p>
 		</div>
 	</div>
 	<div id="imagens">
