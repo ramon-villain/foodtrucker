@@ -37,8 +37,29 @@
 			{{Form::label('instagram', 'Instagram:')}}
 			<div class="wrapInput">{{Form::text('instagram',$data['truck']->instagram,['placeholder' => 'foodtruckerbr'])}}</div>
 
-			{{Form::label('pagamento', 'Formas de Pagamento:')}}
-			<div class="wrapInput">{{Form::text('pagamento','',['placeholder' => 'Dinheiro, Cartão Visa ou Mastercard'])}}</div>
+			{{Form::label('servicos_0', 'Sobremesa:')}}
+			<div class="wrapInput">Sim {{Form::radio('servicos_0','1', ($servicos[0] == '1' ? '1' : null ) )}}
+				Não {{Form::radio('servicos_0','0', ($servicos[0] == '0' ? '1' : null ))}}</div>
+
+			{{Form::label('servicos_1', 'Bebidas:')}}
+			<div class="wrapInput">Sim {{Form::radio('servicos_1','1',($servicos[1] == '1' ? '1' : null ))}}
+				Não {{Form::radio('servicos_1','0', ($servicos[1] == '0' ? '1' : null ))}}</div>
+
+			{{Form::label('servicos_2', 'Música:')}}
+			<div class="wrapInput">Sim {{Form::radio('servicos_2','1', ($servicos[2] == '1' ? '1' : null ) )}}
+				Não {{Form::radio('servicos_2','0', ($servicos[2] == '0' ? '1' : null ))}}</div>
+
+			{{Form::label('servicos_3', 'Cartão de Débito:')}}
+			<div class="wrapInput">Sim {{Form::radio('servicos_3','1', ($servicos[3] == '1' ? '1' : null ) )}}
+				Não {{Form::radio('servicos_3','0', ($servicos[3] == '0' ? '1' : null ))}}</div>
+
+			{{Form::label('servicos_4', 'Cartão de Crédito:')}}
+			<div class="wrapInput">Sim {{Form::radio('servicos_4','1', ($servicos[4] == '1' ? '1' : null ) )}}
+				Não {{Form::radio('servicos_4','0', ($servicos[4] == '0' ? '1' : null ))}}</div>
+
+			{{Form::label('servicos_5', 'Vale-Refeição:')}}
+			<div class="wrapInput">Sim {{Form::radio('servicos_5','1', ($servicos[5] == '1' ? '1' : null ) )}}
+				Não {{Form::radio('servicos_5','0', ($servicos[5] == '0' ? '1' : null ))}}</div>
 
 			{{Form::label('description', 'Descrição:')}}
 			<div class="wrapInput wrapTextarea">{{Form::textarea('description',$data['truck']->description,['placeholder' => 'Food Truck bem legal e cool!'])}}</div>
