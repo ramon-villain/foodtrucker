@@ -23,3 +23,11 @@ function dataEvento($data){
 	$dia = $data[2];
 	return "<span class='dia'>$dia</span><span class='mes'>$mes</span>";
 }
+
+function respostaServico($status){
+	if($status == 1){
+		return "<i class='fa fa-check'></i>";
+	}else{
+		return "<i class='fa fa-times'></i>";
+	}
+}
