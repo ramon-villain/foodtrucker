@@ -40,4 +40,8 @@ class EventosRepository {
 	public function getActualImage( $id ) {
 		return Evento::where('id', $id)->pluck('imagem');
 	}
+
+	public function searchThis( $query ) {
+		return Evento::where('nome','like', "%$query%")->orWhere('local','like', "%$query%")->get();
+	}
 }

@@ -29,5 +29,17 @@ class TagRepository{
 		return $this->getTags()->lists('tag');
 	}
 
+	public function searchThis( $query, $trucks ) {
+//		dd($trucks);
+		$ids = Tag::where('tag','like', "%$query%")->lists('id');
+		$trucks = [];
+		foreach($ids as $id){
+			$trucks[] = TagTruck::where('tag_id', $id)->lists('truck_id');
+		}
+
+		return $trucks;
+	}
+
+
 
 }

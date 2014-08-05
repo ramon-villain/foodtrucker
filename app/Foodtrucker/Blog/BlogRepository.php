@@ -33,4 +33,8 @@ class BlogRepository {
 		]);
 	}
 
+	public function searchThis( $query ) {
+		return Blog::where('titulo','like', "%$query%")->orWhere('body','like', "%$query%")->get();
+	}
+
 } 

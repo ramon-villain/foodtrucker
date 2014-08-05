@@ -97,4 +97,8 @@ class TruckRepository {
 		]);
 	}
 
+	public function searchThis( $query ) {
+		return Truck::where('nome','like', "%$query%")->orWhere('especialidade','like', "%$query%")->orWhere('description','like', "%$query%")->get();
+	}
+
 } 
