@@ -19,6 +19,7 @@
 	@include('front._includes.next-spots')
 	@include('front._includes.newsletter')
 </div>
+<input name="" type="hidden" id="parent_url" value="{{route('eventos_path')}}"/>
 @stop
 @section('scripts')
 {{HTML::script('js/jquery.mask.min.js')}}

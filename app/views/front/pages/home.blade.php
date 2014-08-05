@@ -35,6 +35,7 @@
 	@include('front._includes.busca', ['formClass' => 'white'])
 	<div style="height: 110px;display: block;background: #000; margin-top: 20px;"></div>
 </div>
+<input name="" type="hidden" id="parent_url" value="{{route('home')}}"/>
 @stop
 @section('scripts')
 {{HTML::script('js/bjqs-1.3.min.js')}}
