@@ -20,25 +20,11 @@ class AddPostCommandHandler implements CommandHandler{
 		$this->blogRepository = $blogRepository;
 	}
 
+
 	public function handle( $command ) {
-		$post = Blog::register($command->titulo, $command->body, $command->imagem, $command->publish_at);
+		$post = Blog::register($command->titulo, $command->slug, $command->body, $command->imagem, $command->publish_at);
 		$this->blogRepository->savePost($post);
 		$this->dispatchEventsFor($post);
 		return $post;
-	}
-
-	private function getDayAndBegin( $command ) {
-//		$inicio    = explode( '-', $command->inicio );
-//		$abertura = explode('/', trim($inicio[0]));
-//		$abertura = $abertura[2].'-'.$abertura[1].'-'.$abertura[0];
-//		$data['inicioDay'] = gmdate("Y-m-d", strtotime($abertura));
-//		$data['inicioTime']    = trim( $inicio[1] );
-//
-//		$fim    = explode( '-', $command->fim );
-//		$encerramento = explode('/', trim($fim[0]));
-//		$encerramento = $encerramento[2].'-'.$encerramento[1].'-'.$encerramento[0];
-//		$data['fimDay'] = gmdate("Y-m-d", strtotime($encerramento));
-//		$data['fimTime']    = trim( $fim[1] );
-//		return $data;
 	}
 }
