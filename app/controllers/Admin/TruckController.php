@@ -28,6 +28,7 @@ class Admin_TruckController extends BaseController {
 	{
 		$this->newTruckForm->validate(Input::all());
 		extract(Input::only('nome', 'logo','especialidade','cat_id','mais_pedido','site','facebook','instagram','preco','pagamento','description','imagens', 'extras'));
+		$servicos = serialize([Input::get('servicos_0'),Input::get('servicos_1'),Input::get('servicos_2'),Input::get('servicos_3'),Input::get('servicos_4'),Input::get('servicos_5')]);
 		$logo = $this->extractLogo(Input::file('logo'));
 		$imagens_1 = $this->extractLogo(Input::file('imagens_1'));
 		$imagens_2 = $this->extractLogo(Input::file('imagens_2'));
@@ -35,7 +36,7 @@ class Admin_TruckController extends BaseController {
 		$imagens = serialize([$imagens_1, $imagens_2, $imagens_3]);
 		$slug = Str::slug($nome);
 		$cat_id = $cat_id + 1;
-		$this->truckRepository->saveNewTruck($nome, $slug, $logo, $especialidade, $cat_id, $mais_pedido, $site, $facebook, $instagram, $preco, $pagamento, $description, $imagens, $extras);
+		$this->truckRepository->saveNewTruck($nome, $slug, $logo, $especialidade, $cat_id, $mais_pedido, $site, $facebook, $instagram, $preco, $servicos, $description, $imagens, $extras);
 		return Redirect::back();
 	}
 
@@ -52,7 +53,8 @@ class Admin_TruckController extends BaseController {
 		$data['truck']->cat_id = $data['truck']->cat_id - 1;
 		$data['title'] = 'Editando '. $data['truck']->nome;
 		$imagens = unserialize($data['truck']->imagens);
-		return View::make('back.pages.truck_edit', compact('data', 'imagens'));
+		$servicos = unserialize($data['truck']->pagamento);
+		return View::make('back.pages.truck_edit', compact('data', 'imagens', 'servicos'));
 	}
 
 	public function update($id){
@@ -60,6 +62,7 @@ class Admin_TruckController extends BaseController {
 		$imagens = unserialize($data['truck']->imagens);
 		$imagens_bckp = $imagens;
 		extract(Input::only('nome', 'logo','especialidade','cat_id','mais_pedido','site','facebook','instagram','preco','pagamento','description','imagens', 'extras'));
+		$servicos = serialize([Input::get('servicos_0'),Input::get('servicos_1'),Input::get('servicos_2'),Input::get('servicos_3'),Input::get('servicos_4'),Input::get('servicos_5')]);
 		$cat_id = $cat_id + 1;
 		if(Input::hasFile('logo')){
 			$logo = $this->extractLogo(Input::file('logo'));
@@ -75,7 +78,7 @@ class Admin_TruckController extends BaseController {
 			}
 		}
 		$imagens = serialize($imagens);
-		$this->truckRepository->updateTruck($id, $nome, $logo, $especialidade, $cat_id, $mais_pedido, $site, $facebook, $instagram, $preco, $pagamento, $description, $imagens, $extras);
+		$this->truckRepository->updateTruck($id, $nome, $logo, $especialidade, $cat_id, $mais_pedido, $site, $facebook, $instagram, $preco, $servicos, $description, $imagens, $extras);
 		return Redirect::back();
 	}
 
