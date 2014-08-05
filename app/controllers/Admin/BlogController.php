@@ -31,7 +31,8 @@ class Admin_BlogController extends BaseController {
 		$this->newPostForm->validate(Input::all());
 		extract(Input::only('titulo', 'body', 'imagem', 'publish_at'));
 		$imagem = $this->extractImagem(Input::file('imagem'));
-		$this->execute(new AddPostCommand($titulo, $body, $imagem, $publish_at));
+		$slug = Str::slug($nome);
+		$this->execute(new AddPostCommand($titulo, $slug, $body, $imagem, $publish_at));
 		return Redirect::back();
 	}
 
