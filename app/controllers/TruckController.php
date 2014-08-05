@@ -40,7 +40,8 @@ class TrucksController extends BaseController {
 		$truck->cat_id = $this->truckRepository->getCategoriaNameById($truck->cat_id);
 		$truck->site = ($truck->site ? $truck->site : null);
 		$imagens = unserialize($truck->imagens);
-		return View::make('front.pages.truck', compact('data', 'truck', 'imagens', 'spots'));
+		$servico = [1,0,0,1,1,0];
+		return View::make('front.pages.truck', compact('data', 'truck', 'imagens', 'spots', 'servico'));
 	}
 
 }
