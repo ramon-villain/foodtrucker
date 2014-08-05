@@ -865,6 +865,23 @@ footer .sitemap ul li a:hover {
 #main.truck #about p {
   margin-bottom: 0;
 }
+#main.truck #about p.servicos span {
+  margin-right: 15px;
+}
+#main.truck #about p.servicos span:last-of-type {
+  margin-right: 0;
+}
+#main.truck #about p.servicos i {
+  margin-right: 2px;
+}
+#main.truck #about p.servicos .fa-times {
+  color: #ed7f62;
+}
+#main.truck #about p.servicos .fa-check {
+  position: relative;
+  top: -1px;
+  color: #39bf7e;
+}
 #main.truck #imagens {
   clear: both;
   overflow: hidden;
