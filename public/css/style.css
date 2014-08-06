@@ -37,8 +37,6 @@ img {
 }
 .widget {
   margin-bottom: 20px;
-  clear: both;
-  overflow: hidden;
 }
 .widget .title.yellow {
   background: #ffc107;
@@ -1132,4 +1130,8 @@ footer .sitemap ul li a:hover {
 }
 .selectorReturn {
   cursor: pointer;
+}
+.truck_list {
+  clear: both;
+  overflow: hidden;
 }

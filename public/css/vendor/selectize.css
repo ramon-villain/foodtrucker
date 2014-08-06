@@ -112,6 +112,8 @@
 .selectize-control {
   position: relative;
     width: 200px;
+    float:left;
+    margin-right: 10px;
 }
 .selectize-dropdown,
 .selectize-input,
@@ -130,7 +132,7 @@
 }
 .selectize-input {
   border: 1px solid #e0e0e0;
-  padding: 5px;
+  padding: 5px 7px;
   display: inline-block;
   width: 100%;
   overflow: hidden;
