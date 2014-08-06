@@ -61,6 +61,9 @@
 			<div class="wrapInput">Sim {{Form::radio('servicos_5','1', ($servicos[5] == '1' ? '1' : null ) )}}
 				Não {{Form::radio('servicos_5','0', ($servicos[5] == '0' ? '1' : null ))}}</div>
 
+			{{Form::label('tags', 'Tags:')}}
+			{{Form::text('tags',$data['tags'],['placeholder' => 'sobremesa, bebida'])}}
+
 			{{Form::label('description', 'Descrição:')}}
 			<div class="wrapInput wrapTextarea">{{Form::textarea('description',$data['truck']->description,['placeholder' => 'Food Truck bem legal e cool!'])}}</div>
 
@@ -88,5 +91,30 @@
 	</div>
 </div>
 <input name="" type="hidden" id="parent_url" value="{{route('truck_admin_path')}}"/>
+@stop
+@section('scripts')
+{{HTML::script('js/tag-it.min.js')}}
+<script>
+	$("#tags").tagit({
+		fieldName: "tags",
+		allowSpaces: true,
+		tagSource: function(search, showChoices) {
+			var that = this;
+			console.log(search);
+			$.ajax({
+				url: "/js/tags/"+search.term,
+				data: {q: search.term},
+				success: function(choices) {
+					showChoices(that._subtractArray(choices, that.assignedTags()));
+				}
+			});
+		}
+	});
+</script>
+@stop
+
+@section('css')
+{{HTML::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css')}}
+{{HTML::style('css/vendor/jquery.tagit.css')}}
 @stop
 

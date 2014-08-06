@@ -55,6 +55,9 @@
 		<div class="wrapInput">Sim {{Form::radio('servicos_5','1' )}}
 			Não {{Form::radio('servicos_5','0', true)}}</div>
 
+		{{Form::label('tags', 'Tags:')}}
+		{{Form::text('tags','',['placeholder' => 'sobremesa, bebida'])}}
+
 		{{Form::label('description', 'Descrição:')}}
 		<div class="wrapInput wrapTextarea">{{Form::textarea('description','',['placeholder' => 'Food Truck bem legal e cool!'])}}</div>
 
