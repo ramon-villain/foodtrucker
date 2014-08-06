@@ -17,6 +17,9 @@
 			<div class="col-5">@include('front._includes.busca',['formClass' => ''])</div>
 		</header>
 		<div id="content">
+			@if ($message != '')
+			<script>alert('{{$message}}')</script>
+			@endif
 			@yield('content')
 		</div>
 	</div>
