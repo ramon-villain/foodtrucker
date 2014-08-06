@@ -1,6 +1,8 @@
 <?php
 namespace Foodtrucker\Tags;
 
+use Foodtrucker\Trucks\Truck;
+
 class TagRepository{
 
 	private $tag;
@@ -11,6 +13,18 @@ class TagRepository{
 
 	public function save(Tag $tags){
 		return $tags->save();
+	}
+	public function parseTags( $tags ) {
+		return explode(',', $tags);
+	}
+	public function saveTags($tags){
+		$tags = $this->parseTags($tags);
+		foreach($tags as $tag){
+			if(count(Tag::where('tag', $tag)->get()) == 0){
+				$tags = Tag::register($tag);
+				$this->save($tags);
+			}
+		}
 	}
 
 	public function getTags($filter = 'tag', $order = 'ASC', $paginate = null){
@@ -29,17 +43,14 @@ class TagRepository{
 		return $this->getTags()->lists('tag');
 	}
 
-	public function searchThis( $query, $trucks ) {
-//		dd($trucks);
-		$ids = Tag::where('tag','like', "%$query%")->lists('id');
-		$trucks = [];
-		foreach($ids as $id){
-			$trucks[] = TagTruck::where('tag_id', $id)->lists('truck_id');
+	public function searchThis( $query) {
+		$tag_ids = Tag::where('tag','like', "%$query%")->lists('id');
+		$trucksFromTag = TagTruck::where('spot_id', null)->where('tag_id', $tag_ids)->lists('truck_id');
+		$trucksFinais = [];
+		foreach($trucksFromTag as $truck){
+			$trucksFinais[] = Truck::where('id', $truck)->get()->toArray();
 		}
+		return $trucksFinais;
 
-		return $trucks;
 	}
-
-
-
 }

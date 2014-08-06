@@ -60,10 +60,15 @@ class SpotRepository {
 		$trucks = Truck::lists('id');
 		$spots = [];
 		for($i=0; $i < count($trucks); $i++){
-			$spots[] = $this->spot->where('truck_id', $trucks[$i])->where('active', 1)->where('abertura', '>=', new DateTime('today'))->orderBy('abertura', 'asc')->get();
-			$spots[$i]['nome'] = Truck::where('id', $trucks[$i])->pluck('nome');
+			$get = $this->spot->where('truck_id', $trucks[$i])->where('active', 1)->where('abertura', '>=', new DateTime('today'))->orderBy('abertura', 'asc')->get();
+			$spots[] = $get;
+			if(count($get) > 0){
+				$spots[$i]['nome'] = Truck::where('id', $trucks[$i])->pluck('nome');
+			}else{
+				return null;
+			}
 		}
-		return $spots;
+		 return $spots;
 	}
 
 	public function getSpotsActiveTruck($id){

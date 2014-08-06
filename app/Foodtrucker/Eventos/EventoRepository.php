@@ -42,6 +42,6 @@ class EventosRepository {
 	}
 
 	public function searchThis( $query ) {
-		return Evento::where('nome','like', "%$query%")->orWhere('local','like', "%$query%")->get();
+		return Evento::where('data', '>=', new DateTime('today'))->where('nome','like', "%$query%")->orWhere('local','like', "%$query%")->get();
 	}
 }

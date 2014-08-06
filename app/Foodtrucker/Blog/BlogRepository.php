@@ -1,6 +1,8 @@
 <?php
 namespace Foodtrucker\Blog;
 
+use DateTime;
+
 class BlogRepository {
 
 	public function savePost(Blog $post){
@@ -34,7 +36,7 @@ class BlogRepository {
 	}
 
 	public function searchThis( $query ) {
-		return Blog::where('titulo','like', "%$query%")->orWhere('body','like', "%$query%")->get();
+		return Blog::where('publish_at', '<=', new DateTime('today'))->where('body','like', "%$query%")->get();
 	}
 
 } 
