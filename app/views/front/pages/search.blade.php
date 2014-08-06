@@ -13,8 +13,8 @@
 	<?php $ids[] = $i?>
 	<div class="widget">
 		<div class="body full_bordered">
-			<h2 class="searchTitle"><a href="{{url()}}/trucks/{{$repos[1][$i]['slug']}}">{{$repos[1][$i]['nome']}}</a></h2>
-			<span class="categoria"><a href="{{url()}}/trucks">TRUCKS</a> | </span> <span class="link"><a href="{{url()}}/trucks/{{$repos[1][$i]['slug']}}">{{url()}}/trucks/{{$repos[1][$i]['slug']}}</a></span>
+			<h2 class="searchTitle"><a href="{{url()}}/truck/{{$repos[1][$i]['slug']}}">{{$repos[1][$i]['nome']}}</a></h2>
+			<span class="categoria"><a href="{{url()}}/trucks">TRUCKS</a> | </span> <span class="link"><a href="{{url()}}/truck/{{$repos[1][$i]['slug']}}">{{url()}}/truck/{{$repos[1][$i]['slug']}}</a></span>
 			<p>{{$repos[1][$i]['description']}}</p>
 		</div>
 	</div>
@@ -26,8 +26,8 @@
 		@if(!in_array($i, $ids))
 		<div class="widget">
 			<div class="body full_bordered">
-				<h2 class="searchTitle"><a href="{{url()}}/trucks/{{$repos[2][0][$i]['slug']}}">{{$repos[2][0][$i]['nome']}}</a></h2>
-				<span class="categoria"><a href="{{url()}}/trucks">TRUCKS</a> | </span> <span class="link"><a href="{{url()}}/trucks/{{$repos[2][0][$i]['slug']}}">{{url()}}/trucks/{{$repos[2][0][$i]['slug']}}</a></span>
+				<h2 class="searchTitle"><a href="{{url()}}/truck/{{$repos[2][0][$i]['slug']}}">{{$repos[2][0][$i]['nome']}}</a></h2>
+				<span class="categoria"><a href="{{url()}}/trucks">TRUCKS</a> | </span> <span class="link"><a href="{{url()}}/truck/{{$repos[2][0][$i]['slug']}}">{{url()}}/truck/{{$repos[2][0][$i]['slug']}}</a></span>
 				<p>{{$repos[2][0][$i]['description']}}</p>
 			</div>
 		</div>
@@ -52,7 +52,7 @@
 	<div class="widget">
 		<div class="body full_bordered">
 			<h2 class="searchTitle"><a href="{{url()}}/blog/{{$repos[3][$i]['slug']}}">{{$repos[3][$i]['titulo']}}</a></h2>
-			<span class="categoria"><a href="{{url()}}/blog">BLOG</a> | </span> <span class="link"><a href="{{url()}}/blog/{{$repos[3][$i]['slug']}}">{{url()}}/trucks/{{$repos[3][$i]['slug']}}</a></span>
+			<span class="categoria"><a href="{{url()}}/blog">BLOG</a> | </span> <span class="link"><a href="{{url()}}/blog/{{$repos[3][$i]['slug']}}">{{url()}}/truck/{{$repos[3][$i]['slug']}}</a></span>
 			<p>{{$repos[3][$i]['body']}}</p>
 		</div>
 	</div>

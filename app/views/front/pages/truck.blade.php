@@ -1,7 +1,11 @@
 @extends('front.layouts.default')
 @section('content')
 <div id="main" class="col-13 truck widget">
-	<h1>{{$truck->nome}}</h1>
+	@foreach ($cats as $cat)
+	@if ($truck->cat_id == $cat->nome)
+		<span class="pic">{{HTML::image($cat->imagem)}}</span><h1>{{$truck->nome}}</h1>
+	@endif
+	@endforeach
 	<div class="widget" style="margin-bottom: 10px;">
 		{{HTML::image($truck->logo, '', ['class' => 'logo col-5 alpha'])}}
 		<div id="infos" class="col-8 omega">
@@ -38,6 +42,7 @@
 	@include('front._includes.next-spots-truck')
 	@include('front._includes.newsletter')
 </div>
+<input name="" type="hidden" id="parent_url" value="{{route('trucks_path')}}"/>
 @stop
 
 @section('scripts')

@@ -12,7 +12,7 @@
 <div class="page">
 	<div class="container">
 		<header>
-			<div id="logo" class="col-3"><a href="/"><img src="/images/foodtrucker-t.svg" alt="" height="100"/></a></div>
+			<div id="logo" class="col-3"><a href="{{route('home')}}"><img src="/images/foodtrucker-t.svg" alt="" height="100"/></a></div>
 			<div id="menu" class="col-12">@include('front._includes.menu')</div>
 			<div class="col-5">@include('front._includes.busca',['formClass' => ''])</div>
 		</header>
