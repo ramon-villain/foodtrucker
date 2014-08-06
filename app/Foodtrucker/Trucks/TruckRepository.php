@@ -54,6 +54,9 @@ class TruckRepository {
 	}
 
 	public function getCategorias() {
+		return \DB::table('categorias')->orderBy('id','asc')->get();
+	}
+	public function getCategoriasName(){
 		return \DB::table('categorias')->orderBy('id','asc')->lists('nome');
 	}
 	public function getCategoriaNameById($id){

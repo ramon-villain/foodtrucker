@@ -27,13 +27,16 @@ class TrucksController extends BaseController {
 
 	public function index()
 	{
-		$data['title'] = 'Contato';
+		$data['title'] = 'Trucks';
 		$spots = $this->spotRepository->getSpotsActive();
-		return View::make('front.pages.contato', compact('data', 'spots'));
+		$trucks = $this->truckRepository->getTrucks();
+		$cats = $this->truckRepository->getCategorias();
+		$data['trucks'] = $this->truckRepository->getTrucksName();
+		return View::make('front.pages.trucks', compact('data', 'spots', 'cats', 'trucks'));
 	}
 
 	public function truck($slug){
-
+		$cats = $this->truckRepository->getCategorias();
 		$truck = $this->truckRepository->getTruckBySlug($slug);
 		$data['title'] = $truck->nome;
 		$spots = $this->spotRepository->getSpotsActiveTruck($truck->id);
@@ -41,7 +44,7 @@ class TrucksController extends BaseController {
 		$truck->site = ($truck->site ? $truck->site : null);
 		$imagens = unserialize($truck->imagens);
 		$servico = unserialize($truck->pagamento);
-		return View::make('front.pages.truck', compact('data', 'truck', 'imagens', 'spots', 'servico'));
+		return View::make('front.pages.truck', compact('data', 'truck', 'imagens', 'spots', 'servico', 'cats'));
 	}
 
 }

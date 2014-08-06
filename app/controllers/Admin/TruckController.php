@@ -33,7 +33,7 @@ class Admin_TruckController extends BaseController {
 
 	public function index(){
 		$data['title']  = 'Trucks';
-		$data['categorias']  = $this->truckRepository->getCategorias();
+		$data['categorias']  = $this->truckRepository->getCategoriasName();
 		$data['trucks'] = $this->truckRepository->getTrucks();
 		return View::make('back.pages.trucks', compact('data'));
 	}
@@ -65,7 +65,7 @@ class Admin_TruckController extends BaseController {
 	}
 
 	public function edit($id){
-		$data['categorias']  = $this->truckRepository->getCategorias();
+		$data['categorias']  = $this->truckRepository->getCategoriasName();
 		$data['truck'] = $this->truckRepository->getTruckById($id);
 		$data['truck']->cat_id = $data['truck']->cat_id - 1;
 		$data['title'] = 'Editando '. $data['truck']->nome;
