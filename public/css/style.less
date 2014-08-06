@@ -372,6 +372,17 @@ footer{
     }
 }
 #main.truck{
+    .pic {
+        .fl;
+        margin-right: 4px;
+        img {
+            height: 30px;
+        }
+    }
+    h1{
+        line-height: 34px;
+        margin-bottom: 8px;
+    }
     .widget{
         background: @white;
         border: 1px solid @borderGrey;
@@ -384,9 +395,21 @@ footer{
             width: 244px;
             margin-right: 0px;
         }
+        .col-9{
+            width: 446px;
+        }
+        .col-4{
+            width: 191px;
+            margin-right: 0px;
+        }
     }
-    .logo{
+    .col-5.logo{
         max-width: 245px;
+        .fl;
+        .br;
+    }
+    .col-4.logo{
+        max-width: 192px;
         .fl;
         .br;
     }
@@ -396,6 +419,28 @@ footer{
             li{
                 color:@mediumGrey;
                 margin-bottom: 10px;
+                p{
+                    color: @mediumGrey;
+                    margin-bottom: 0;
+                }
+            }
+            li:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+        ul.trucks-page{
+            padding: 0;
+            li{
+                margin-bottom: 6px;
+                p{
+                    margin: 0;
+                }
+                a{
+                    font-weight: bold;
+                }
+            }
+            li:last-of-type{
+                margin-bottom: 0;
             }
         }
     }
@@ -406,6 +451,7 @@ footer{
         text-align: justify;
         p{
             margin-bottom: 0;
+            color:@mediumGrey;
         }
         p.servicos{
             span{
@@ -452,4 +498,138 @@ footer{
             top:-1px;
         }
     }
+}
+
+.truck {
+    .cat-title{
+        display: block;
+        .br;
+        .gothamBold;
+        color:@grey;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        .clear;
+        background: url('../images/pics/bg-title.png') repeat-x;
+        .title{
+            background: @cream;
+            padding-right: 5px;
+            .fl;
+        }
+        span.pic{
+            display: block;
+            .fl;
+            img{
+                height: 30px;
+            }
+        }
+        h2 {
+            height: 30px;
+            letter-spacing: 0.075em;
+            .gothamBold;
+            line-height: 32px;
+            font-size: 15px;
+            margin-left: 5px;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+    }
+    span.pic.cat-1{
+        background-color:#AF2C3C;
+    }
+    span.pic.cat-2{
+        background-color: #29ABE2;
+    }
+    span.pic.cat-3{
+        background-color: #22B573;
+    }
+    span.pic.cat-4{
+        background-color:#B3B3B3;
+    }
+    span.pic.cat-5{
+        background-color: #FF4A4A;
+    }
+    span.pic.cat-6{
+        background-color: #BE58D3;
+    }
+    span.pic.cat-7{
+        background-color:#0BCEBB;
+    }
+    span.pic.cat-8{
+        background-color: #DDBB97;
+    }
+    span.pic.cat-9{
+        background-color: #F7931E;
+    }
+    span.pic.cat-10{
+        background-color:#51290F;
+    }
+    span.pic.cat-11{
+        background-color: #FF9483;
+    }
+
+    .truck{
+
+    }
+    .logo{
+        img{
+            max-width: 200px;
+            .br;
+        }
+        .fl;
+        margin-right: 20px;
+    }
+    .infos{
+        .fl;
+    }
+}
+.return.grid, .return.list{
+    .clear;
+    margin-top: 25px;
+}
+.grid{
+
+    .widget{
+        clear:none;
+        margin-right: 15px;
+        h2{
+            color:@grey;
+            line-height: 34px;
+            font-size: 15px;
+        }
+        .pic{
+            margin-bottom: 10px;
+        }
+        .fl;
+        a{
+            font-weight: bold;
+            text-align: center;
+            padding-top: 7px;
+            display: block;
+            .clear;
+        }
+    }
+    .widget:nth-child(3n+0){
+        margin-right: 0;
+    }
+}
+.options{
+    clear:both;
+    height: 30px;
+}
+.view{
+    padding-top: 8px;
+    .fr;
+    button {
+        background: transparent;
+        border:none;
+        color: @mediumGrey;
+        .gothamBold;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0 5px;
+    }
+}
+.selectorReturn{
+    cursor: pointer;
+
 }

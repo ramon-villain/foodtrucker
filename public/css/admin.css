@@ -37,6 +37,8 @@ img {
 }
 .widget {
   margin-bottom: 20px;
+  clear: both;
+  overflow: hidden;
 }
 .widget .title.yellow {
   background: #ffc107;
@@ -470,6 +472,7 @@ a:visited {
 p {
   color: #666666;
   text-align: justify;
+  line-height: 17px;
 }
 h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

@@ -37,6 +37,8 @@ img {
 }
 .widget {
   margin-bottom: 20px;
+  clear: both;
+  overflow: hidden;
 }
 .widget .title.yellow {
   background: #ffc107;
