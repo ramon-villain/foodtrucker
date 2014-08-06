@@ -54,8 +54,8 @@ Route::get('/trucks', [
 	'as'    => 'trucks_path',
 	'uses'  => 'TrucksController@index']);
 
-Route::get('/trucks/{nome}', [
-	'as'    => 'trucks_path',
+Route::get('/truck/{nome}', [
+	'as'    => 'truck_path',
 	'uses'  => 'TrucksController@truck']);
 
 Route::get('/busca', [
