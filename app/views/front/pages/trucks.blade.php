@@ -3,7 +3,15 @@
 <div id="main" class="col-13 truck">
 	<div class="options">
 		<div class="fl">
-			<select id="dynamic_select" class="form-control">
+			<select id="categoria" class="form-control">
+				<option value="" selected>Categorias</option>
+				<option value="0">Todas as Categorias</option>
+				@foreach ($cats as $cat)
+					<option value="{{$cat->id}}">{{$cat->nome}}</option>
+				@endforeach
+			</select>
+
+			<select id="food_truck" class="form-control">
 				<option value="" selected>Food Truck</option>
 				@foreach ($trucks as $truck)
 				<option value="{{url()}}/truck/{{$truck->slug}}">{{$truck->nome}}</option>
@@ -17,12 +25,13 @@
 	</div>
 	<div class="return list">
 		@foreach ($cats as $cat)
+		<div data-categoria="{{$cat->id}}" class="item_list">
 		<div class="cat-title">
 			<div class="title"><span class="pic">{{HTML::image($cat->imagem)}}</span><h2>{{ $cat->nome }}</h2></div>
 		</div>
 		@foreach ($trucks as $truck)
 		@if ($truck->cat_id == $cat->id)
-		<div class="widget">
+		<div class="widget truck_list">
 			<a href="{{url()}}/truck/{{$truck->slug}}">{{HTML::image($truck->logo, $truck->nome, ['class' => 'logo col-4 alpha'])}}</a>
 			<div id="infos" class="col-9 omega">
 				<ul class="trucks-page">
@@ -34,13 +43,14 @@
 		</div>
 		@endif
 		@endforeach
+		</div>
 		@endforeach
 	</div>
 	<div class="return grid" style="display: none;">
 		@foreach ($cats as $cat)
 		@foreach ($trucks as $truck)
 		@if ($truck->cat_id == $cat->id)
-		<div class="widget">
+		<div class="widget item_grid"  data-categoria="{{$cat->id}}">
 			<span class="pic">{{HTML::image($cat->imagem)}}</span><h2>{{ $cat->nome }}</h2>
 			<a href="{{url()}}/truck/{{$truck->slug}}">{{HTML::image($truck->logo, $truck->nome, ['class' => 'logo col-4 alpha'])}}</a>
 			<a href="{{url()}}/truck/{{$truck->slug}}">Saiba Mais</a>
@@ -61,10 +71,17 @@
 
 
 <script>
-	$('#dynamic_select').selectize({
-		sortField: 'text'
+
+	$( "select#categoria").change(function(){
+		var id = this.value;
+		$('.item_list, .item_grid').hide();
+		$('div[data-categoria='+id+']').show();
+		if(id == '0'){
+			$('.item_list, .item_grid').show();
+		}
 	});
-	$('#dynamic_select').bind('change', function () {
+	$('#food_truck, #categoria').selectize();
+	$('#food_truck').bind('change', function () {
 		var url = $(this).val(); // get selected value
 		if (url) { // require a URL
 			window.location = url; // redirect
@@ -73,10 +90,12 @@
 	});
 	$('.selectorReturn').on('click',function(e) {
 		if ($(this).hasClass('grid')) {
+			$("select#categoria option[value='0']").attr('selected', 'selected');
 			$('.return.list').hide();
 			$('.return.grid').show();
 		}
 		else if($(this).hasClass('list')) {
+			$("select#categoria option[value=0]").attr('selected', 'selected');
 			$('.return.list').show();
 			$('.return.grid').hide();
 		}
