@@ -22,6 +22,11 @@ App::after(function($request, $response)
 	//
 });
 
+App::missing(function()
+{
+	return Redirect::to('/');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Authentication Filters
