@@ -58,10 +58,9 @@ Route::get('/trucks/{nome}', [
 	'as'    => 'trucks_path',
 	'uses'  => 'TrucksController@truck']);
 
-Route::get('/busca/', [
+Route::get('/busca', [
 	'as'    => 'search_path',
 	'uses'  => 'SearchController@index']);
-
 Route::group(array('before' => 'auth'), function() {
 	Route::group( array( 'prefix' => 'admin' ), function () {
 		Route::get('', function () {
