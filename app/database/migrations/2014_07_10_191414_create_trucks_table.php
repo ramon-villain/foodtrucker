@@ -16,7 +16,7 @@ class CreateTrucksTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('nome');
-			$table->string('slug');
+			$table->string('slug')->unique();
 			$table->string('logo');
 			$table->string('especialidade');
 			$table->integer('cat_id')->unsigned()->index();
@@ -29,7 +29,7 @@ class CreateTrucksTable extends Migration {
 			$table->string('pagamento');
 			$table->longtext('description');
 			$table->string('imagens', 5000);
-			$table->string('extras');
+			$table->string('extras')->nullable();
 			$table->timestamps();
 		});
 	}

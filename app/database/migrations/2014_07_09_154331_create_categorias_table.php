@@ -16,6 +16,7 @@ class CreateCategoriasTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('nome')->unique();
+			$table->string('imagem')->nullable();
 			$table->timestamps();
 		});
 	}
