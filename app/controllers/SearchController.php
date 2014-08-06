@@ -26,19 +26,29 @@ class SearchController extends BaseController {
 	 * @var BlogRepository
 	 */
 	private $blogRepository;
+	/**
+	 * @var SpotRepository
+	 */
+	private $spotRepository;
 
-	function __construct( TruckRepository $truckRepository, TagRepository $tagRepository, EventosRepository $eventosRepository, BlogRepository $blogRepository) {
+	function __construct( TruckRepository $truckRepository, TagRepository $tagRepository, EventosRepository $eventosRepository, BlogRepository $blogRepository, SpotRepository $spotRepository) {
 		$this->truckRepository = $truckRepository;
 		$this->tagRepository = $tagRepository;
 		$this->eventosRepository = $eventosRepository;
 		$this->blogRepository = $blogRepository;
+		$this->spotRepository = $spotRepository;
 	}
 
 	public function index()
 	{
 		$query = Input::get('q');
+		$data['title'] = 'Resultado da busca: '. $query;
+		if($query == null){
+			return Redirect::to('/');
+		}
 		$repos = $this->searchRepos( $query );
-		dd($repos);
+		$spots = $this->spotRepository->getSpotsActive();
+		return View::make('front.pages.search', compact('repos', 'spots', 'query', 'data'));
 	}
 
 	/**
@@ -51,8 +61,11 @@ class SearchController extends BaseController {
 		$truck  = $this->truckRepository->searchThis( $query )->toArray();
 		$tag    = $this->tagRepository->searchThis( $query, $truck );
 		$blog   = $this->blogRepository->searchThis( $query )->toArray();
-
-		return [$evento, $tag, $truck, $blog];
+		if(!count($evento) AND !count($truck) AND !count($tag) AND !count($blog)){
+			return null;
+		}else{
+			return [$evento, $truck,$tag, $blog];
+		}
 	}
 
 

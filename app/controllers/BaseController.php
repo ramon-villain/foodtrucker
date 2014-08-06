@@ -16,6 +16,8 @@ class BaseController extends Controller {
 			$this->layout = View::make($this->layout);
 		}
 		View::share('currentUser', Auth::user());
+		$mensagem = (Session::get('message') ? Session::get('message') : null);
+		View::share('message', $mensagem);
 	}
 
 }

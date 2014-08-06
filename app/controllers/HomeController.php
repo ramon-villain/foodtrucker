@@ -38,8 +38,7 @@ class HomeController extends BaseController {
 			$featured = new SetFeaturedCommand('https://res.cloudinary.com/enjoei/image/upload/c_fill,h_330,w_276/avvdeqvbnj0omkxnvuub','https://res.cloudinary.com/enjoei/image/upload/c_fill,h_330,w_276/avvdeqvbnj0omkxnvuub        ','Food Trucker','Em Destaque');
 			Session::forget('modal');
 		}
-		$mensagem = (Session::get('message') ? Session::get('message') : null);
-		return View::make('front.pages.home', compact('featured', 'banners', 'spots', 'mensagem'));
+		return View::make('front.pages.home', compact('featured', 'banners', 'spots'));
 	}
 
 	public function newsletter(){
