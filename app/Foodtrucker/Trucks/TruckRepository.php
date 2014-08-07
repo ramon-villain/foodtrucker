@@ -29,6 +29,9 @@ class TruckRepository {
 		return Truck::lists('nome');
 	}
 	public function getTruckById($id){
+		if($id == 'last'){
+			return Truck::orderBy('id', 'desc')->first();
+		}
 		return Truck::where('id', $id)->first();
 	}
 
