@@ -58,6 +58,10 @@ Route::get('/truck/{nome}', [
 	'as'    => 'truck_path',
 	'uses'  => 'TrucksController@truck']);
 
+Route::get('/cadastre-se', [
+	'as'    => 'truck_sign_path',
+	'uses'  => 'PagesController@cadastro_index']);
+
 Route::get('/busca', [
 	'as'    => 'search_path',
 	'uses'  => 'SearchController@index']);
@@ -179,6 +183,8 @@ Route::group(['prefix' => 'js'], function(){
 	Route::get('spots/{tag}', function($spot){
 		$spots = DB::table('spots')->where('id', 'LIKE', "%$spot%")->lists('id');
 		return Response::json($spots);});
+
+	Route::get('spots', 'HomeController@spotsJs');
 
 	Route::get('trucks/{tag}', function($truck){
 		$trucks = DB::table('trucks')->where('id', 'LIKE', "%$truck%")->lists('name');
