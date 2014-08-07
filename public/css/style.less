@@ -363,6 +363,7 @@ footer{
             max-width: 150px;
         }
         .infos{
+            width: 455px;
             text-transform: none;
             color:@mediumGrey;
             .fl;
@@ -380,7 +381,11 @@ footer{
                 text-transform: none;
                 color:@yellow;
                 letter-spacing: normal;
-                margin-bottom: 10px;
+                margin-bottom: 7px;
+            }
+            p{
+                margin: 0;
+
             }
             div{
                 .helvetica;
@@ -654,4 +659,61 @@ footer{
 
 .truck_list{
     .clear;
+}
+
+.map{
+    overflow: hidden;
+    .imageMap{
+        .fl;
+        img{
+            max-width: 150px;
+            margin-right: 10px;
+        }
+    }
+    .bodyMap{
+        padding:10px 0 5px;
+        .fl;
+        h2{
+            .gothamBold;
+            text-transform: uppercase;
+            color: @grey;
+        }
+        p.social{
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+        p{
+            .helvetica;
+            color:@grey;
+            margin: 3px 0;
+            b{
+                font-weight: bold;
+            }
+        }
+    }
+    .servicos{
+        margin: 0;
+        padding-top: 4px;
+        .clear;
+        display: block;
+        span{
+            .helvetica;
+            font-size: 11px;
+            font-weight: bold;
+            margin-right: 12px;
+            color:@grey;
+            i{
+                margin-right: 3px;
+            }
+            .fa-times{
+                color:@red;
+            }
+            .fa-check{
+                color:@green;
+            }
+        }
+        span:last-of-type{
+            margin-right: 0;
+        }
+    }
 }
