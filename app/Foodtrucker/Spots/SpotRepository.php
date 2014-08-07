@@ -68,6 +68,7 @@ class SpotRepository {
 				return null;
 			}
 		}
+
 		 return $spots;
 	}
 

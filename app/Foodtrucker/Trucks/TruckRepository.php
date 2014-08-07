@@ -112,4 +112,8 @@ class TruckRepository {
 		return Truck::orderBy('id', 'desc')->pluck('id');
 	}
 
+	public function getTruckByName( $truck ) {
+		return Truck::where('nome', $truck)->first();
+	}
+
 } 

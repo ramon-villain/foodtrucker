@@ -46,14 +46,15 @@ class Admin_SpotController extends BaseController {
 		$this->newSpotForm->validate(Input::all());
 		extract(Input::only('truck_id','endereco','inicio', 'fim', 'description', 'tags'));
 		$truck_id = $this->getTruckIDfromName($truck_id);
-		$this->execute( new AddSpotCommand($truck_id,$endereco,$inicio,$fim,$description));
+		$this->execute( new AddSpotCommand($truck_id->id,$endereco,$inicio,$fim,$description));
 		$this->execute( new AddTagCommand($tags));
-		$this->execute( new AddTagTruckCommand($tags,$this->spotRepository->getThisId($this->spot),$truck_id));
+		$this->execute( new AddTagTruckCommand($tags,$this->spotRepository->getThisId($this->spot),$truck_id->id));
 		return Redirect::back();
 	}
 
 	private function getTruckIDfromName( $truck ) {
-		return $truck + 1;
+		$trucks = $this->truckRepository->getTrucksName();
+		return $this->truckRepository->getTruckByName($trucks[$truck]);
 	}
 
 	public function edit($id){
