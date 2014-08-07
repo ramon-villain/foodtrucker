@@ -10,7 +10,7 @@
 	<?php $ids = []?>
 	@if($repos[1])
 	@for ($i = 0; $i < count($repos[1]); $i++)
-	<?php $ids[] = $i?>
+	<?php $ids[] = $repos[1][$i]['id']?>
 	<div class="widget">
 		<div class="body full_bordered">
 			<h2 class="searchTitle"><a href="{{url()}}/truck/{{$repos[1][$i]['slug']}}">{{$repos[1][$i]['nome']}}</a></h2>
@@ -23,15 +23,15 @@
 
 	@if($repos[2])
 	@for ($i = 0; $i < count($repos[2]); $i++)
-		@if(!in_array($i, $ids))
-		<div class="widget">
-			<div class="body full_bordered">
-				<h2 class="searchTitle"><a href="{{url()}}/truck/{{$repos[2][$i][0]['slug']}}">{{$repos[2][$i][0]['nome']}}</a></h2>
-				<span class="categoria"><a href="{{url()}}/trucks">TRUCKS</a> | </span> <span class="link"><a href="{{url()}}/truck/{{$repos[2][$i][0]['slug']}}">{{url()}}/truck/{{$repos[2][$i][0]['slug']}}</a></span>
-				<p>{{$repos[2][$i][0]['description']}}</p>
-			</div>
+	@if(!in_array($repos[2][$i][0]['id'], $ids))
+	<div class="widget">
+		<div class="body full_bordered">
+			<h2 class="searchTitle"><a href="{{url()}}/truck/{{$repos[2][$i][0]['slug']}}">{{$repos[2][$i][0]['nome']}}</a></h2>
+			<span class="categoria"><a href="{{url()}}/trucks">TRUCKS</a> | </span> <span class="link"><a href="{{url()}}/truck/{{$repos[2][$i][0]['slug']}}">{{url()}}/truck/{{$repos[2][$i][0]['slug']}}</a></span>
+			<p>{{$repos[2][$i][0]['description']}}</p>
 		</div>
-		@endif
+	</div>
+	@endif
 	@endfor
 	@endif
 
