@@ -591,6 +591,25 @@ header #menu ul li a.active {
   height: 445px;
   border-radius: 3px;
 }
+#content #trucksNovos {
+  position: relative;
+}
+#content #trucksNovos .body {
+  background-repeat: no-repeat;
+  height: 234px;
+  position: relative;
+}
+#content #trucksNovos img {
+  max-width: 100%;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#content #trucksNovos h3 {
+  position: absolute;
+  bottom: 10px;
+  margin: 0 10px;
+  width: 321px;
+}
 #content #truckDaSemana {
   position: relative;
 }
