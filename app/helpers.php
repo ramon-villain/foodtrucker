@@ -1,5 +1,17 @@
 <?php
 
+function dataMapFront($abertura, $inicio, $encerramento, $fim){
+	$encerramento = new DateTime($encerramento);
+	$hoje = date('Y-m-d');
+	$fim = new DateTime($fim);
+	$inicio = new DateTime($inicio);
+	if($hoje === $encerramento->format('Y-m-d')){
+		return 'Das <b>'.$inicio->format('H:i').'</b> às <b>'. $fim->format('H:i') .'</b>';
+	}else{
+		return 'Das <b>'.$inicio->format('H:i').'</b> até dia <b>'.$encerramento->format('d/m'). '</b> às <b>'. $fim->format('H:i') .'</b>';
+	}
+}
+
 function dataSpotFront($dia, $hora = null){
 	$hoje = date('Y-m-d');
 	$final = new DateTime($dia.' '. $hora);
