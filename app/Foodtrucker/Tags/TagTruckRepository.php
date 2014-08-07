@@ -45,4 +45,25 @@ class TagTruckRepository {
 		$tags = implode(",", $tags);
 		return $tags;
 	}
+
+	public function updateTagTrucks( $tags, $id ) {
+		$tagsTruck = TagTruck::where('truck_id', $id)->lists('tag_id');
+		$arrTags = $this->parseTags($tags);
+		$tags_id = [];
+		foreach($arrTags as $tag){
+			$tagId = Tag::where('tag', $tag)->pluck('id');
+			$tags_id[] = $tagId;
+			if(count(TagTruck::where('tag_id', $tagId)->where('truck_id',$id)->get()) == 0) {
+				TagTruck::insert([
+					'truck_id'  => $id,
+					'tag_id'    => $tagId
+				]);
+			}
+		}
+		for($i=0;$i< count($tagsTruck); $i++){
+			if(!in_array($tagsTruck[$i],$tags_id)){
+				TagTruck::where('truck_id',$id)->where('tag_id', $tagsTruck[$i])->delete();
+			}
+		}
+	}
 } 

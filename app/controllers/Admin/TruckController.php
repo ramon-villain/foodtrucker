@@ -96,6 +96,8 @@ class Admin_TruckController extends BaseController {
 			}
 		}
 		$imagens = serialize($imagens);
+		$this->tagRepository->saveTags(Input::get('tags'));
+		$this->tagTruckRepository->updateTagTrucks(Input::get('tags'),$id);
 		$this->truckRepository->updateTruck($id, $nome, $logo, $especialidade, $cat_id, $mais_pedido, $site, $facebook, $instagram, $preco, $servicos, $description, $imagens, $extras);
 		return Redirect::back();
 	}
