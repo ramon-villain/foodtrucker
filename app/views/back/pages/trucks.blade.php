@@ -13,7 +13,7 @@
 
 @section('scripts')
 {{HTML::script('js/tag-it.min.js')}}
-{{HTML::script('js/jquery.datetimepicker.js')}}
+{{HTML::script('js/min/jquery.datetimepicker-min.js')}}
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
 {{HTML::script('js/jquery.geocomplete.js')}}
 <script>

@@ -20,8 +20,7 @@
 	</div>
 </div>
 {{HTML::script('js/jquery.min.js')}}
-{{HTML::script('js/jquery-ui.min.js')}}
-{{HTML::script('js/jquery.cookie.min.js')}}
+{{HTML::script('js/min/jquery-ui.min-min.js')}}
 @yield('scripts')
 {{HTML::script('js/main.js')}}
 </body>

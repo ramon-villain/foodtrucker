@@ -41,10 +41,10 @@
 @stop
 
 @section('scripts')
-{{HTML::script('js/wysihtml5-0.3.0.js')}}
+{{HTML::script('js/min/wysihtml5-0.3.0-min.js')}}
 {{HTML::script('js/bootstrap.min.js')}}
-{{HTML::script('js/bootstrap-wysihtml5.js')}}
-{{HTML::script('js/jquery.datetimepicker.js')}}
+{{HTML::script('js/min/bootstrap-wysihtml5-min.js')}}
+{{HTML::script('js/min/jquery.datetimepicker-min.js')}}
 <script>
 	$('.editor').wysihtml5({
 		"font-styles": false,

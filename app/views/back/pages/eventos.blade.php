@@ -11,10 +11,10 @@
 <input name="" type="hidden" id="parent_url" value="{{route('evento_admin_path')}}"/>
 @stop
 @section('scripts')
-{{HTML::script('js/jquery.datetimepicker.js')}}
-{{HTML::script('js/wysihtml5-0.3.0.js')}}
+{{HTML::script('js/min/jquery.datetimepicker-min.js')}}
+{{HTML::script('js/min/wysihtml5-0.3.0-min.js')}}
 {{HTML::script('js/bootstrap.min.js')}}
-{{HTML::script('js/bootstrap-wysihtml5.js')}}
+{{HTML::script('js/min/bootstrap-wysihtml5-min.js')}}
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
 {{HTML::script('js/jquery.geocomplete.js')}}
 <script>

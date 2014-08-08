@@ -11,7 +11,11 @@
 			{{Form::model($data['spot'], ['files' => true, 'route' => ['edit_spot_admin_path', $data['spot']->id]])}}
 
 			{{Form::label('truck_id', 'Escolha um Food Truck:')}}
-			{{Form::select('truck_id', $data['trucks'], $data['spot']->truck_id)}}
+			<select name="truck_id" id="truck_id" class="form-control filter_select">
+				@for ($i = 0; $i < count($data['trucks']); $i++)
+				<option value="{{$data['trucks'][$i]}}">{{$data['trucks'][$i]}}</option>
+				@endfor
+			</select>
 
 			{{Form::label('endereco', 'Endereço do Spot:')}}
 			<div class="wrapInput">{{Form::text('endereco',$data['spot']->local,['placeholder' => 'Avenida Paulista, 800, São Paulo - SP'])}}</div>
@@ -39,9 +43,10 @@
 @stop
 @section('scripts')
 {{HTML::script('js/tag-it.min.js')}}
-{{HTML::script('js/jquery.datetimepicker.js')}}
+{{HTML::script('js/min/jquery.datetimepicker-min.js')}}
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
 {{HTML::script('js/jquery.geocomplete.js')}}
+{{HTML::script('js/min/selectize-min.js')}}
 <script>
 	$("#endereco").geocomplete({
 		details: "form"
@@ -68,6 +73,7 @@
 			});
 		}
 	});
+	$('#truck_id').selectize();
 </script>
 @stop
 
@@ -75,4 +81,5 @@
 {{HTML::style('css/vendor/jquery.datetimepicker.css')}}
 {{HTML::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css')}}
 {{HTML::style('css/vendor/jquery.tagit.css')}}
+{{HTML::style('css/vendor/selectize.css')}}
 @stop
