@@ -6,6 +6,7 @@ use Foodtrucker\Spots\Spot;
 use Foodtrucker\Spots\SpotRepository;
 use Foodtrucker\Tags\AddTagCommand;
 use Foodtrucker\Tags\AddTagTruckCommand;
+use Foodtrucker\Tags\TagRepository;
 use Foodtrucker\Tags\TagTruckRepository;
 use Foodtrucker\Trucks\Truck;
 use Foodtrucker\Trucks\TruckRepository;
@@ -23,13 +24,18 @@ class Admin_SpotController extends BaseController {
 	 * @var TagTruckRepository
 	 */
 	private $tagTruckRepository;
+	/**
+	 * @var TagRepository
+	 */
+	private $tagRepository;
 
-	function __construct( NewSpotForm $newSpotForm, SpotRepository $spotRepository, Spot $spot, TruckRepository $truckRepository, TagTruckRepository $tagTruckRepository) {
+	function __construct( NewSpotForm $newSpotForm, SpotRepository $spotRepository, Spot $spot, TruckRepository $truckRepository, TagTruckRepository $tagTruckRepository, TagRepository $tagRepository) {
 		$this->newSpotForm = $newSpotForm;
 		$this->spotRepository = $spotRepository;
 		$this->spot = $spot;
 		$this->truckRepository = $truckRepository;
 		$this->tagTruckRepository = $tagTruckRepository;
+		$this->tagRepository = $tagRepository;
 	}
 
 	public function index(){
@@ -69,9 +75,10 @@ class Admin_SpotController extends BaseController {
 
 	public function update($id){
 		extract(Input::only('truck_id','endereco','inicio', 'fim', 'description', 'tags'));
-		$truck_id = $this->getTruckIDfromName($truck_id);
-		$this->spotRepository->updateSpot($id, $truck_id, $endereco, $inicio, $fim, $description);
-		$this->tagTruckRepository->updateTagsSpot($id, $tags);
+		$truck_id = $this->truckRepository->getTruckByName($truck_id);
+		$this->tagRepository->saveTags(Input::get('tags'));
+		$this->spotRepository->updateSpot($id, $truck_id->id, $endereco, $inicio, $fim, $description);
+		$this->tagTruckRepository->updateTagsSpot($id, $truck_id->id,$tags);
 		return Redirect::back();
 	}
 
