@@ -73,4 +73,17 @@ class SpotRepository {
 		return Spot::where('truck_id', $id)->where('active', 1)->where('abertura', '>=', new DateTime('today'))->orderBy('abertura', 'asc')->get();
 	}
 
+	public function getLastId() {
+		return Spot::orderBy('id', 'desc')->pluck('id');
+	}
+
+	public function addLatLong( $endereco, $lat, $long, $spot ) {
+		return \DB::table('spot_details')->insert([
+				'address' => $endereco,
+				'lat'   => $lat,
+				'long'  => $long,
+				'spot_id'   =>$spot
+		]);
+	}
+
 } 
