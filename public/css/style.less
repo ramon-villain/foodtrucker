@@ -727,19 +727,30 @@ footer{
         color:@grey;
         font-size: 19px;
         .fl;
-        line-height: 31px;
+        line-height: 33px;
         margin-right: 20px;
     }
-    .wrapInput{
+    .wrapInput, ul.tagit{
         .fl;
         margin-right: 20px;
         padding: 7px;
+    position: relative;
+        .clean{
+            position: absolute;
+            right: 5px;
+            top: 7px;
+            color:@darkGrey;
+            opacity:0;
+            cursor: pointer;
+        }
     }
     #address{
-        width: 268px;
+        width: 218px;
+        padding-right: 18px;
     }
-    #eat{
-        width: 168px;
+    ul.tagit{
+        width: 221px;
+        padding: 1px 0 2px;
     }
     .selectize-control{
         width: 165px;
@@ -749,4 +760,18 @@ footer{
         margin-right: 0;
         .fr;
     }
+}
+
+.fake_link_spots{
+    &:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+#mapa{
+    background: @cream;
+    height: 446px;
+    display: block;
+    width: 100%;
+    .mb20;
 }

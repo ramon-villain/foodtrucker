@@ -85,6 +85,9 @@ img {
   line-height: 30px;
   height: 30px;
 }
+.widget .body h3 a {
+  font-weight: bold;
+}
 .widget .body ul:first-of-type h3 {
   margin-top: 0;
 }
@@ -1229,19 +1232,32 @@ footer .sitemap ul li a:hover {
   color: #9e9e9e;
   font-size: 19px;
   float: left;
-  line-height: 31px;
+  line-height: 33px;
   margin-right: 20px;
 }
-#filter_map .wrapInput {
+#filter_map .wrapInput,
+#filter_map ul.tagit {
   float: left;
   margin-right: 20px;
   padding: 7px;
+  position: relative;
+}
+#filter_map .wrapInput .clean,
+#filter_map ul.tagit .clean {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  color: #666666;
+  opacity: 0;
+  cursor: pointer;
 }
 #filter_map #address {
-  width: 268px;
+  width: 218px;
+  padding-right: 18px;
 }
-#filter_map #eat {
-  width: 168px;
+#filter_map ul.tagit {
+  width: 221px;
+  padding: 1px 0 2px;
 }
 #filter_map .selectize-control {
   width: 165px;
@@ -1250,4 +1266,15 @@ footer .sitemap ul li a:hover {
 #filter_map .selectize-control:last-of-type {
   margin-right: 0;
   float: right;
+}
+.fake_link_spots:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#mapa {
+  background: #fffffd;
+  height: 446px;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
 }

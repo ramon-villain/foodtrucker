@@ -85,6 +85,9 @@ img {
   line-height: 30px;
   height: 30px;
 }
+.widget .body h3 a {
+  font-weight: bold;
+}
 .widget .body ul:first-of-type h3 {
   margin-top: 0;
 }
