@@ -14,9 +14,17 @@ function dataMapFront($abertura, $inicio, $encerramento, $fim){
 
 function dataSpotFront($dia, $hora = null){
 	$hoje = date('Y-m-d');
+	$amanha =  new DateTime('tomorrow');
 	$final = new DateTime($dia.' '. $hora);
 	if($dia == $hoje){
 		$dia = 'HOJE';
+		if($hora == null){
+			return $dia;
+		}
+		$hora = new DateTime($hora);
+		return $dia. $hora->format(' - H:i');
+	}elseif($dia == $amanha->format('Y-m-d')){
+		$dia = 'AMANHÃ';
 		if($hora == null){
 			return $dia;
 		}
@@ -42,4 +50,14 @@ function respostaServico($status){
 	}else{
 		return "<i class='fa fa-times'></i>";
 	}
+}
+
+function getSlugFromNome($nome){
+	$slug = DB::table('trucks')->where('nome', $nome)->pluck('slug');
+	return $slug;
+}
+
+function getID($nome){
+	$id = DB::table('trucks')->where('nome', $nome)->pluck('id');
+	return $id;
 }
