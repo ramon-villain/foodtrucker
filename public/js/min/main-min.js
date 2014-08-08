@@ -1,0 +1,1 @@
+$(function(){var a=$("#parent_url").val();$("#menu ul li a[href='"+a+"']").addClass("active"),$(".alert .close").click(function(){$(this).parent("li").parent("ul").parent(".alert").fadeOut(350)})});
