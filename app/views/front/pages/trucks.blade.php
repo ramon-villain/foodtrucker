@@ -4,15 +4,14 @@
 	<div class="options">
 		<div class="fl">
 			<select id="categoria" class="form-control">
-				<option value="" selected>Categorias</option>
-				<option value="0">Todas as Categorias</option>
+				<option value="0" selected>Categorias</option>
 				@foreach ($cats as $cat)
 					<option value="{{$cat->id}}">{{$cat->nome}}</option>
 				@endforeach
 			</select>
 
 			<select id="food_truck" class="form-control">
-				<option value="" selected>Food Truck</option>
+				<option value="0" selected>Food Trucks</option>
 				@foreach ($trucks as $truck)
 				<option value="{{url()}}/truck/{{$truck->slug}}">{{$truck->nome}}</option>
 				@endforeach
@@ -76,6 +75,7 @@
 		var id = this.value;
 		$('.item_list, .item_grid').hide();
 		$('div[data-categoria='+id+']').show();
+		$('div[data-categoria='+id+']').addClass('af');
 		if(id == '0'){
 			$('.item_list, .item_grid').show();
 		}
