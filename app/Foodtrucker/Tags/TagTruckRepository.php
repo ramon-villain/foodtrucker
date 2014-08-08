@@ -16,8 +16,26 @@ class TagTruckRepository {
 		return $tags;
 	}
 
-	public function updateTagsSpot( $tags ) {
-		$tags = $this->parseTags($tags);
+	public function updateTagsSpot( $id, $truck_id, $tags ) {
+		$tagsSpot = TagTruck::where('spot_id', $id)->lists('tag_id');
+		$arrTags = $this->parseTags($tags);
+		$tags_id = [];
+		foreach($arrTags as $tag){
+			$tagId = Tag::where('tag', $tag)->pluck('id');
+			$tags_id[] = $tagId;
+			if(count(TagTruck::where('tag_id', $tagId)->where('spot_id',$id)->get()) == 0) {
+				TagTruck::insert([
+					'spot_id'  => $id,
+					'truck_id'  =>$truck_id,
+					'tag_id'    => $tagId
+				]);
+			}
+		}
+		for($i=0;$i< count($tagsSpot); $i++){
+			if(!in_array($tagsSpot[$i],$tags_id)){
+				TagTruck::where('spot_id',$id)->where('tag_id', $tagsSpot[$i])->delete();
+			}
+		}
 
 	}
 
