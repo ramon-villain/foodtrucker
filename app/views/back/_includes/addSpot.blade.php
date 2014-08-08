@@ -9,7 +9,9 @@
 		{{Form::select('truck_id', $data['trucks'])}}
 
 		{{Form::label('endereco', 'Endereço do Spot:')}}
-		<div class="wrapInput">{{Form::text('endereco','',['placeholder' => 'Avenida Paulista, 800, São Paulo - SP'])}}</div>
+		<div class="wrapInput">{{Form::text('endereco','',['placeholder' => 'Avenida Paulista, 800, São Paulo - SP', 'class' => 'geo'])}}</div>
+		<input name="lat" type="hidden" class="geo" value="">
+		<input name="long" type="hidden" class="geo" value="">
 
 		{{Form::label('inicio', 'Dia e Horário de Início:')}}
 		<div class="wrapInput">{{Form::text('inicio','',['placeholder' => '2014-06-29 10:00'])}}</div>
