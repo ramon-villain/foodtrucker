@@ -9,7 +9,7 @@
 				<div class="infos">
 					<h3>{{ $evento->local }}</h3>
 					<h2>{{ $evento->nome }}</h2>
-					{{ $evento->description }}
+					<p>{{ $evento->description }}</p>
 				</div>
 			</div>
 		</div>
