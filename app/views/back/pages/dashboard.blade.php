@@ -18,10 +18,10 @@
 @section('scripts')
 {{HTML::script('js/tag-it.min.js')}}
 {{HTML::script('js/jquery.datetimepicker.js')}}
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places&amp;language=pt-BR"></script>
 {{HTML::script('js/jquery.geocomplete.js')}}
 <script>
-	$("#endereco").geocomplete({
+	$(".geo").geocomplete({
 		details: "form"
 	});
 	$('#fim, #inicio').appendDtpicker({
