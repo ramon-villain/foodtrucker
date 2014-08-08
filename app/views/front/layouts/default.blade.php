@@ -48,7 +48,7 @@
 </footer>
 <input id="current_url" name="current_url" value="{{URL::current()}}" type="hidden"/>
 {{HTML::script('js/jquery.min.js')}}
-{{HTML::script('js/jquery.cookie.min.js')}}
+{{HTML::script('js/min/jquery-ui.min-min.js')}}
 {{HTML::script('js/main.js')}}
 @yield('scripts')
 </body>

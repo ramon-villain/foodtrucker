@@ -1,8 +1,29 @@
 @extends('front.layouts.default')
 @section('content')
 @include('front._includes.errors')
+<div id="filter_map" class="col-20">
+	<h2>TÔ COM FOME!</h2>
+	{{Form::open()}}
+	{{Form::text('filter_taste', '', ['placeholder' => 'O que você quer comer?', 'id' => 'filter_taste'])}}
+	<div class="wrapInput" id="address">{{Form::text('filter_address', '', ['placeholder' => 'Onde você está?', 'id' => 'filter_address'])}}<span class="clean"><i class="fa fa-times-circle"></i></span></div>
+	<input name="lat" type="hidden" class="geo" value="">
+	<input name="lng" type="hidden" class="geo" value="">
+	<select id="filter_categoria" class="form-control filter_select">
+		<option value="0" selected>Categorias</option>
+		@foreach ($categorias as $categoria)
+		<option value="{{$categoria->id}}">{{$categoria->nome}}</option>
+		@endforeach
+	</select>
+	<select id="filter_truck" class="form-control filter_select">
+		<option value="0" selected>Food Trucks</option>
+		@foreach ($trucks as $truck)
+		<option value="{{$truck->id}}">{{$truck->nome}}</option>
+		@endforeach
+	</select>
+	{{Form::close()}}
+</div>
 <div id="main" class="col-13">
-	<div id="mapa" class="mb20" style="background: #000;height: 446px;display: block;width: 100%;"></div>
+	<div id="mapa"></div>
 	<div id="truckDaSemana" class="col-5 alpha widget">
 		<div class="title blue"><i class="fa fa-trophy"></i><h2>{{$featured->title}}</h2></div>
 		<div class="body" style="background-image: url({{$featured->image}})">
@@ -27,14 +48,22 @@
 	</div>
 </div>
 <div id="sidebar" class="col-7">
-	@include('front._includes.next-spots')
+	@include('front._includes.next-spots-home')
 	@include('front._includes.newsletter')
 	@include('front._includes.busca', ['formClass' => 'white'])
-	<div style="height: 110px;display: block;background: #000; margin-top: 20px;"></div>
+	<div class="widget" style="height: 110px;display: block;background: #000; margin-top: 20px;"></div>
+	@include('front._includes.novo_truck')
 </div>
 <input name="" type="hidden" id="parent_url" value="{{route('home')}}"/>
 @stop
 @section('scripts')
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places&amp;language=pt-BR"></script>
+{{HTML::script('js/tag-it.min.js')}}
+{{HTML::script('js/jquery.geocomplete.js')}}
+{{HTML::script('js/jquery.ui.map.js')}}
+{{HTML::script('js/jquery.ui.map.extensions.js')}}
+{{HTML::script('js/min/selectize-min.js')}}
+{{HTML::script('js/mapa.js')}}
 {{HTML::script('js/bjqs-1.3.min.js')}}
 <script>
 	$('.carousel').bjqs({
@@ -49,5 +78,8 @@
 @stop
 
 @section('css')
+{{HTML::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css')}}
 {{HTML::style('css/vendor/bjqs.css')}}
+{{HTML::style('css/vendor/selectize.css')}}
+{{HTML::style('css/vendor/jquery.tagit.css')}}
 @stop
