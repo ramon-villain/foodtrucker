@@ -1169,7 +1169,7 @@ footer .sitemap ul li a:hover {
   margin-right: 10px;
 }
 .map .bodyMap {
-  padding: 10px 0 5px;
+  padding: 3px 0 5px;
   float: left;
 }
 .map .bodyMap h2 {
@@ -1180,6 +1180,9 @@ footer .sitemap ul li a:hover {
 .map .bodyMap p.social {
   margin-bottom: 15px;
   margin-top: 0;
+}
+.map .bodyMap p.social i {
+  margin-top: 5px;
 }
 .map .bodyMap p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1218,4 +1221,33 @@ footer .sitemap ul li a:hover {
 }
 .map .servicos span:last-of-type {
   margin-right: 0;
+}
+#filter_map {
+  margin-bottom: 20px;
+}
+#filter_map h2 {
+  color: #9e9e9e;
+  font-size: 19px;
+  float: left;
+  line-height: 31px;
+  margin-right: 20px;
+}
+#filter_map .wrapInput {
+  float: left;
+  margin-right: 20px;
+  padding: 7px;
+}
+#filter_map #address {
+  width: 268px;
+}
+#filter_map #eat {
+  width: 168px;
+}
+#filter_map .selectize-control {
+  width: 165px;
+  margin-right: 20px;
+}
+#filter_map .selectize-control:last-of-type {
+  margin-right: 0;
+  float: right;
 }

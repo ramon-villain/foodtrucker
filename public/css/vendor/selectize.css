@@ -316,3 +316,6 @@
   opacity: 0.5;
   background-color: #fafafa;
 }
+.selectize-input .item{
+    color:#808080;
+}
