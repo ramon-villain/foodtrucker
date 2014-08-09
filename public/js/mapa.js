@@ -1,13 +1,12 @@
 var gmarkers = [];
 $('#mapa').gmap({'center':new google.maps.LatLng('-22.979826', '-46.990110')}).bind('init', function() {
-    var a = 0;
     $.getJSON( 'js/spots', function(data) {
         $.each( data, function(i, marker) {
-            console.log(i);
+            console.log(marker);
+            $('#mapa').gmap('option', 'zoom', 10);
             var m = $('#mapa').gmap('addMarker', {
-                'teste': a++,
-                'cat_id': [marker[1].cat_id, '0'],
-                'truck_id': [marker[1].id, '0'],
+                'cat_id': [marker[1].cat_id.toString(), '0'],
+                'truck_id': [marker[1].id.toString(), '0'],
                 'tags': marker[3],
                 'spot_id': [marker.id],
                 'position': new google.maps.LatLng(marker[0][1], marker[0][0]),
@@ -15,7 +14,6 @@ $('#mapa').gmap({'center':new google.maps.LatLng('-22.979826', '-46.990110')}).b
             }).click(function() {
                 $('#mapa').gmap('openInfoWindow', { 'maxWidth': '700','content': '' +
                 '<div class="map">' +
-                '<div class="imageMap"><img src='+marker[1].logo+'/></div>' +
                 '<div class="bodyMap"><h2>'+marker[1].nome+'</h2>' +
                 '<p class="social">' +
                 '<a href="truck/'+marker[1].slug+'">http://foodtrucker.com.br/truck/'+marker[1].slug+'</a> <br/>' +
@@ -27,8 +25,8 @@ $('#mapa').gmap({'center':new google.maps.LatLng('-22.979826', '-46.990110')}).b
                 '<span>'+marker[2][0]+'Sobremesa</span>'+
                 '<span>'+marker[2][1]+'Bebidas</span>'+
                 '<span>'+marker[2][2]+'Música</span>'+
-                '<span>'+marker[2][3]+'Cartão de Crédito</span>'+
-                '<span>'+marker[2][4]+'Cartão de Débito</span>'+
+                '<span>'+marker[2][3]+'Cartão de Débito</span>'+
+                '<span>'+marker[2][4]+'Cartão de Crédito</span>'+
                 '<span>'+marker[2][5]+'Vale-Refeição</span>'+
                 '</p>' +
                 '</div>'
@@ -62,13 +60,13 @@ $('#filter_address').geocomplete({
     $('.clean').css('opacity',1);
     $("#mapa").gmap('clear', 'overlays > Circle');
     var clientPosition = new google.maps.LatLng(result.geometry.location.k, result.geometry.location.B);
-    $('#mapa').gmap('get','map').setOptions({'center':clientPosition});
+    $('#mapa').gmap('get','map').setOptions({'center':clientPosition, 'zoom': 13});
     $('#mapa').gmap('addShape', 'Circle', {
         'strokeWeight': 0,
         'fillColor': "#008595",
         'fillOpacity': 0.25,
         'center': clientPosition,
-        'radius': 10000,
+        'radius': 5000,
         'clickable': false
     });
 });
@@ -97,19 +95,7 @@ $('#filter_truck').bind('change', function () {
     var truck_id = $(this).val();
     $('#mapa').gmap('find', 'markers', { 'property': 'truck_id', 'value': [truck_id] }, function(marker, found) {
         if(found){
-            console.log(marker);
-            var truck = new google.maps.LatLng(marker.position.k, marker.position.B);
-            $('#mapa').gmap('get','map').setOptions({'center':truck});
-        }
-        marker.setVisible(found);
-    });
-});
-$('.fake_link_spots').click(function(){
-    truck.setValue(0);
-    categoria.setValue(0);
-    var spot = $(this).data('spot').toString();
-    $('#mapa').gmap('find', 'markers', { 'property': 'spot_id', 'value': spot }, function(marker, found) {
-        if(found){
+            console.log(found);
             var truck = new google.maps.LatLng(marker.position.k, marker.position.B);
             $('#mapa').gmap('get','map').setOptions({'center':truck});
         }
@@ -147,8 +133,3 @@ $("#filter_taste").tagit({
         });
     }
 });
-
-function linkClick(id){
-    console.log(gmarkers);
-    console.log(id);
-}

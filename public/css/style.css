@@ -777,6 +777,7 @@ header #menu ul li a.active {
 footer {
   background: #303030;
   padding: 30px 0;
+  width: 100%;
 }
 footer .copyright p {
   margin-top: 0;
@@ -794,6 +795,94 @@ footer .copyright p a {
 }
 footer .copyright p a:hover {
   text-decoration: underline;
+}
+footer .instagram {
+  width: 200px;
+  margin-left: 20px;
+  position: relative;
+  padding: 3px;
+  background: #fffffd;
+  border-radius: 3px;
+  border: 1px solid #9e9e9e;
+}
+footer .instagram img {
+  border-radius: 3px;
+  max-width: 100%;
+  position: relative;
+}
+footer .instagram span {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+footer .instagram span a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  font-weight: bold;
+  font-size: 12px;
+  color: #ffffff;
+}
+footer .instagram span a i {
+  margin-right: 5px;
+}
+footer .right p {
+  text-align: left;
+  color: #ed7f62;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+footer .right .talk {
+  color: #ffffff;
+}
+footer .right .talk p,
+footer .right .talk a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #f7f7f7;
+  display: block;
+  margin-bottom: 10px;
+}
+footer .right .talk p i,
+footer .right .talk a i {
+  margin-right: 10px;
+}
+footer .right .form_footer p:first-of-type {
+  margin-top: 0;
+}
+footer .right .form_footer input[type='text'] {
+  border-radius: 3px;
+}
+footer .right .form_footer .wrapInput {
+  width: 300px;
+  float: left;
+}
+footer .right .form_footer .wrapInput input {
+  font-family: "GothamBold", Verdana, sans-serif;
+  text-transform: uppercase;
+}
+footer .right .form_footer .text-btn {
+  float: right;
+  height: 37px;
+  cursor: pointer;
+  color: #ffffff;
+}
+footer .right .form_footer .text-btn:hover {
+  color: #ed7f62;
 }
 footer .sitemap {
   background: #fffffd;
@@ -871,10 +960,10 @@ footer .sitemap ul li a:hover {
   margin-right: 10px;
   max-height: 120px;
   border-radius: 3px;
-  max-width: 150px;
+  max-width: 170px;
 }
 .evento .body .infos {
-  width: 455px;
+  width: 435px;
   text-transform: none;
   color: #9e9e9e;
   float: left;
@@ -882,7 +971,7 @@ footer .sitemap ul li a:hover {
 .evento .body .infos h3 {
   text-transform: none;
   color: #ed7f62;
-  margin-top: 5px;
+  margin-top: 3px;
   background: transparent;
   padding: 0;
   height: auto;
@@ -893,7 +982,7 @@ footer .sitemap ul li a:hover {
   text-transform: none;
   color: #ffc107;
   letter-spacing: normal;
-  margin-bottom: 7px;
+  margin-bottom: 3px;
 }
 .evento .body .infos p {
   margin: 0;

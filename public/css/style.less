@@ -265,12 +265,12 @@ header{
             color:@yellow;
         }
     }
-
 }
 
 footer{
     background: @greyFooter;
     padding: 30px 0;
+    width: 100%;
     .copyright{
         p{
             margin-top: 0;
@@ -284,6 +284,92 @@ footer{
                 text-decoration: none;
                 &:hover{
                     text-decoration: underline;
+                }
+            }
+        }
+    }
+    .instagram{
+        width: 200px;
+        margin-left: 20px;
+        position: relative;
+        padding: 3px;
+        background: @cream;
+        .br;
+        border:1px solid @mediumGrey;
+        img{
+            .br;
+            max-width: 100%;
+            position: relative;
+        }
+        span{
+            background: rgba(0,0,0, .6);
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            padding: 2px 5px;
+            border-radius: 5px;
+            border-bottom-left-radius: 0px;
+            border-top-left-radius: 0px;
+            a{
+                i{
+                    margin-right: 5px;
+                }
+                .helvetica;
+                font-weight: bold;
+                font-size: 12px;
+                color:@white;
+            }
+        }
+    }
+    .right{
+        p{
+            text-align: left;
+                color:@red;
+                .helvetica;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 14px;
+                margin-bottom: 5px;
+        }
+        .talk{
+            color:@white;
+            p,a{
+                .helvetica;
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: bold;
+                color:@lightGrey;
+                display: block;
+                margin-bottom: 10px;
+                i{
+                    margin-right: 10px;
+                }
+            }
+        }
+        .form_footer{
+            p{
+            }
+            p:first-of-type{
+                margin-top: 0;
+            }
+            input[type='text']{
+                .br;
+            }
+            .wrapInput{
+                width: 300px;
+                .fl;
+                input{
+                    .gothamBold;
+                    text-transform: uppercase;
+                }
+            }
+            .text-btn{
+                .fr;
+                height: 37px;
+                cursor: pointer;
+                color:@white;
+                &:hover{
+                    color:@red;
                 }
             }
         }
@@ -360,17 +446,17 @@ footer{
             margin-right: 10px;
             max-height: 120px;
             .br;
-            max-width: 150px;
+            max-width: 170px;
         }
         .infos{
-            width: 455px;
+            width: 435px;
             text-transform: none;
             color:@mediumGrey;
             .fl;
             h3{
                 text-transform: none;
                 color: @red;
-                margin-top: 5px;
+                margin-top: 3px;
                 background: transparent;
                 padding: 0;
                 height: auto;
@@ -381,7 +467,7 @@ footer{
                 text-transform: none;
                 color:@yellow;
                 letter-spacing: normal;
-                margin-bottom: 7px;
+                margin-bottom: 3px;
             }
             p{
                 margin: 0;

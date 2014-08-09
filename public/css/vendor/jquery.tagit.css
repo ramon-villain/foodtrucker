@@ -437,7 +437,7 @@ ul.tagit li.tagit-choice-editable {
   padding: .2em 18px .2em .5em;
 }
 ul.tagit li.tagit-new {
-  padding: .25em 4px .25em 0;
+    padding: 4px 4px 3px 3px;
 }
 ul.tagit input[type="text"] {
   -moz-box-sizing: border-box;
