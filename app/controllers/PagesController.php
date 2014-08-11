@@ -33,7 +33,7 @@ class PagesController extends BaseController {
 		$data = Input::all();
 		Mail::send('emails.contato',$data, function($message)
 		{
-			$message->to('ramon.villain@gmail.com')->subject('Welcome!');
+			$message->to('carona@foodtrucker.com.br')->subject(Input::get('nome').' ('.Input::get('email_contato').') ');
 		});
 
 
