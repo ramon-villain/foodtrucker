@@ -12,48 +12,34 @@ function dataMapFront($abertura, $inicio, $encerramento, $fim){
 	}
 }
 
-function dataSpotFront($dia, $hora = null, $fim = null){
-	$dia = new DateTime($dia);
-	$final = new DateTime($dia->format('Y-m-d').' '. $hora);
-	$hoje = date('Y-m-d');
-	$amanha =  new DateTime('tomorrow');
+function dataSpotFront($dia, $inicio = null, $fim = null){
+	$fim_dt = new DateTime($fim);
+	$fim = $fim_dt->format('H:i');
+	$inicio_dt = new DateTime($inicio);
+	$inicio = $inicio_dt->format('H:i');
+	$dia_dt = new DateTime($dia);
+	$dia = $dia_dt->format('Y-m-d');
+	$hoje_dt = new DateTime('today');
+	$hoje = $hoje_dt->format('Y-m-d');
+	$amanha_dt =  new DateTime('tomorrow');
+	$amanha = $amanha_dt->format('Y-m-d');
+
 	if($dia == $hoje){
 		$dia = 'HOJE';
-		if($hora == null){
-			return $dia->format('d/m');
-		}elseif($fim == null){
-			$hora = new DateTime($hora);
-			return $dia->format('d/m'). $hora->format(' - H:i');
-		}else{
-			$hora = new DateTime($hora);
-			$fim = new DateTime($fim);
-			return $dia->format('d/m'). $hora->format(' - H:i').' às '.$fim->format(' H:i');;
-		}
-	}elseif($dia == $amanha->format('Y-m-d')){
+	}elseif ($dia == $amanha){
 		$dia = 'AMANHÃ';
-		if($hora == null){
-			return $dia->format('d/m');
-		}elseif($fim == null){
-			$hora = new DateTime($hora);
-			return $dia->format('d/m'). $hora->format(' - H:i');
-		}else{
-			$hora = new DateTime($hora);
-			$fim = new DateTime($fim);
-			return $dia->format('d/m'). $hora->format(' - H:i').' às '.$fim->format(' H:i');;
-		}
 	}else{
-		if($hora == null){
-			return $final->format('d/m');
-		}elseif($fim == null){
-			$hora = new DateTime($hora);
-			return $dia->format('d/m'). $hora->format(' - H:i');
-		}else{
-			$hora = new DateTime($hora);
-			$fim = new DateTime($fim);
-			return $dia->format('d/m'). $hora->format(' - H:i').' às '.$fim->format(' H:i');;
-		}
+		$dia = $dia_dt->format('d/m');
+	}
+	if($inicio == null){
+		return $dia_dt->format('d/m');
+	}elseif ($fim == null){
+		return $dia.' - '. $inicio;
+	}else{
+		return $dia.' - '. $inicio.' às '.$fim;
 	}
 }
+
 function dataEvento($data){
 	$data = explode('-', $data);
 	$mes = $data[1];
