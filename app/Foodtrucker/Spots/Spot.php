@@ -14,6 +14,9 @@ class Spot extends \Eloquent {
 	public function tags(){
 		return $this->belongsToMany('Foodtrucker\Tags\Tag', 'tags_trucks');
 	}
+	public function trucks(){
+		return $this->belongsTo('Foodtrucker\Trucks\Truck', 'truck_id');
+	}
 	public static function register( $truck_id, $abertura, $encerramento, $inicio, $fim, $local , $description) {
 		$spot = new static(compact('truck_id', 'abertura','encerramento', 'inicio', 'fim', 'local', 'description'));
 		$spot->raise(new SpotRegistered($spot));
@@ -22,11 +25,6 @@ class Spot extends \Eloquent {
 
 	public function setPasswordAttribute($password){
 		$this->attributes['password'] = Hash::make($password);
-	}
-
-	public function truck()
-	{
-		return $this->belongsTo('Foodtrucker\Trucks\Truck');
 	}
 
 //	public function getAberturaAttribute($value)
