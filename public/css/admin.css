@@ -202,16 +202,16 @@ option {
 .form h1 {
   color: #ffc107;
 }
+.form textarea,
+.form .editor {
+  width: 100%;
+}
 .form input,
 .form textarea,
 .form .editor {
   color: #666666;
-  width: 100%;
-  border: none;
-}
-.form input[type="submit"],
-.form input[type="radio"] {
   width: auto;
+  border: none;
 }
 .btn {
   font-family: "GothamBold", Verdana, sans-serif;
