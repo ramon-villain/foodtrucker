@@ -70,20 +70,15 @@ class SpotRepository {
 	}
 
 	public function getSpotsActive() {
-		$trucks = Truck::lists('id');
-		$spots = [];
-		for($i=0; $i < count($trucks); $i++){
-			$get = $this->spot->where('active', 1)->where('abertura', '>=', new DateTime('today'))->where('truck_id', $trucks[$i])->orderBy('abertura', 'asc')->get()->toArray();
-			if($get){
-				array_push($get, Truck::where('id', $trucks[$i])->pluck('nome'));
-				$spots[] = $get;
-			}
-		}
-		return $spots;
+		return Truck::with(['spots' => function($query){
+			$query->where('abertura', '>=', new DateTime('today'))->where('active', 1);
+		}])->get()->toArray();
 	}
 
 	public function getSpotsActiveTruck($id){
-		return Spot::where('truck_id', $id)->where('active', 1)->where('abertura', '>=', new DateTime('today'))->orderBy('id', 'desc')->get();
+		return Truck::where('id', $id)->with(['spots' => function($query) use ($id){
+			$query->where('abertura', '>=', new DateTime('today'))->where('active', 1)->where('truck_id', $id);
+		}])->get()->toArray();
 	}
 
 	public function getLastId() {
@@ -103,7 +98,7 @@ class SpotRepository {
 		$trucks = Truck::lists('id');
 		$spots = [];
 		for($i=0; $i < count($trucks); $i++){
-			$get = $this->spot->where('active', 1)->where('abertura', '>', new DateTime('today'))->where('truck_id', $trucks[$i])->orderBy('id', 'desc')->get()->toArray();
+			$get = $this->spot->where('active', 1)->where('abertura', '>', new DateTime('today'))->where('truck_id', $trucks[$i])->orderBy('abertura', 'asc')->get()->toArray();
 			if($get){
 				array_push($get, Truck::where('id', $trucks[$i])->pluck('nome'));
 				$spots[] = $get;
