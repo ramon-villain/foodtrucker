@@ -26,7 +26,7 @@
 		<ul class="truck-{{getID($spots[$d][count($spots[$d]) - 1])}}">
 			<h3><a href="{{url()}}/truck/{{getSlugFromNome($spots[$d][count($spots[$d]) - 1])}}">{{ $spots[$d][count($spots[$d]) - 1] }}</a></h3>
 			<div></div>
-			@for ($e = 0; $e < (count($spotsget) - 1); $e++)
+			@for ($e = 0; $e < count($spotsget); $e++)
 				@if (getID($spots[$d][count($spots[$d]) - 1]) == $spotsget[$e]['truck_id'])
 					<li data-spot="{{$spotsget[$e]['id']}}"> <a href="{{url()}}/truck/{{getSlugFromNome($spotsFuturos[$d][count($spotsFuturos[$d]) - 1])}}"><b>{{dataSpotFront($spotsget[$e]['abertura'], $spotsget[$e]['inicio'], $spotsget[$e]['fim'])}}</b> - {{ $spotsget[$e]['local']}}</a></li>
 				@endif

@@ -3,9 +3,9 @@
 	<div class="body bordered">
 		@for($i=0;$i < count($spots); $i++)
 			<ul>
-				<h3>{{ $spots[$i][count($spots[$i]) - 1] }}</h3>
-				@for ($b = 0; $b < (count($spots[$i]) - 1); $b++)
-					<li> <a href="{{url()}}/truck/{{getSlugFromNome($spots[$i][count($spots[$i]) - 1])}}"><b>{{dataSpotFront($spots[$i][$b]['abertura'], $spots[$i][$b]['inicio'], $spots[$i][$b]['fim'])}}</b> - {{ $spots[$i][$b]['local']}}</a></li>
+				<h3>{{ $spots[$i]['nome'] }}</h3>
+				@for ($b = 0; $b < count($spots[$i]['spots']); $b++)
+					<li> <a href="{{url()}}/truck/{{$spots[$i]['slug']}}"><b>{{dataSpotFront($spots[$i]['spots'][$b]['abertura'], $spots[$i]['spots'][$b]['inicio'], $spots[$i]['spots'][$b]['fim'])}}</b> - {{ $spots[$i]['spots'][$b]['local']}}</a></li>
 				@endfor
 			</ul>
 		@endfor
