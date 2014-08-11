@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.gmail.com',
+	'host' => 'useast16.myserverhosts.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'site@foodtrucker.com.br', 'name' => 'Food Trucker'),
+	'from' => array('address' => 'no-reply@foodtrucker.com.br', 'name' => 'Food Trucker'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'admin@estudioignis.com',
+	'username' => 'no-reply@foodtrucker.com.br',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'starbucks',
+	'password' => 'noreply@food',
 
 	/*
 	|--------------------------------------------------------------------------
