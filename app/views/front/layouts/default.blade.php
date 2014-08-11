@@ -24,8 +24,8 @@
 	<link rel="icon"
 	      type="image/png"
 	      href="/images/favicon.png">
-	{{HTML::style('css/grid.css?ver=3')}}
-	{{HTML::style('css/style.css?ver=3')}}
+	{{HTML::style('css/grid.css?ver=7')}}
+	{{HTML::style('css/style.css?ver=6')}}
 	@yield('css')
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
