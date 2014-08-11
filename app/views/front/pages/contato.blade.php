@@ -9,7 +9,7 @@
 		{{Form::label('nome', 'Seu Nome:*')}}
 		<div class="wrapInput">{{Form::text('nome','',['placeholder' => 'Antônio Amigo da Silva'])}}</div>
 		{{Form::label('email_contato', 'Seu Email:*')}}
-		<div class="wrapInput">{{Form::email('email_contato','',['placeholder' => 'antonio@exemplo.com', 'required' => 'required'])}}</div>
+		<div class="wrapInput">{{Form::email('email_contato','',['placeholder' => 'antonio@migo.com', 'required' => 'required'])}}</div>
 		{{Form::label('telefone', 'Seu Telefone:')}}
 		<div class="wrapInput">{{Form::text('telefone','',['placeholder' => '(11) 3344-4433'])}}</div>
 		{{Form::label('mensagem', 'Sua Mensagem:*')}}
