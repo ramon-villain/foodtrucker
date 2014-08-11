@@ -91,7 +91,7 @@
 				{{ Form::close() }}
 				<p>Entre em contato:</p>
 				<div class="talk">
-					<a href="mailto:contato@foodtrucker.com.br?Subject=[Foodtrucker] Contato"><i class="fa fa-envelope-o" style="margin-right: 8px;"></i>contato@foodtrucker.com.br</a>
+					<a href="mailto:carona@foodtrucker.com.br?Subject=[Foodtrucker] Contato"><i class="fa fa-envelope-o" style="margin-right: 8px;"></i>carona@foodtrucker.com.br</a>
 					<a href="http://fb.com/foodtruckerbr"><i class="fa fa-facebook-square"></i>FB.COM/Foodtruckerbr</a>
 					<a href="http://instagram.com/foodtruckerbr"><i class="fa fa-instagram"></i>@Foodtruckerbr</a>
 				</div>
