@@ -6,7 +6,7 @@
 			<select id="categoria" class="form-control">
 				<option value="0" selected>Categorias</option>
 				@foreach ($cats as $cat)
-					<option value="{{$cat->id}}">{{$cat->nome}}</option>
+				<option value="{{$cat->id}}">{{$cat->nome}}</option>
 				@endforeach
 			</select>
 
@@ -25,23 +25,23 @@
 	<div class="return list">
 		@foreach ($cats as $cat)
 		<div data-categoria="{{$cat->id}}" class="item_list">
-		<div class="cat-title">
-			<div class="title"><span class="pic">{{HTML::image($cat->imagem)}}</span><h2>{{ $cat->nome }}</h2></div>
-		</div>
-		@foreach ($trucks as $truck)
-		@if ($truck->cat_id == $cat->id)
-		<div class="widget truck_list">
-			<a href="{{url()}}/truck/{{$truck->slug}}">{{HTML::image($truck->logo, $truck->nome, ['class' => 'logo col-4 alpha'])}}</a>
-			<div id="infos" class="col-9 omega">
-				<ul class="trucks-page">
-					<li><b>Especialidade: </b>{{$truck->especialidade}}</li>
-					<li><p>{{ $truck->description }}</p></li>
-					<li><a href="{{url()}}/truck/{{$truck->slug}}">Saiba Mais</a></li>
-				</ul>
+			<div class="cat-title">
+				<div class="title"><span class="pic">{{HTML::image($cat->imagem)}}</span><h2>{{ $cat->nome }}</h2></div>
 			</div>
-		</div>
-		@endif
-		@endforeach
+			@foreach ($trucks as $truck)
+			@if ($truck->cat_id == $cat->id)
+			<div class="widget truck_list">
+				<a href="{{url()}}/truck/{{$truck->slug}}">{{HTML::image($truck->logo, $truck->nome, ['class' => 'logo col-4 alpha'])}}</a>
+				<div id="infos" class="col-9 omega">
+					<ul class="trucks-page">
+						<li><b>Especialidade: </b>{{$truck->especialidade}}</li>
+						<li><p>{{ $truck->description }}</p></li>
+						<li><a href="{{url()}}/truck/{{$truck->slug}}">Saiba Mais</a></li>
+					</ul>
+				</div>
+			</div>
+			@endif
+			@endforeach
 		</div>
 		@endforeach
 	</div>
@@ -66,7 +66,7 @@
 <input name="" type="hidden" id="parent_url" value="{{route('trucks_path')}}"/>
 @stop
 @section('scripts')
-{{HTML::script('js/selectize.js')}}
+{{HTML::script('js/min/selectize-min.js')}}
 
 
 <script>
@@ -75,8 +75,25 @@
 		var id = this.value;
 		$('.item_list, .item_grid').hide();
 		$('div[data-categoria='+id+']').show();
-		$('div[data-categoria='+id+']').addClass('af');
+		$('.ativo').removeClass('ativo');
+		var i = 0;
+		$('.ativo').removeClass('ativo');
+		$('.item_grid').each(function(){
+			if($(this).css('display') !== 'none') {
+				i++;
+				$(this).addClass('ativo');
+				$(this).css('marginRight', '15px');
+				if(i == 3){
+					$('.ativo:nth-child(3n+2)').css({'margin-right': '0px'}).next().css({'clear' : 'left'});
+				}
+			}
+		});
 		if(id == '0'){
+			$('.item_grid').each(function(){
+				$('.ativo').removeClass('ativo');
+				$(this).css('marginRight', '15px');
+				$('.item_grid:nth-child(3n+3)').css({'margin-right': '0px', 'clear' : 'right'});
+			});
 			$('.item_list, .item_grid').show();
 		}
 	});

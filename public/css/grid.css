@@ -60,6 +60,7 @@ img {
   padding-left: 10px;
 }
 .widget .title h2 {
+  width: 90%;
   height: 40px;
   letter-spacing: 0.075em;
   font-family: "GothamBold", Verdana, sans-serif;
@@ -205,6 +206,12 @@ option {
 .form textarea,
 .form .editor {
   color: #666666;
+  width: 100%;
+  border: none;
+}
+.form input[type="submit"],
+.form input[type="radio"] {
+  width: auto;
 }
 .btn {
   font-family: "GothamBold", Verdana, sans-serif;

@@ -23,15 +23,23 @@
 	{{Form::close()}}
 </div>
 <div id="main" class="col-13">
+	<div class="mapa_wrapper">
+	<span class="mapa_fail">
+		<img src="{{url()}}/images/no-results.png"/>
+		<h1>:(</h1>
+		<h1>Não encontramos nenhum truck.</h1>
+		<h2>Tente novamente com novas opções!</h2>
+	</span>
+	</div>
 	<div id="mapa"></div>
 	<div id="truckDaSemana" class="col-5 alpha widget">
-		<div class="title blue"><i class="fa fa-trophy"></i><h2>{{$featured->title}}</h2></div>
+		<div class="title green"><i class="fa fa-trophy"></i><h2>{{$featured->title}}</h2></div>
 		<div class="body" style="background-image: url({{$featured->image}})">
 			<h3>{{$featured->body}}</h3>
 		</div>
 	</div>
 	<div id="anota-ai" class="col-8 omega widget ">
-		<div class="title green"><i class="fa fa-calendar-o"></i><h2>Anota Ai!</h2> <!--<span>Hoje</span>--></div>
+		<div class="title green"><i class="fa fa-calendar-o"></i><h2>Anota Aí!</h2> <!--<span>Hoje</span>--></div>
 		<div class="body carousel">
 			<ul class="bjqs">
 				@foreach ($banners as $banner)
@@ -49,9 +57,6 @@
 </div>
 <div id="sidebar" class="col-7">
 	@include('front._includes.next-spots-home')
-	@include('front._includes.newsletter')
-	@include('front._includes.busca', ['formClass' => 'white'])
-	<div class="widget" style="height: 110px;display: block;background: #000; margin-top: 20px;"></div>
 	@include('front._includes.novo_truck')
 </div>
 <input name="" type="hidden" id="parent_url" value="{{route('home')}}"/>

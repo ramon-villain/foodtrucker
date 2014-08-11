@@ -76,6 +76,7 @@ img{
         color:@white;
         padding-left: 10px;
         h2 {
+            width: 90%;
             height: 40px;
             letter-spacing: 0.075em;
             .gothamBold;
@@ -215,6 +216,11 @@ select, option{
     }
     input, textarea, .editor{
         color:@darkGrey;
+        width: 100%;
+        border:none;
+    }
+    input[type="submit"], input[type="radio"]{
+        width: auto;
     }
 }
 

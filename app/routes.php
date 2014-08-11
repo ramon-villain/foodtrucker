@@ -9,13 +9,13 @@ Route::get('/', [
 	'as'    => 'home',
 	'uses'  => 'HomeController@index']);
 
-Route::get('/cadastrar', [
-	'as'    => 'register_path',
-	'uses'  => 'RegistrationController@index']);
-
-Route::post('/cadastrar', [
-	'as'    => 'register_path',
-	'uses'  => 'RegistrationController@store']);
+//Route::get('/cadastrar', [
+//	'as'    => 'register_path',
+//	'uses'  => 'RegistrationController@index']);
+//
+//Route::post('/cadastrar', [
+//	'as'    => 'register_path',
+//	'uses'  => 'RegistrationController@store']);
 
 Route::post('/newsletter', [
 	'as'    => 'newsletter_path',
@@ -127,6 +127,12 @@ Route::group(array('before' => 'auth'), function() {
 		Route::get('config/banners', [
 			'as'    => 'add_banner_path',
 			'uses'  => 'Admin_ConfigController@addBanner']);
+		Route::get('config/banner/{id}/edit', [
+			'as'    => 'edit_banner_admin_path',
+			'uses'  => 'Admin_ConfigController@editBanner']);
+		Route::post('config/banner/{id}/edit', [
+			'as'    => 'edit_banner_admin_path',
+			'uses'  => 'Admin_ConfigController@postEditBanner']);
 		Route::post('config/banners', [
 			'as'    => 'banner_upload',
 			'uses'  => 'Admin_ConfigController@bannerPost']);

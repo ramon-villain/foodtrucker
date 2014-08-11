@@ -40,7 +40,7 @@ class Admin_ConfigController extends BaseController {
 			$featured = new SetFeaturedCommand('','','','');
 			Session::forget('modal');
 		}
-		$banners = $this->bannerRepository->getBanners();
+		$banners = $this->bannerRepository->getBanners('', 'off');
 		$data['modal'] = (Session::get('modal') == null ? 'false' : 'true');
 		$data['imagemDestaque'] = Session::get('img');
 		return View::make('back.pages.config', compact('data', 'featured', 'banners'));
@@ -112,34 +112,21 @@ class Admin_ConfigController extends BaseController {
 		Session::forget( 'modal' );
 		$imageFinal = Session::get('img');
 		$img = Image::make($imageFinal);
-
 		$img->crop(intval(Input::get('w')), intval(Input::get('h')), intval(Input::get('x')), intval(Input::get('y')));
 		$img->fit(404, 245);
 		$img->save($imageFinal);
 		return Redirect::route('config_admin_path');
 	}
 
-//	public function bannerPost(){
-//		Session::forget( 'img_featured' );
-//		$this->bannerHomeForm->validate(Input::all());
-//		if(Input::hasFile('image')){
-//			$image = Input::file('image');
-//			$path = 'images/banner';
-//			$image->move($path, $nome);
-//			$final_image = $path."/".$nome;
-//			$img = Image::make($final_image);
-//			$img->resize(768, null, function ($constraint) {
-//				$constraint->aspectRatio();
-//			});
-//			$img->save($final_image);
-//			Session::put( 'modal', 'true' );
-//		}else{
-//			$final_image = Input::get('image_bckp');
-//		}
-//		Session::put('img_banner', $final_image);
-//		extract(Input::only('image','image_bckp','body','title'));
-//		$this->execute(new SetFeaturedCommand($final_image, $image_bckp, $body, $title));
-//		return Redirect::route('config_admin_path');
-//	}
+	public function editBanner($id){
+		$data['banner'] = $this->bannerRepository->getBanner($id);
+		return View::make('back.pages.banner_edit', compact('data'));
+	}
+
+	public function postEditBanner($id){
+		extract(Input::get());
+		$this->bannerRepository->editBanner($id, $body, $status, $url);
+		return Redirect::back();
+	}
 
 }

@@ -4,7 +4,7 @@
 			<ul>
 				<h3>{{ $truck->nome }}</h3>
 				@foreach ($spots as $spot)
-				<li> <b>{{dataSpotFront($spot->abertura, $spot->inicio)}}</b> - {{ $spot->local}}</li>
+				<li> <b>{{dataSpotFront($spot->abertura, $spot->inicio, $spot->fim)}}</b> - {{ $spot->local}}</li>
 
 				@endforeach
 			</ul>

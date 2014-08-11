@@ -12,29 +12,46 @@ function dataMapFront($abertura, $inicio, $encerramento, $fim){
 	}
 }
 
-function dataSpotFront($dia, $hora = null){
+function dataSpotFront($dia, $hora = null, $fim = null){
+	$dia = new DateTime($dia);
+	$final = new DateTime($dia->format('Y-m-d').' '. $hora);
 	$hoje = date('Y-m-d');
 	$amanha =  new DateTime('tomorrow');
-	$final = new DateTime($dia.' '. $hora);
 	if($dia == $hoje){
 		$dia = 'HOJE';
 		if($hora == null){
-			return $dia;
+			return $dia->format('d/m');
+		}elseif($fim == null){
+			$hora = new DateTime($hora);
+			return $dia->format('d/m'). $hora->format(' - H:i');
+		}else{
+			$hora = new DateTime($hora);
+			$fim = new DateTime($fim);
+			return $dia->format('d/m'). $hora->format(' - H:i').' às '.$fim->format(' H:i');;
 		}
-		$hora = new DateTime($hora);
-		return $dia. $hora->format(' - H:i');
 	}elseif($dia == $amanha->format('Y-m-d')){
 		$dia = 'AMANHÃ';
 		if($hora == null){
-			return $dia;
+			return $dia->format('d/m');
+		}elseif($fim == null){
+			$hora = new DateTime($hora);
+			return $dia->format('d/m'). $hora->format(' - H:i');
+		}else{
+			$hora = new DateTime($hora);
+			$fim = new DateTime($fim);
+			return $dia->format('d/m'). $hora->format(' - H:i').' às '.$fim->format(' H:i');;
 		}
-		$hora = new DateTime($hora);
-		return $dia. $hora->format(' - H:i');
 	}else{
 		if($hora == null){
 			return $final->format('d/m');
+		}elseif($fim == null){
+			$hora = new DateTime($hora);
+			return $dia->format('d/m'). $hora->format(' - H:i');
+		}else{
+			$hora = new DateTime($hora);
+			$fim = new DateTime($fim);
+			return $dia->format('d/m'). $hora->format(' - H:i').' às '.$fim->format(' H:i');;
 		}
-		return $final->format('d/m - H:i');
 	}
 }
 function dataEvento($data){

@@ -25,7 +25,19 @@ class PagesController extends BaseController {
 
 	public function contato_post(){
 		$this->contatoForm->validate(Input::all());
-		dd(Input::all());
+//		$data = ['name'=>Input::get('nome'),'sender'=>Input::get('email_contato'),'notes'=>Input::get('mensagem'), 'telefone' => Input::get('telefone')];
+//		$user = array(
+//			'email'=>'ramon.villain@gmail.com',
+//			'name'=>'Ramon Villain'
+//		);
+		$data = Input::all();
+		Mail::send('emails.contato',$data, function($message)
+		{
+			$message->to('ramon.villain@gmail.com')->subject('Welcome!');
+		});
+
+
+		return Redirect::back()->with('message', 'Email enviado com sucesso!');
 	}
 
 	public function sobre_index(){
@@ -39,6 +51,11 @@ class PagesController extends BaseController {
 		$spots = $this->spotRepository->getSpotsActive();
 		$eventos = $this->eventosRepository->getEventosActive();
 		return View::make('front.pages.eventos', compact('data', 'spots', 'eventos'));
+	}
+
+	public function cadastro_index(){
+		$data['title'] = 'Cadastre seu truck';
+		return View::make('front.pages.cadastre_truck', compact('data', 'spots', 'eventos'));
 	}
 
 

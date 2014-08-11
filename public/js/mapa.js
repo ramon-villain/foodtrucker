@@ -32,8 +32,7 @@ $('#mapa').gmap({'center':new google.maps.LatLng('-22.979826', '-46.990110')}).b
                 '</div>'
                 }, this);
             })[0];
-            console.log(marker);
-            $('<li><a href="#" ><b>HOJE - '+ marker.inicio.slice(0,-3)+'</b> - ' + marker.local + '</a></li>')
+            $('<li><a href="#" ><b>HOJE - '+ marker.inicio.slice(0,-3)+' às '+marker.fim.slice(0,-3)+'</b> - ' + marker.local + '</a></li>')
                 .data('marker',m)
                 .appendTo('ul.truck-'+marker[1].id+ ' div')
                 .click(function(e){
@@ -41,6 +40,7 @@ $('#mapa').gmap({'center':new google.maps.LatLng('-22.979826', '-46.990110')}).b
                     google.maps.event.trigger($(this).data('marker'),'click');
                     $('#mapa').gmap('find', 'markers', { 'property': 'spot_id', 'value': marker.id }, function(marker, found) {
                         if(found){
+                            $('.mapa_wrapper').fadeOut(250);
                             var truck = new google.maps.LatLng(marker.position.k, marker.position.B);
                             $('#mapa').gmap('get','map').setOptions({'center':truck});
                         }
@@ -74,33 +74,48 @@ var $select = $('.filter_select').selectize();
 var categoria = $select[0].selectize;
 var truck = $select[1].selectize;
 $('#filter_categoria').next('.selectize-control').click(function(){
+    $('.mapa_wrapper').fadeOut(250);
     truck.setValue(0);
     $("#filter_taste").tagit("removeAll");
 });
 $('#filter_truck').next('.selectize-control').click(function(){
+    $('.mapa_wrapper').fadeOut(250);
     categoria.setValue(0);
     $("#filter_taste").tagit("removeAll");
 });
 $('#filter_categoria').bind('change', function () {
+    var i = 0;
     var cat_id = $(this).val();
+    $('.mapa_wrapper').fadeOut(250);
     $('#mapa').gmap('find', 'markers', { 'property': 'cat_id', 'value': [cat_id] }, function(marker, found) {
         if(found){
+            i++;
             var truck = new google.maps.LatLng(marker.position.k, marker.position.B);
             $('#mapa').gmap('get','map').setOptions({'center':truck});
         }
         marker.setVisible(found);
     });
+    if(i == 0){
+        $('.mapa_wrapper').fadeIn(250);
+    }
 });
 $('#filter_truck').bind('change', function () {
+    var i = 0;
     var truck_id = $(this).val();
+    $('.mapa_wrapper').fadeOut(250);
     $('#mapa').gmap('find', 'markers', { 'property': 'truck_id', 'value': [truck_id] }, function(marker, found) {
         if(found){
             console.log(found);
+            i++;
             var truck = new google.maps.LatLng(marker.position.k, marker.position.B);
             $('#mapa').gmap('get','map').setOptions({'center':truck});
         }
+        console.log(i);
         marker.setVisible(found);
     });
+        if(i == 0){
+            $('.mapa_wrapper').fadeIn(250);
+        }
 });
 $("#filter_taste").tagit({
     placeholderText: 'O que você quer comer?',
@@ -108,6 +123,10 @@ $("#filter_taste").tagit({
     fieldName: "tags",
     allowSpaces: true,
     tagSource: function(search, showChoices) {
+        $('.mapa_wrapper').fadeOut(250);
+        $('ul.tagit').css({'background':'transparent'});
+        truck.setValue(0);
+        categoria.setValue(0);
         var that = this;
         $.ajax({
             url: "/js/tags/"+search.term,
@@ -117,17 +136,21 @@ $("#filter_taste").tagit({
             }
         });
     },beforeTagAdded: function() {
-        truck.setValue(0);
-        categoria.setValue(0);
     },afterTagAdded: function(event, ui) {
+        var i = 0;
         $('#mapa').gmap('find', 'markers', { 'property': 'tags', 'value': [ui.tagLabel] }, function(marker, found) {
             if(found){
+                i++
                 var truck = new google.maps.LatLng(marker.position.k, marker.position.B);
                 $('#mapa').gmap('get','map').setOptions({'center':truck});
             }
             marker.setVisible(found);
         });
+            if(i == 0){
+                $('.mapa_wrapper').fadeIn(250);
+            }
     },afterTagRemoved: function(){
+        $('.mapa_wrapper').fadeOut(250);
         $('#mapa').gmap('find', 'markers', { 'property': 'cat_id', 'value': '0' }, function(marker, found) {
             marker.setVisible();
         });

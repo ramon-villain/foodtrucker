@@ -14,9 +14,9 @@
 				<li><b>Categoria: </b>{{$truck->cat_id}}</li>
 				<li><b>Mais pedidos: </b>{{$truck->mais_pedido}}</li>
 				<li><b>Preço: </b>{{$truck->preco}}</li>
-				<li><b>Site: </b>{{$truck->site or '---'}}</li>
-				<li><b><i class="fa fa-facebook-square fa-lg"></i> </b><a href="http://fb.com/{{$truck->facebook}}">{{$truck->facebook}}</a></li>
-				<li><b><i class="fa fa-instagram fa-lg"></i> </b><a href="http://instagram.com/{{$truck->instagram}}">{{$truck->instagram}}</a></li>
+				<li><b>Site: </b> <a href="http://{{$truck->site or 'foodtrucker.com.br'}}" target="_blank">{{$truck->site or '---'}}</a></li>
+				<li><b><i class="fa fa-facebook-square fa-lg"></i> </b><a href="http://fb.com/{{$truck->facebook}}" target="_blank">{{$truck->facebook}}</a></li>
+				<li><b><i class="fa fa-instagram fa-lg"></i> </b><a href="http://instagram.com/{{$truck->instagram}}" target="_blank">{{$truck->instagram}}</a></li>
 			</ul>
 		</div>
 		<div id="about">
@@ -25,8 +25,8 @@
 				<span>{{ respostaServico($servico[0]) }}<b>Sobremesa</b></span>
 				<span>{{ respostaServico($servico[1]) }}<b>Bebidas</b></span>
 				<span>{{ respostaServico($servico[2]) }}<b>Música</b></span>
-				<span>{{ respostaServico($servico[3]) }}<b>Cartão de Crédito</b></span>
-				<span>{{ respostaServico($servico[4]) }}<b>Cartão de Débito</b></span>
+				<span>{{ respostaServico($servico[3]) }}<b>Cartão de Débito</b></span>
+				<span>{{ respostaServico($servico[4]) }}<b>Cartão de Crédito</b></span>
 				<span>{{ respostaServico($servico[5]) }}<b>Vale-Refeição</b></span>
 			</p>
 		</div>

@@ -45,6 +45,9 @@ class TagRepository{
 
 	public function searchThis( $query) {
 		$tag_ids = Tag::where('tag','like', "%$query%")->lists('id');
+		if($tag_ids == null){
+			return null;
+		}
 		$trucksFromTag = TagTruck::where('spot_id', null)->where('tag_id', $tag_ids)->lists('truck_id');
 		$trucksFinais = [];
 		foreach($trucksFromTag as $truck){

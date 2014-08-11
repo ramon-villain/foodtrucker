@@ -69,6 +69,7 @@
 				Tente novamente com outros termos.</p>
 		</div>
 	</div>
+	<img src="{{url()}}/images/no-results.png" style="width:350px;margin:0 auto;text-align:center;display:block"/>
 	@endif
 </div>
 <div id="sidebar" class="col-7">

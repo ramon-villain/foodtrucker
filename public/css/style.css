@@ -60,6 +60,7 @@ img {
   padding-left: 10px;
 }
 .widget .title h2 {
+  width: 90%;
   height: 40px;
   letter-spacing: 0.075em;
   font-family: "GothamBold", Verdana, sans-serif;
@@ -205,6 +206,12 @@ option {
 .form textarea,
 .form .editor {
   color: #666666;
+  width: 100%;
+  border: none;
+}
+.form input[type="submit"],
+.form input[type="radio"] {
+  width: auto;
 }
 .btn {
   font-family: "GothamBold", Verdana, sans-serif;
@@ -661,7 +668,7 @@ header #menu ul li a.active {
 }
 #content #anota-ai h3 {
   position: relative;
-  bottom: 45px;
+  bottom: 40px;
   margin: 0 10px;
 }
 #sidebar #ultimasParadas .body {
@@ -690,7 +697,7 @@ header #menu ul li a.active {
 }
 #newsletter .wrapInput {
   float: left;
-  width: 264px;
+  width: 254px;
   border: none;
 }
 #newsletter.red {
@@ -700,6 +707,7 @@ header #menu ul li a.active {
 #newsletter.red h2 {
   color: #b74d32;
   font-family: "GothamBold", Verdana, sans-serif;
+  border: none;
 }
 #newsletter.red input::-moz-placeholder,
 #newsletter.red h2::-moz-placeholder {
@@ -719,6 +727,7 @@ header #menu ul li a.active {
   padding: 11px 0 0;
   margin: 0 10px 0 20px;
   cursor: pointer;
+  width: 20px;
 }
 #newsletter.red h2 {
   line-height: 16px;
@@ -755,6 +764,7 @@ header #menu ul li a.active {
   font-size: 14px;
   padding: 0px;
   margin: 0;
+  height: 40px;
 }
 .busca input::-moz-placeholder {
   color: #ffffff;
@@ -839,7 +849,6 @@ footer .right p {
   font-weight: 400;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 14px;
   margin-bottom: 5px;
 }
 footer .right .talk {
@@ -868,18 +877,20 @@ footer .right .form_footer input[type='text'] {
   border-radius: 3px;
 }
 footer .right .form_footer .wrapInput {
-  width: 300px;
+  width: 290px;
   float: left;
 }
 footer .right .form_footer .wrapInput input {
   font-family: "GothamBold", Verdana, sans-serif;
   text-transform: uppercase;
+  border: none;
 }
 footer .right .form_footer .text-btn {
   float: right;
   height: 37px;
   cursor: pointer;
   color: #ffffff;
+  width: 40px;
 }
 footer .right .form_footer .text-btn:hover {
   color: #ed7f62;
@@ -893,7 +904,6 @@ footer .sitemap ul {
   font-size: 13px;
   font-weight: 400;
   font-weight: bold;
-  font-size: 14px;
   text-transform: uppercase;
   margin: 0;
   padding: 20px 19px;
@@ -1344,6 +1354,10 @@ footer .sitemap ul li a:hover {
   width: 218px;
   padding-right: 18px;
 }
+#filter_map #address input {
+  border: none;
+  width: 100%;
+}
 #filter_map ul.tagit {
   width: 221px;
   padding: 1px 0 2px;
@@ -1366,4 +1380,44 @@ footer .sitemap ul li a:hover {
   display: block;
   width: 100%;
   margin-bottom: 20px;
+}
+#main {
+  position: relative;
+}
+.mapa_wrapper {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 669px;
+  height: 445px;
+  z-index: 10;
+  display: none;
+}
+.mapa_fail {
+  display: block;
+  z-index: 10;
+  position: absolute;
+  background: rgba(255, 255, 253, 0.95);
+  box-shadow: 0px 0px 4px 0px #000;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  left: 160px;
+  top: 50px;
+}
+.mapa_fail img {
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.mapa_fail h1 {
+  text-align: center;
+  color: #ed7f62;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.mapa_fail h2 {
+  text-align: center;
+  color: #ffc107;
+  font-size: 13px;
 }

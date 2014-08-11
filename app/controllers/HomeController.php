@@ -43,7 +43,7 @@ class HomeController extends BaseController {
 	{
 		$categorias = $this->truckRepository->getCategorias();
 		$trucks = $this->truckRepository->getTrucks();
-		$spots = $this->spotRepository->getSpotsActive();
+		$spots = $this->spotRepository->getSpotsActiveHoje();
 		$spotsFuturos = $this->spotRepository->getFutureSpotsActive();
 		$featured = $this->configRepository->getFeatured();
 		$banners = $this->bannerRepository->getBanners(5);

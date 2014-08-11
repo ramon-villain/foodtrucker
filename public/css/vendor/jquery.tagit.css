@@ -60,6 +60,7 @@ img {
   padding-left: 10px;
 }
 .widget .title h2 {
+  width: 90%;
   height: 40px;
   letter-spacing: 0.075em;
   font-family: "GothamBold", Verdana, sans-serif;
@@ -205,6 +206,12 @@ option {
 .form textarea,
 .form .editor {
   color: #666666;
+  width: 100%;
+  border: none;
+}
+.form input[type="submit"],
+.form input[type="radio"] {
+  width: auto;
 }
 .btn {
   font-family: "GothamBold", Verdana, sans-serif;
@@ -400,7 +407,7 @@ ul.tagit {
 ul.tagit li {
   display: block;
   float: left;
-  margin: 2px 0px 2px 4px;
+  margin: 2px 0px 2px 7px;
 }
 ul.tagit li.tagit-choice {
   position: relative;
@@ -437,7 +444,7 @@ ul.tagit li.tagit-choice-editable {
   padding: .2em 18px .2em .5em;
 }
 ul.tagit li.tagit-new {
-    padding: 4px 4px 3px 3px;
+  padding: .25em 4px .25em 0;
 }
 ul.tagit input[type="text"] {
   -moz-box-sizing: border-box;

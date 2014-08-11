@@ -9,12 +9,16 @@
 		</div>
 		<div class="body bordered">
 			{{Form::model($data['spot'], ['files' => true, 'route' => ['edit_spot_admin_path', $data['spot']->id]])}}
-
 			{{Form::label('truck_id', 'Escolha um Food Truck:')}}
 			<select name="truck_id" id="truck_id" class="form-control filter_select">
-				@for ($i = 0; $i < count($data['trucks']); $i++)
-				<option value="{{$data['trucks'][$i]}}">{{$data['trucks'][$i]}}</option>
-				@endfor
+				@foreach ($data['trucks'] as $truck)
+					@if($data['spot']->truck_id == $truck->id)
+						<option value="{{$truck->nome}}" selected>{{$truck->nome}}</option>
+					@endif
+					@unless($data['spot']->truck_id == $truck->id)
+						<option value="{{$truck->nome}}">{{$truck->nome}}</option>
+					@endif
+				@endforeach
 			</select>
 
 			{{Form::label('endereco', 'Endereço do Spot:')}}
@@ -44,7 +48,7 @@
 @section('scripts')
 {{HTML::script('js/tag-it.min.js')}}
 {{HTML::script('js/min/jquery.datetimepicker-min.js')}}
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places&amp;language=pt-BR"></script>
 {{HTML::script('js/jquery.geocomplete.js')}}
 {{HTML::script('js/min/selectize-min.js')}}
 <script>

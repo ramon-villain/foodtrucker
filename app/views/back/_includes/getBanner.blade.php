@@ -12,7 +12,7 @@
 			</tr>
 			@foreach($banners as $banner)
 			<tr>
-				<td><a href="banners/{{$banner->id}}/edit">{{$banner->id}}</td>
+				<td><a href="config/banner/{{$banner->id}}/edit">{{$banner->id}}</td>
 				<td>{{$banner->body}}</td>
 				<td>{{$banner->url}}</td>
 				<td>@if($banner->status == '1')Sim @else Não @endif</td>

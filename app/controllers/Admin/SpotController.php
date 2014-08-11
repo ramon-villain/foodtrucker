@@ -43,7 +43,7 @@ class Admin_SpotController extends BaseController {
 		foreach ($data['spots'] as $spot){
 			$spot['truck_id'] = Truck::where('id', $spot['truck_id'])->pluck('nome');
 		}
-		$data['trucks'] = $this->truckRepository->getTrucksName();
+		$data['trucks'] = $this->truckRepository->getTrucks();
 		return View::make('back.pages.spots', compact('data'));
 	}
 
@@ -60,16 +60,15 @@ class Admin_SpotController extends BaseController {
 	}
 
 	private function getTruckIDfromName( $truck ) {
-		$trucks = $this->truckRepository->getTrucksName();
-		return $this->truckRepository->getTruckByName($trucks[$truck]);
+		return $this->truckRepository->getTruckByName($truck);
 	}
 
 	public function edit($id){
-		$data['trucks'] = $this->truckRepository->getTrucksName();
+		$data['trucks'] = $this->truckRepository->getTrucks();
 		$data['tags'] = $this->tagTruckRepository->getTagsSpot($id);
 		$data['spot'] = $this->spotRepository->getSpotById($id);
 		$data['title'] = 'Editando Spot';
-		$data['spot']['truck_id'] = $data['spot']['truck_id'] - 1;
+		$data['spot']['truck_id'] = $data['spot']['truck_id'];
 		return View::make('back.pages.spots_edit', compact('data'));
 	}
 

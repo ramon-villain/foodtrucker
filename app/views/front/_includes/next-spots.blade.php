@@ -5,7 +5,7 @@
 			<ul>
 				<h3>{{ $spots[$i][count($spots[$i]) - 1] }}</h3>
 				@for ($b = 0; $b < (count($spots[$i]) - 1); $b++)
-					<li> <b>{{dataSpotFront($spots[$i][$b]['abertura'], $spots[$i][$b]['inicio'])}}</b> - {{ $spots[$i][$b]['local']}}</li>
+					<li> <a href="{{url()}}/truck/{{getSlugFromNome($spots[$i][count($spots[$i]) - 1])}}"><b>{{dataSpotFront($spots[$i][$b]['abertura'], $spots[$i][$b]['inicio'], $spots[$i][$b]['fim'])}}</b> - {{ $spots[$i][$b]['local']}}</a></li>
 				@endfor
 			</ul>
 		@endfor

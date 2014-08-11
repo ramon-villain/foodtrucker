@@ -16,7 +16,7 @@
 
 		<p>Então criamos o Food Trucker. <br/>
 		Por paixão.<br/>
-		Paixão à tudo. Paixão até mesmo à nós!</p>
+		Paixão a tudo. Paixão até mesmo a nós!</p>
 
 		<p>Queremos ajudar esse movimento de rua a crescer cada vez mais e ajudar você a participar disso com a gente.</p>
 

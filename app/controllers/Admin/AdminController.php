@@ -29,7 +29,7 @@ class Admin_AdminController extends BaseController {
 	public function dashboard()
 	{
 		$data['title'] = 'Dashboard';
-		$data['trucks'] = $this->truckRepository->getTrucksName();
+		$data['trucks'] = $this->truckRepository->getTrucks();
 		$data['tags'] = $this->tagRepository->getTagsPaginatated();
 		$data['spots'] = $this->spotRepository->getSpots();
 		return View::make('back.pages.dashboard', compact('data'));

@@ -20,6 +20,7 @@
 {{HTML::script('js/min/jquery.datetimepicker-min.js')}}
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places&amp;language=pt-BR"></script>
 {{HTML::script('js/jquery.geocomplete.js')}}
+{{HTML::script('js/min/selectize-min.js')}}
 <script>
 	$(".geo").geocomplete({
 		details: "form"
@@ -46,6 +47,7 @@
 			});
 		}
 	});
+	$('#truck_id').selectize();
 </script>
 @stop
 
@@ -53,4 +55,5 @@
 {{HTML::style('css/vendor/jquery.datetimepicker.css')}}
 {{HTML::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css')}}
 {{HTML::style('css/vendor/jquery.tagit.css')}}
+{{HTML::style('css/vendor/selectize.css')}}
 @stop
